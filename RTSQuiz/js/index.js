@@ -1339,7 +1339,7 @@ const resultAnalysis = (e)=>{
         let amount = document.getElementById(currentQuestIndex).innerText;
         amount = amount.replaceAll(",","");
         quitFlag.winningAmount = parseInt(amount);
-        document.getElementById("result").innerText = "Correct Answer";
+        document.getElementById("result").innerText = "";
         e.style.backgroundColor = "greenyellow";
         enableNextButton();
         enableQuitButton();
@@ -1359,7 +1359,7 @@ const resultAnalysis = (e)=>{
         else
         {
             WrongAnswerSound();
-            document.getElementById("result").innerText = "Wrong Answer";
+            document.getElementById("result").innerText = "";
             e.style.backgroundColor = "lightcoral";
             correctOptionId = correctOptionAnsEle(correctAns);
             document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
@@ -1909,7 +1909,7 @@ const buildMoneyArea = ()=>{
             <div id="11" class="each-prize">12,50,000</div>
             <div id="12" class="each-prize">25,00,000</div>
             <div id="13" class="each-prize">50,00,000</div>
-            <div id="14" class="each-prize">1 Crore</div>
+            <div id="14" class="each-prize">100,00,000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
@@ -2101,21 +2101,21 @@ const WelcomeSound = ()=>{
 // just to show the money stack before the game begins..
 const showMoneyStack = ()=>{
     let moneyAreaPrizes = `
-            <div id="0" class="each-prize">1000</div>
-            <div id="1" class="each-prize">2000</div>
-            <div id="2" class="each-prize">3000</div>
-            <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10,000</div>
-            <div id="5" class="each-prize">20,000</div>
-            <div id="6" class="each-prize">40,000</div>
-            <div id="7" class="each-prize">80,000</div>
-            <div id="8" class="each-prize">1,60,000</div>
-            <div id="9" class="each-prize">3,20,000</div>
-            <div id="10" class="each-prize">6,40,000</div>
-            <div id="11" class="each-prize">12,50,000</div>
-            <div id="12" class="each-prize">25,00,000</div>
-            <div id="13" class="each-prize">50,00,000</div>
-            <div id="14" class="each-prize">1 Crore</div>
+    <div id="0" class="each-prize">1000</div>
+    <div id="1" class="each-prize">2000</div>
+    <div id="2" class="each-prize">3000</div>
+    <div id="3" class="each-prize">5000</div>
+    <div id="4" class="each-prize">10,000</div>
+    <div id="5" class="each-prize">20,000</div>
+    <div id="6" class="each-prize">40,000</div>
+    <div id="7" class="each-prize">80,000</div>
+    <div id="8" class="each-prize">1,60,000</div>
+    <div id="9" class="each-prize">3,20,000</div>
+    <div id="10" class="each-prize">6,40,000</div>
+    <div id="11" class="each-prize">12,50,000</div>
+    <div id="12" class="each-prize">25,00,000</div>
+    <div id="13" class="each-prize">50,00,000</div>
+    <div id="14" class="each-prize">100,00,000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
@@ -2150,7 +2150,7 @@ const showLifeline = ()=>{
 const sitOnTheHotSeatFun = ()=>{
     let contestantName = document.getElementById("contestant-name-input").value;
     if(contestantName=="")
-        contestantName = "Anonymous";
+        contestantName = "Anónimo";
     page1Sound.pause();
     WelcomeSound();
     document.getElementById("page2").classList.add("show-modal");
