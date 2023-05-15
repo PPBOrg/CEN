@@ -1,0 +1,637 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --btnHover:goldenrod;
+    --page2btn:rgb(30, 115, 125);
+}
+
+
+/* -------------------page1 ----------------------- */
+.container{
+    height:100vh;
+    width:100vw;
+    background-color:rgb(1, 1, 27);
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY6e8wfrvZdR3_zc2NgAdR2CC1qBIKeGPE6E81XdfU5W3mWGVzbRP_9Hl82VTS_xcAnC0&usqp=CAU");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.input-box{
+    margin-bottom:2.3em;
+}
+.input-box input{
+    border:none;
+    outline:none;
+    font-size:1.8em;
+    padding:8px;
+    padding-bottom:4px;
+    border-bottom:2px solid white;
+    background:none;
+    color:white;
+    text-align: center;
+}
+
+input[type='text']::placeholder{
+    text-align: center;
+}
+
+.btn , .lifeline-no{
+    font-size:1em;
+    padding:8px;
+    background:none;
+    border:1px solid white;
+    cursor: pointer;
+    transition:all 0.3s ease;
+    margin-bottom:2.3em;
+    position:relative;
+    z-index:1;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+
+.btn::after{
+    content:"";
+    background-color:var(--btnHover);
+    height:100%;
+    width:0%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition:all 0.2s ease;
+}
+
+.btn:hover::after{
+    width:100%;
+}
+
+.btn-rules{
+    font-size:1em;
+    outline:none;
+    background:none;
+    color:white;
+    border:none;
+    cursor: pointer;
+}
+
+
+/* -------------------------modal for rules ------------- */
+.modal-container,.modal-container-page2{
+    height:75vh;
+    width:75vw;
+    background-color:lightseagreen;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSweXstGSDGBYr8x8IAYnaAUPHhUzQp3cge1w&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size:cover;
+    background-attachment: fixed;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    box-shadow:0 0 20px rgb(88, 83, 83);
+    border-radius:6px;
+    padding:1.3em;
+    z-index:2;
+    transition:all 0.3s ease-in-out;
+    opacity:0;
+    pointer-events: none;
+}
+
+.modal-rules{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    height:100%;
+}
+.kbc-rules{
+    flex-basis:95%;
+    overflow-y:scroll;
+}
+
+.close-btn{
+    margin:0;
+    margin-top:1.2em;
+}
+
+
+.show-modal{
+    opacity:1;
+    pointer-events: auto;
+}
+
+/* ----------------------modal for main game page2------------ */
+.modal-container-page2{
+    height:100vh;
+    width:100vw;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://images.news18.com/ibnlive/uploads/2017/08/amitabhkbc.jpg?im=FitAndFill,width=1200,height=900");
+    background-position: center;
+    padding:0;
+    display: flex;
+}
+
+.game-area{
+    flex-basis: 86%;
+    /* border: 2px solid yellow; */
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://images.news18.com/ibnlive/uploads/2017/08/amitabhkbc.jpg?im=FitAndFill,width=1200,height=900");
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    /* position:relative; */
+}
+
+.game-area-people{
+    /* border:1px solid orange; */
+    flex-basis:10%;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.people{
+    /* border:1px solid orange; */
+    display: flex;
+    margin-top:0.3em;
+}
+
+.person-image,.lets-play-image{
+    border:1px solid var(--page2btn);
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    background-color:white;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvts5aHBstDkR8PigS4RmZkbZy78zpZoSuOw&usqp=CAU);
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin:0 6px;
+}
+
+.person-info p{
+    font-size:1rem;
+}
+.person-info span{
+    font-size:0.7rem;
+    color:var(--page2btn);
+    font-weight: bold;
+}
+
+.page2btn , .lifeline-no{
+    margin-bottom:0;
+    background-color:var(--page2btn);
+    border-radius:5px;
+}
+
+.lifeline-no{
+    background:none;
+    font-family: "Algerian", Arial , Helvetica , sans-serif;
+    font-size:1.6em;
+    padding:0 6px;
+    margin-right:2px;
+}
+
+.page2btn::after{
+    border-radius:5px;
+}
+
+.game-area-result{
+    /* border:1px solid pink; */
+    position:relative;
+    flex-basis:20%;
+    margin:1em 1.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result{
+    /* border:2px solid red; */
+    border-radius:5px;
+    text-align:center;
+    font-size:2rem;
+    text-shadow:10px 10px 20px black;
+    
+}
+
+.game-area-ques-ans{
+    /* border:1px solid wheat; */
+    flex-basis:60%;
+    margin:0em 1.6em;
+    display:flex;
+    flex-direction: column;
+}
+
+.lets-play-container , .lifeline-set{
+    /* border:2px solid red; */
+    /* border-radius: 50%; */
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lets-play-image{
+    height:300px;
+    width:300px;
+    border:none;
+    cursor:pointer;
+    background-image:url("https://media.istockphoto.com/vectors/round-colorful-neon-lets-play-sign-vector-id1174957431?k=20&m=1174957431&s=612x612&w=0&h=oROOzp5cpHREYJgSJfQRYoPbeb2DYTnUdb5OlkkY4yI=");
+}
+
+.timer-container{
+    flex-basis:20%;
+    display: flex;
+    justify-content: center;
+}
+.timer{
+    /* border:1px solid blueviolet; */
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-size:2rem;
+    font-family: "Algerian", Arial , Helvetica , sans-serif;
+    box-shadow:0px 0px 10px 3px var(--page2btn);
+}
+.question-box{
+    flex-basis:40%;
+    box-shadow:0px 0px 10px 3px var(--page2btn);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:1.2em;
+    margin-bottom:6px;
+    /* background-color:yellowgreen; */
+}
+.question{
+    /* border:1px solid var(--page2btn); */
+    /* height:108px; */
+    padding:0.7em;
+    /* text-align:center; */
+    /* background-color:rgba(137, 43, 226, 0.1); */
+}
+.answer-box{
+    flex-basis:40%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0.6em 0; */
+    /* background-color:skyblue; */
+
+}
+
+.answer-opt{
+    /* border:1px solid red; */
+    /* background-color: red; */
+    width:49%;
+    height:46px;
+    margin:0.3em 0;
+    box-shadow:0px 0px 10px 3px var(--page2btn);
+    border-radius: 5px;
+    padding:0.3em;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    /* justify-content: center; */
+}
+
+.answer-opt span{
+    margin-right:0.3em;
+}
+.game-area-btns{
+    /* border:1px solid orange; */
+    flex-basis:10%;
+    margin:0em 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.money-area{
+    flex-grow: 1;
+    /* border: 2px solid greenyellow; */
+    text-align:center;
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    box-shadow: 0px 3px 3px white;
+    /* align-items:center; */
+}
+
+.each-prize{
+    /* border:1px solid red; */
+    flex-basis:15%;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.checking-bullets-container , .lifeline-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .bullets , .lifeline-item{
+    /* border:1px solid blue; */
+    height:30px;
+    width:30px;
+    box-shadow:0px 0px 12px grey;
+    border-radius:50%;
+    margin:4px 6px;
+  }
+
+  .lifeline-box{
+    flex-direction: column;
+    align-items: center;
+    /* border:1px solid white; */
+    width:5em;
+    margin-top:1em;
+    position:absolute;
+    top:-90%;
+    right:4%;
+    transition:all 0.5s ease;
+    height:0rem;
+    opacity:0;
+    pointer-events: none;
+  }
+
+  .lifeline-item{
+    height:2rem;
+    width:3.4rem;
+    box-shadow:0px 0px 6px 2px aqua;
+    background-color: aqua;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    transition:all 0.2s ease;
+    margin:0.4rem 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .show-lifeline{
+    opacity:1;
+    pointer-events: auto;
+    height:11rem;
+    top:-30%;
+  }
+
+  .lifeline-item:hover{
+    transform:scale3d(1.5, 1.5, 1.5);
+  }
+
+  .audience-poll{
+    background-image:url("../images/AudiencePoll.jpeg");
+  }
+
+  .fifty-fifty{
+    background-image:url("../images/fifty-fifty.jpeg");
+  }
+
+  .flip-the-question{
+    background-image:url("../images/switchQuest.jpeg");
+  }
+  .double-dip{
+    background-image:url("../images/doubleDip.jpeg");
+  }
+
+  
+.audience-poll-inner-container,.just-before-audience-poll{
+    border:1px solid yellow;
+    height:9rem;
+    width:10rem;
+    border-radius: 5px;
+    position:absolute;
+    top:10%;
+    left:50%;
+    transform: translate(-100%,-20%);
+}
+
+.audience-bar-box,.audience-letter-box,.audience-percentage-box{
+    /* border:1px solid orange; */
+    height:6rem;
+    width:10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    background:transparent;
+}
+.bar{
+    width:1.6rem;
+    height:90%;
+    border:1px solid goldenrod;
+    /* background-color:transparent; */
+    box-shadow: 3px 0px 1px gold;
+    border-radius: 5px;
+    margin:0 3px;
+}
+.audience-letter-box,.audience-percentage-box{
+    height:1.5rem;
+    font-weight: bold;
+    align-items: flex-start;
+}
+.letter,.percentage{
+    width:1.6rem;
+    text-align: center;
+    color:white;
+}
+.percentage{
+    font-weight: lighter;
+}
+
+.cross-mark{
+    height:0.2rem;
+    width:2.6rem;
+    background-color:red;
+    border-radius:20%;
+    border:0.01rem solid white;
+    opacity:0;
+}
+
+.cross-one{
+    transform: rotate(150deg);
+}
+  
+.cross-two{
+    position:fixed;
+    transform: rotate(30deg);
+}
+
+.opacity-one{
+    opacity:1;
+}
+
+.pointer-events-NO{
+    pointer-events: none;
+}
+
+
+.pointer-events-none{
+    pointer-events: none;
+}
+
+.quit-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:5em;
+    /* border:2px solid green; */
+    /* position:absolute; */
+    /* top:50%; */
+    /* left:50%; */
+    /* transform:translate(-50%,-50%); */
+}
+.transfer-image{
+    /* border:2px solid red; */
+    border-radius: 5px;
+    height:400px;
+    /* width:300px; */
+    background-color: green;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.png");
+    background-position:center;
+    background-size:cover;
+    margin-right:2rem;
+    flex-basis:30%;
+}
+
+.quit-info-container{
+    /* border:1px solid red; */
+    flex-basis: 40%;
+    background-color:blanchedalmond;
+    background:transparent;
+}
+
+.congratulation{
+    font-size:4rem;
+    color:aquamarine;
+    margin:2rem 0;
+    font-family:'Gill Sans';
+    /* margin-top:1rem; */
+}
+
+.prize-money-earned{
+    font-size:0.8rem;
+    color:white;
+    margin-bottom:0.3rem;
+}
+
+.money{
+    font-size:3rem;
+    color:aqua;
+}
+
+.last-comment{
+    font-size:1.4rem;
+    color:white;
+    margin:2rem 0;
+}
+/* -------------------media query--------------- */
+
+@media screen and (max-width:480px){
+    .container{
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8LaKBCQ0Nz7lvXCxLetDVSROwW2kS8MSgp6Om5-rhw&s");
+        background-size:contain;
+        background-position:center;
+        background-repeat: repeat;
+    }
+
+    .input-box input{
+        width:80vw;
+    }
+
+    /* ------- page 2 ---------------- */
+
+    .game-area{
+        flex-basis:100%;
+    }
+
+    .game-area{
+        flex-basis:100%;
+        width:100vw;
+    }
+    .money-area{
+        position:absolute;
+        opacity:0;
+        pointer-events: none;
+        flex-basis:0%;
+        flex-grow: 0;
+    }
+    .game-area-result{
+        flex-basis:15%;
+    }
+    .game-area-ques-ans{
+        flex-basis: 65%;
+    }
+    .timer-container{
+        flex-basis:15%;
+    }
+    
+    .answer-box{
+        flex-direction: column;
+        flex-basis:45%;  
+    }
+    .answer-opt{
+        width:100%;
+        margin:3px 0;
+    }
+    .audience-poll-inner-container{
+        top:13%;
+        left:70%;
+    }
+
+    /* --------------- QUIT PAGE --------- */
+    .quit-container{
+        margin-top: 150px;
+    }
+    .transfer-image{
+        position:absolute;
+        opacity:0;
+        pointer-events: none;
+    }
+    .quit-info-container{
+        width:90vw;
+        text-align:center;
+        /* border:1px solid white; */
+    }
+    .people{
+        justify-content: center;
+    }
+    .congratulation{
+        font-size:3rem;
+    }
+    .money{
+        font-size:2.8rem;
+    }
+}
+
