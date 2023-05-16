@@ -16,7 +16,7 @@
     height:100vh;
     width:100vw;
     background-color:rgb(1, 1, 27);
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart1.jpg");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@ a{
     height:75vh;
     width:75vw;
     background-color:lightseagreen;
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://cdn.wallpapersafari.com/8/59/0V5Tqe.jpg");
+    background-image:url("../images/walpaperend.jpg");
     background-repeat: no-repeat;
     background-position:right;
     background-size:cover;
@@ -258,7 +258,7 @@ a{
     margin-bottom: 100px;
     border:none;
     cursor:pointer;
-    background-image:url("../images/logo2.png");}
+    background-image:url("../images/logo.png");}
 
 .timer-container{
     flex-basis:20%;
@@ -522,7 +522,7 @@ a{
     height:400px;
     /* width:300px; */
     background-color: green;
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.png");
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.jpg");
     background-position:center;
     background-size:cover;
     margin-right:2rem;
@@ -564,10 +564,13 @@ a{
 
 @media screen and (max-width:480px){
     .container{
-        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8LaKBCQ0Nz7lvXCxLetDVSROwW2kS8MSgp6Om5-rhw&s");
-        background-size:contain;
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart2.jpg");
+        background-size:cover;
         background-position:center;
-        background-repeat: repeat;
+        background-repeat: no-repeat;
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .input-box input{
