@@ -1243,7 +1243,7 @@ const timeUp = ()=>{
     document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
     document.getElementById(correctOptionId).style.color = "black";
 
-    document.getElementById("result").innerText = "#Time Up";
+    document.getElementById("result").innerText = "#Acabou o Tempo";
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
@@ -1306,7 +1306,7 @@ const DoubleDipWrongAnswerSound = ()=>{
 
 function doubleDipLogic(e){
 
-    document.querySelector("#result").innerText = "Wrong Answer ! Make Second Guess";
+    document.querySelector("#result").innerText = "Resposta errada! Tente outra vez";
     e.style.backgroundColor = "lightcoral";
     optButtonEnabled();
     e.style.pointerEvents = "none";
@@ -1470,7 +1470,7 @@ const doubleDipCrossMark = ()=>{
 const doubleDipHandler = ()=>{
     lifelineFlag["doubleDipFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing double-dip ...";
+    document.getElementById("result").innerText = "A implementar a dupla escolha ...";
     LifelineImplementationSound();
     document.querySelector(".double-dip").classList.add("pointer-events-none");
     doubleDipCrossMark();
@@ -1478,7 +1478,7 @@ const doubleDipHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "--Make Your first Guess--";
+        document.getElementById("result").innerText = "--Escolha a primeira opção--";
         lifelineFlag.doubleDipMarker = 1;
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -1549,7 +1549,7 @@ const flipTheQuestionLogic = ()=>{
 const flipTheQuestionHandler = ()=>{
     lifelineFlag["flipTheQuestionFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing flip-the-question ...";
+    document.getElementById("result").innerText = "A implementar troca de questão ...";
     LifelineImplementationSound();
     document.querySelector(".flip-the-question").classList.add("pointer-events-none");
     flipTheQuestionCrossMark();
@@ -1557,7 +1557,7 @@ const flipTheQuestionHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Question flipped!!";
+        document.getElementById("result").innerText = "Questão trocada!!";
         flipTheQuestionLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -1631,7 +1631,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineFlag["fiftyFiftyFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing 50-50 ...";
+    document.getElementById("result").innerText = "A implementar o 50-50 ...";
     LifelineImplementationSound();
     document.querySelector(".fifty-fifty").classList.add("pointer-events-none");
     fiftyFiftyCrossMark();
@@ -1639,7 +1639,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Two Wrong Answers Removed!!";
+        document.getElementById("result").innerText = "Duas respotas erradas removidas!";
         fiftyFiftyLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -1763,7 +1763,7 @@ const audiencePollAddHandler = ()=>{
     lifelineFlag["audiencePollFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing Audience Poll ...";
+    document.getElementById("result").innerText = "A implementar a Ajuda do Público ...";
     AudiencePollImplementationSound();
     document.querySelector(".audience-poll").classList.add("pointer-events-none");
     audiencePollCrossMark();
@@ -1889,17 +1889,17 @@ const buildMoneyArea = ()=>{
             <div id="1" class="each-prize">2000</div>
             <div id="2" class="each-prize">3000</div>
             <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10,000</div>
-            <div id="5" class="each-prize">20,000</div>
-            <div id="6" class="each-prize">40,000</div>
-            <div id="7" class="each-prize">80,000</div>
-            <div id="8" class="each-prize">1,60,000</div>
-            <div id="9" class="each-prize">3,20,000</div>
-            <div id="10" class="each-prize">6,40,000</div>
-            <div id="11" class="each-prize">12,50,000</div>
-            <div id="12" class="each-prize">25,00,000</div>
-            <div id="13" class="each-prize">50,00,000</div>
-            <div id="14" class="each-prize">100,00,000</div>
+            <div id="4" class="each-prize">10.000</div>
+            <div id="5" class="each-prize">20.000</div>
+            <div id="6" class="each-prize">40.000</div>
+            <div id="7" class="each-prize">80.000</div>
+            <div id="8" class="each-prize">160.000</div>
+            <div id="9" class="each-prize">320.000</div>
+            <div id="10" class="each-prize">640.000</div>
+            <div id="11" class="each-prize">1.250.000</div>
+            <div id="12" class="each-prize">2.500.000</div>
+            <div id="13" class="each-prize">5.000.000</div>
+            <div id="14" class="each-prize">10.000.000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
@@ -1913,7 +1913,7 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Question for ${prizeValue}`;
+    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
 }
 
 function congratulationComment(ind){
@@ -2095,17 +2095,17 @@ const showMoneyStack = ()=>{
     <div id="1" class="each-prize">2000</div>
     <div id="2" class="each-prize">3000</div>
     <div id="3" class="each-prize">5000</div>
-    <div id="4" class="each-prize">10,000</div>
-    <div id="5" class="each-prize">20,000</div>
-    <div id="6" class="each-prize">40,000</div>
-    <div id="7" class="each-prize">80,000</div>
-    <div id="8" class="each-prize">1,60,000</div>
-    <div id="9" class="each-prize">3,20,000</div>
-    <div id="10" class="each-prize">6,40,000</div>
-    <div id="11" class="each-prize">12,50,000</div>
-    <div id="12" class="each-prize">25,00,000</div>
-    <div id="13" class="each-prize">50,00,000</div>
-    <div id="14" class="each-prize">100,00,000</div>
+    <div id="4" class="each-prize">10.000</div>
+    <div id="5" class="each-prize">20.000</div>
+    <div id="6" class="each-prize">40.000</div>
+    <div id="7" class="each-prize">80.000</div>
+    <div id="8" class="each-prize">160.000</div>
+    <div id="9" class="each-prize">320.000</div>
+    <div id="10" class="each-prize">640.000</div>
+    <div id="11" class="each-prize">1.250.000</div>
+    <div id="12" class="each-prize">2.500.000</div>
+    <div id="13" class="each-prize">5.000.000</div>
+    <div id="14" class="each-prize">10.000.000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;

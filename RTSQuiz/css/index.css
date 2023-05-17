@@ -6,7 +6,6 @@
 }
 
 :root{
-    --btnHover:goldenrod;
     --page2btn:rgb(77, 77, 77);
 }
 
@@ -97,6 +96,13 @@ a{
     cursor: pointer;
 }
 
+#sitOnTheHotSeat{
+    background-color: darkred;
+}
+
+#sitOnTheHotSeat:hover{
+    background-color: darkgreen;
+}
 
 /* -------------------------modal for rules ------------- */
 .modal-container,.modal-container-page2{
@@ -215,6 +221,7 @@ a{
 
 .page2btn::after{
     border-radius:5px;
+    background-color: rgb(142, 142, 142);
 }
 
 .game-area-result{
@@ -258,7 +265,9 @@ a{
     margin-bottom: 100px;
     border:none;
     cursor:pointer;
-    background-image:url("../images/logo.png");}
+    background-image:url("../images/logo.png");
+}
+
 
 .timer-container{
     flex-basis:20%;
