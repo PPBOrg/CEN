@@ -24,8 +24,7 @@ const kbcQuestions =
             c: "Partilhar a senha com amigos de confiança",
             d: "Usar a mesma senha para todas as contas",
             correct: "Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais",
-        }
-    ],
+        }],
 // ----------------- 2 ------------------------------
         [{
             question: "O que deve fazer caso receba uma mensagem suspeita de alguém que não conhece a pedir informações pessoais?",
@@ -100,8 +99,7 @@ const kbcQuestions =
             c: "Apagar o e-mail sem abrir ou clicar em qualquer coisa",
             d: "Encaminhar o e-mail para todos os seus contatos",
             correct: "Excluir o e-mail sem abrir ou clicar em qualquer coisa",
-        },
-        ],
+        }],
 // ----------------- 5 ------------------------------
         [{
             question: "O que é engenharia social?",
