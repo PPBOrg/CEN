@@ -1918,16 +1918,18 @@ const questForSpecificPrizeMoney = ()=>{
 
 function congratulationComment(ind){
     let comment ;
-    if(ind<2)
-        comment = "Well";
-    else if(ind>=2 && ind<6)
-        comment = "Well Played";
-    else if(ind>=6 && ind<10)
-        comment = "Great Game";
-    else if(ind>=10 && ind<14)
-        comment = "You Rock";
+    if(ind<1)
+        comment = "Estagiário de Cibersegurança";
+    else if(ind>=2 && ind<5)
+        comment = "Técnico de Cibersegurança";
+    else if(ind>=5 && ind<8)
+        comment = "Analista de Cibersegurança";
+    else if(ind>=8 && ind<11)
+        comment = "Engenheiro de Cibersegurança";
+    else if(ind>=11 && ind<14)
+        comment = "Consultor de Cibersegurança";
     else
-        comment = "fabulous performance";
+        comment = "Especialista em Cibersegurança";
 
     return comment;
 }
@@ -1994,8 +1996,8 @@ function openQuitPage(){
     if(quitFlag.oneCroreFlag)
     {
         congratulation = congratulationComment(14);
-        money = "1 Crore";
-        lastComment = "Congratulation to the winner of KBC";
+        money = "1 Ponto";
+        lastComment = "Parabens pela sua Vitória";
     }
     else if(quitFlag.timeUpFlag)
     {
@@ -2016,7 +2018,7 @@ function openQuitPage(){
             money = 10000;
         else 
             money = 0;        
-        lastComment =  `Your prize money comes down from ${quitFlag.winningAmount} to ${money} due to wrong answer.`;
+        lastComment =  `Seus pontos em prêmio cairam de  ${quitFlag.winningAmount} para ${money} devido à resposta errada.`;
         money = formatedMoney(money);    
     }
     else 
@@ -2039,7 +2041,7 @@ function openQuitPage(){
                 </div>
             </div>
             <div class="congratulation">${congratulation}</div>
-            <div class="prize-money-earned">Prize Money Earned :</div>
+            <div class="prize-money-earned">Prêmio em Pontos: </div>
             <div class="money">${money}</div>
             <div class="last-comment">${lastComment}</div>
         </div>
