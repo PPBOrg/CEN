@@ -1,775 +1,179 @@
 const kbcQuestions = 
     [
-        // ----------------- 1 --------------
+// ----------------- 1 ------------------------------
         [{
-            question:"A coin of what value is called as “Athhanni”?",
-            a:"1 Rupee",
-            b:"25 Paise",
-            c:"50 Paise",
-            d:"2 Rupee",
-            correct:"50 Paise",
+            question: "Qual dos seguintes é um exemplo de informação pessoal sensível?",
+            a: "Nome de um filme favorito",
+            b: "Endereço de e-mail",
+            c: "Cor favorita",
+            d: "Equipa de futebol preferida",
+            correct: "Endereço de e-mail",
         },
         {
-            question:"How many squares are there in chess board?",
-            a:"49",
-            b:"74",
-            c:"56",
-            d:"64",
-            correct:"64",
-        }, 
-        {
-            question:"What do you call homemade cheese?",
-            a:"Panir",
-            b:"Pury",
-            c:"Dahi",
-            d:"Ghee",
-            correct:"Panir",
+            question: "Qual das seguintes é uma boa prática para criar senhas?",
+            a: "Usar a mesma senha para todas as contas",
+            b: "Partilhar as senhas com os amigos",
+            c: "Criar senhas curtas e fáceis de lembrar",
+            d: "Criar senhas longas e complexas",
+            correct: "Criar senhas longas e complexas",
         },
         {
-            question:"Evaluate :  2+2/2 ",
-            a:"2",
-            b:"3",
-            c:"4",
-            d:"1",
-            correct:"3",
-        },        
-        {
-            question:"Which of these Roman numerals will have the lowest value?",
-            a:"L",
-            b:"X",
-            c:"V",
-            d:"C",
-            correct:"V",
-        },
-        {
-            question:"Complete this Hindi idiom: Sau baat ki___",
-            a:"Addhi baat",
-            b:"Pauni bat",
-            c:"Ek baat",
-            d:"Dedh baat",
-            correct:"Ek baat",
-        },
-        {
-            question:"Where is the Capital of Arunachal Pradesh?",
-            a:"Itanagar",
-            b:"Dispur",
-            c:"Jamnagar",
-            d:"Gandhinagar",
-            correct:"Itanagar",
-        },
-        {
-            question:"How many colors are there in a rainbow?",
-            a:"5",
-            b:"6",
-            c:"7",
-            d:"8",
-            correct:"7",
-        },
-        {
-            question:"How many consonants are there in a English alphabet?",
-            a:"19",
-            b:"21",
-            c:"13",
-            d:"24",
-            correct:"21",
-        },
-        {
-            question:"Which month of the year has the least number of days?",
-            a:"February",
-            b:"March",
-            c:"April",
-            d:"June",
-            correct:"February",
-        },
-        {
-            question:"Where is the Capital of Madhya Pradesh?",
-            a:"Itanagar",
-            b:"Dispur",
-            c:"Bhopal",
-            d:"Gandhinagar",
-            correct:"Bhopal",
-        },
-        {
-            question:"Which is not a Capital of any state?",
-            a:"Jamshedpur",
-            b:"Gandhinagar",
-            c:"Raipur",
-            d:"Dehradun",
-            correct:"Jamshedpur",
-        },               
-        {
-            question:"Where is the Capital of Manipur?",
-            a:"Itanagar",
-            b:"Dispur",
-            c:"Imphal",
-            d:"Gandhinagar",
-            correct:"Imphal",
-        },
-        {
-            question:"National Anthem of India is",
-            a:"Vande Mataram",
-            b:"Sare Jaha Se Accha",
-            c:"Jhanda Uncha Rahe Hamara",
-            d:"Jana Gana Mana",
-            correct:"Jana Gana Mana",
-        },
-        {
-            question:"Where is the Capital of Meghalaya?",
-            a:"Sikkim",
-            b:"Dispur",
-            c:"Shillong",
-            d:"Gandhinagar",
-            correct:"Shillong",
-        },
-        {
-            question:"Where is the Capital of Mizoram?",
-            a:"Itanagar",
-            b:"Dispur",
-            c:"Aizawl",
-            d:"Kohima",
-            correct:"Aizawl",
-        },
-        {
-            question:"Where is the Capital of Nagaland?",
-            a:"Kohima",
-            b:"Dispur",
-            c:"Jamnagar",
-            d:"Gandhinagar",
-            correct:"Kohima",
-        },
-        {
-            question:"Where is the Capital of Sikkim?",
-            a:"Itanagar",
-            b:"Gangtok",
-            c:"Jamnagar",
-            d:"Sikkim",
-            correct:"Gangtok",
-        },
-        {
-            question:"Where is the Capital of Punjab?",
-            a:"Itanagar",
-            b:"Dispur",
-            c:"Jamnagar",
-            d:"Chandigarh",
-            correct:"Chandigarh",
-        },
-        {
-            question:"Which of these is a board game which can normally be played by only two opponents at a time?",
-            a:"Snakes and ladders",
-            b:"Chess",
-            c:"Carrom",
-            d:"Ludo",
-            correct:"Chess",
+            question: "O que é importante fazer ao criar uma senha?",
+            a: "Usar o nome e data de nascimento para facilitar a memorização",
+            b: "Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais",
+            c: "Partilhar a senha com amigos de confiança",
+            d: "Usar a mesma senha para todas as contas",
+            correct: "Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais",
         }],
 // ----------------- 2 ------------------------------
         [{
-            question:"Who is the governor of bihar as in 2022?",
-            a:"Phagu Chauhan",
-            b:"Nitesh Kumar",
-            c:"RamNath Kovind",
-            d:"Sushil Modi",
-            correct:"Phagu Chauhan",
+            question: "O que deve fazer caso receba uma mensagem suspeita de alguém que não conhece a pedir informações pessoais?",
+            a: "Responder com as informações solicitadas",
+            b: "Ignorar a mensagem",
+            c: "Partilhar as informações apenas com um amigo próximo",
+            d: "Informar imediatamente um adulto responsável",
+            correct: "Informar imediatamente um adulto responsável",
         },
         {
-            question:"What is the chemical formula for water?",
-            a:"H2O",
-            b:"H2O2",
-            c:"HCL",
-            d:"O2",
-            correct:"H2O",
+            question: "O que se deve fazer caso se receba um pedido para partilhar fotos ou informações pessoais online?",
+            a: "Partilhar imediatamente",
+            b: "Perguntar aos pais ou responsáveis antes de partilhar qualquer coisa",
+            c: "Ignorar o pedido",
+            d: "Partilhar apenas com amigos próximos",
+            correct: "Perguntar aos pais ou responsáveis antes de partilhar qualquer coisa",
         },
         {
-            question:"Which among the given animals is NOT vegetarian?",
-            a:"giraffes",
-            b:"Elephants",
-            c:"pandas",
-            d:"cat",
-            correct:"cat",
-        },                
-        {
-            question:"White Flag is the symbol of",
-            a:"Peace",
-            b:"War",
-            c:"Truth",
-            d:"Friendship",
-            correct:"Peace",
-        },
-        {
-            question:"Which of these consecutive months have 31 days?",
-            a:"January and February",
-            b:"June and July",
-            c:"July and August",
-            d:"September and October",
-            correct:"July and August",
-        },
-        {
-            question:"Which month do not have 31 days?",
-            a:"August",
-            b:"March",
-            c:"June",
-            d:"October",
-            correct:"June",
-        },
-        {
-            question:"Which of these is taken as mouth fresherner after meal?",
-            a:"Haldi",
-            b:"Dhania",
-            c:"Sauf",
-            d:"Hing",
-            correct:"Sauf",
-        },
-        {
-            question:"Which is the Highest mountain?",
-            a:"Mount Everest",
-            b:"Kanchenjunga",
-            c:"K2",
-            d:"Mount Rushmore",
-            correct:"Mount Everest",
-        },
-        {
-            question:"In the patriotic song 'Nanha Munna Rahi Hoon', which of these words will come last?",
-            a:"Jai Hind, Jai Hind",
-            b:"Desh Ka Sipahi Hoon",
-            c:"Nanha Munna Rahi Hoon",
-            d:"Bolo Mere Sang",
-            correct:"Jai Hind, Jai Hind",
-        },
-        {
-            question:" What do you call a house made of ice?",
-            a:"Igloo",
-            b:"houseboats",
-            c:"Kutcha house",
-            d:"Society",
-            correct:"Igloo",
-        },
-        {
-            question:"Which is the only one of these which comes in different sizes called mini, micro and nano?",
-            a:"Trucks",
-            b:"Credit cards",
-            c:"Cars",
-            d:"Sim Cards",
-            correct:"Sim Cards",
-        },
-        {
-            question:" Which of these comes in kaali, adrakwali and masala varieties?",
-            a:"Chai",
-            b:"Chana",
-            c:"Chapati",
-            d:"Chowmein",
-            correct:"Chai",
-        },
-        {
-            question:"Which of these measures is the shortest in length?",
-            a:"Half-mile",
-            b:"Half foot",
-            c:"Half Yard",
-            d:"Half Metre",
-            correct:"Half foot",
+            question: "O que deve fazer caso receba uma mensagem suspeita de alguém que afirma ser um amigo seu?",
+            a: "Responder imediatamente com informações pessoais",
+            b: "Ignorar a mensagem e apagar imediatamente",
+            c: "Encaminhar a mensagem para todos os seus contatos",
+            d: "Verificar a autenticidade entrando em contato com seu amigo por meio de outra forma de comunicação",
+            correct: "Verificar a autenticidade entrando em contato com seu amigo por meio de outra forma de comunicação",
         }],
 // ----------------- 3 ------------------------------
         [{
-            question:"In which state Kedarnath temple is located?",
-            a:"Uttar Pradesh",
-            b:"Himachal Pradesh",
-            c:"Uttarakhand",
-            d:"Jharkhand",
-            correct:"Uttarakhand",
+            question: "O que é um vírus de computador?",
+            a: "Um programa que protege o computador contra ameaças",
+            b: "Uma peça de hardware que melhora o desempenho do computador",
+            c: "Um programa malicioso que pode danificar arquivos e software",
+            d: "Um dispositivo que permite acesso à internet sem fio",
+            correct: "Um programa malicioso que pode danificar arquivos e software",
         },
         {
-            question:"What type of bird lays the largest eggs",
-            a:"Ostrich",
-            b:"Pengiun",
-            c:"Swan",
-            d:"Vulture",
-            correct:"Ostrich",
+            question: "O que é phishing?",
+            a: "Uma técnica para proteger a identidade online",
+            b: "Um tipo de malware que rouba informações pessoais",
+            c: "Uma forma de enviar e receber mensagens criptografadas",
+            d: "Um serviço que permite fazer compras online com segurança",
+            correct: "Um tipo de malware que rouba informações pessoais",
         },
         {
-            question:"which among them is not a payment app?",
-            a:"Paytm",
-            b:"Phone Pe",
-            c:"Amazon Pay",
-            d:"Play Store",
-            correct:"Play Store",
-        },        
-        {
-            question:"Materials through which light cannot pass are said to be.....?",
-            a:"Transparent",
-            b:"Opaque",
-            c:"Translucent",
-            d:"Obstructor",
-            correct:"Opaque",
-        },
-        {
-            question:"Google (www.google.com) is a.....",
-            a:"Search Engine",
-            b:"Number in Math",
-            c:"Directory of images",
-            d:"Chat service on the web",
-            correct:"Search Engine",
-        },
-        {
-            question:"Which among them is not a mobile company?",
-            a:"apple",
-            b:"samsung",
-            c:"motorola",
-            d:"mahindra",
-            correct:"mahindra",
-        },        
-        {
-            question:"Choose the correct verb form. The earth _____ round the sun. ",
-            a:"move",
-            b:"moves",
-            c:"moved",
-            d:"none of the above",
-            correct:"moves",
-        },
-        {
-            question:"What the main particles of an atom are? ",
-            a:"Neutron, electron, and proton",
-            b:"Proton and electron",
-            c:"Photon, electron, and neutron",
-            d:"Photon and electron",
-            correct:"Neutron, electron, and proton",
-        },
-        {
-            question:"Ampere is the unit of.....?",
-            a:"Electric Energy",
-            b:"Electric Charge",
-            c:"Electrical Current",
-            d:"Electromotive Force",
-            correct:"Electrical Current",
-        },
-        {
-            question:"What is the main component of biogas and natural gas?",
-            a:"Ethane",
-            b:"Methane",
-            c:"Propane",
-            d:"Butane",
-            correct:"Methane",
-        },
-        {
-            question:"What metal is a liquid at room temperature?",
-            a:"Sodium",
-            b:"Mercury",
-            c:"Zinc",
-            d:"Both Zinc and Sodium",
-            correct:"Mercury",
-        },
-        {
-            question:"Which gas in the atmosphere saves us from the UV rays of the sun?",
-            a:"Nitrogen",
-            b:"Ozone",
-            c:"Oxygen",
-            d:"Carbon Monoxide",
-            correct:"Ozone",
-        },
-        {
-            question:"Which planet is closest to the Earth?",
-            a:"Venus",
-            b:"Mercury",
-            c:"Mars",
-            d:"Sun",
-            correct:"Venus",
-        },
-        {
-            question:"The mother of which of these characters from the Mahabharata was a 'rakshasi' ?",
-            a:"Abhimanyu",
-            b:"Ghatotkacha",
-            c:"Sahadev",
-            d:"Dushasana",
-            correct:"Ghatotkacha",
-        }
-        ],
+            question: "Qual das seguintes é uma maneira segura de comunicar pela internet?",
+            a: "Partilhar informações pessoais em fóruns públicos",
+            b: "Usar redes Wi-Fi públicas sem proteção",
+            c: "Enviar senhas e informações confidenciais por e-mail",
+            d: "Utilizar mensagens criptografadas ou aplicativos seguros",
+            correct: "Utilizar mensagens criptografadas ou aplicativos seguros",
+        }],
 // ----------------- 4 ------------------------------
         [{
-            question:" The hottest planet in the solar system?",
-            a:"Mercury",
-            b:"Venus",
-            c:"Mars",
-            d:"Jupiter",
-            correct:"Venus",
+            question: "O que se deve fazer se encontrar uma página da web suspeita ou com conteúdo inadequado?",
+            a: "Continuar navegando e explorar a página",
+            b: "Fechar a página imediatamente",
+            c: "Partilhar o link com os amigos",
+            d: "Responder às perguntas da página",
+            correct: "Fechar a página imediatamente",
         },
         {
-            question:"Which of the following is used in pencils? ",
-            a:"Silicon",
-            b:"Phosophorous",
-            c:"Graphite",
-            d:"Charcoal",
-            correct:"Graphite",
+            question: "O que é uma firewall?",
+            a: "Um tipo de vírus de computador",
+            b: "Um dispositivo usado para bloquear chamadas telefónicas indesejadas",
+            c: "Um programa que protege o computador contra ataques e acessos não autorizados",
+            d: "Uma rede de computadores conectados entre si",
+            correct: "Um programa que protege o computador contra ataques e acessos não autorizados",
         },
         {
-            question:" 'Dandia' is a popular dance of ___ ",
-            a:"Maharashtra",
-            b:"Gujarat",
-            c:"Tamil Nadu",
-            d:"Punjab",
-            correct:"Gujarat",
-        },
-        {
-            question:"Which of the following is the lowermost layer of the Atmosphere?",
-            a:"Troposphere",
-            b:"Mesosphere",
-            c:"Thermosphere",
-            d:"Exosphere",
-            correct:"Troposphere",
-        },
-        {
-            question:"What is the name of person which controls a football match ",
-            a:"A referee",
-            b:"An Umpire",
-            c:"A spectator",
-            d:"A goalkeeper",
-            correct:"A referee",
-        },
-        {
-            question:"Mohini Attam dance form developed originally in which of the following states?",
-            a:"Karnataka",
-            b:"Orissa",
-            c:"Tamil Nadu",
-            d:"Kerala",
-            correct:"Kerala",
-        },
-        {
-            question:"Which of the following is not a part of the Internet?",
-            a:"World Wide Web",
-            b:"Email",
-            c:"CD-ROM",
-            d:"HTTP",
-            correct:"CD-ROM",
-        },
-        {
-            question:"Candy Crush Saga, Temple Run and Fruit Ninjia are all types of What ? ",
-            a:"Search Engines",
-            b:"Chat Messangers",
-            c:"Games",
-            d:"Anti Virus",
-            correct:"Games",
-        },
-        {
-            question:"Which is the biggest thing in our solar system ?",
-            a:"Jupitar",
-            b:"Alpha Century",
-            c:"Sun",
-            d:"Venus",
-            correct:"Sun",
-        },
-        {
-            question:"Skin,ears,and kidneys are examples of_____ ",
-            a:"Organ Systems",
-            b:"Organs",
-            c:"Tissues",
-            d:"Cells",
-            correct:"Organs",
+            question: "O que é importante fazer ao receber um e-mail suspeito de um remetente desconhecido?",
+            a: "Abrir os anexos e links fornecidos no e-mail",
+            b: "Responder ao e-mail fornecendo suas informações pessoais",
+            c: "Apagar o e-mail sem abrir ou clicar em qualquer coisa",
+            d: "Encaminhar o e-mail para todos os seus contatos",
+            correct: "Excluir o e-mail sem abrir ou clicar em qualquer coisa",
         }],
 // ----------------- 5 ------------------------------
         [{
-            question:"How many district are there in bihar?",
-            a:"36",
-            b:"38",
-            c:"40",
-            d:"41",
-            correct:"38",
+            question: "O que é engenharia social?",
+            a: "Um tipo de ataque cibernético realizado por hackers profissionais",
+            b: "Um método para proteger redes sociais de ameaças virtuais",
+            c: "Um processo para criar senhas complexas e seguras",
+            d: "Uma técnica que manipula as pessoas para obter informações confidenciais",
+            correct: "Uma técnica que manipula as pessoas para obter informações confidenciais",
         },
         {
-            question:"Tansen, a great musician of his time, was in the court of – ",
-            a:"Akbar",
-            b:"Shahjahan",
-            c:"Bahadur Shah",
-            d:"Jahangir",
-            correct:"Akbar",
+            question: "O que é backup de dados?",
+            a: "Uma medida para bloquear o acesso a um site ou serviço online",
+            b: "Uma técnica para criptografar dados confidenciais",
+            c: "Uma cópia de segurança de arquivos e informações importantes",
+            d: "Um programa antivírus para proteger o computador contra ameaças",
+            correct: "Uma cópia de segurança de arquivos e informações importantes",
         },
         {
-            question:"IPL is associated with which sport in India? ",
-            a:"Football",
-            b:"Cricket",
-            c:"Hockey",
-            d:"Badminton",
-            correct:"Cricket",
-        },
-        {
-            question:"Which is a green planet in the solar system? ",
-            a:"Pluto",
-            b:"Venus",
-            c:"Uranus",
-            d:"Mars",
-            correct:"Uranus",
-        },
-        {
-            question:"When is the ' World environment Day ' celebrated",
-            a:"June 5",
-            b:"April 7",
-            c:"October 24",
-            d:"None of the above",
-            correct:"June 5",
-        },
-        {
-            question:"International Women's day is observed on",
-            a:"3rd March",
-            b:"8th March",
-            c:"15th March",
-            d:"18th March",
-            correct:"8th March",
-        },
-        {
-            question:"Which of the following is the currency of SriLanka?",
-            a:"Dinar",
-            b:"Rupee",
-            c:"Taka",
-            d:"Yen",
-            correct:"Rupee",
-        },
-        {
-            question:"Computers calculate numbers in what mode?",
-            a:"Decimal",
-            b:"Octal",
-            c:"Binary",
-            d:"None of the above",
-            correct:"Binary",
-        },
-        {
-            question:"Which is the largest planet of our solar system?",
-            a:"Saturn",
-            b:"Jupiter",
-            c:"Pluto",
-            d:"Neptune",
-            correct:"Jupiter",
-        },
-        {
-            question:"Which is the Largest continent?",
-            a:"Europe",
-            b:"America",
-            c:"Asia",
-            d:"Africa",
-            correct:"Asia",
-        },
-        {
-            question:"Which avatar of Lord Vishnu fought against a demon with the help of a vanar sena?",
-            a:"Sri Krishna",
-            b:"Vamana",
-            c:"Sri Rama",
-            d:"Narasimha",
-            correct:"Sri Rama",
-        },
-        {
-            question:"Which of these number is normally required to verify a transaction when shopping online using a debit card or credit card?",
-            a:"PAN",
-            b:"PNR",
-            c:"CVV",
-            d:"AADHAAR",
-            correct:"CVV",
-        },
-        {
-            question:"Approximately how many bones are there in the human body?",
-            a:"108",
-            b:"206",
-            c:"196",
-            d:"308",
-            correct:"206",
-        }
-
-        ],
+            question: "O que é um software antivírus?",
+            a: "Um programa usado para invadir sistemas de computador",
+            b: "Um dispositivo físico para proteger o computador de vírus",
+            c: "Um programa que detecta e remove ameaças de malware",
+            d: "Uma técnica para criptografar dados confidenciais",
+            correct: "Um programa que detecta e remove ameaças de malware",
+        }],
 // ----------------- 6 ------------------------------
         [{
-            question:"In which year India got independence?",
-            a:"1945",
-            b:"1947",
-            c:"1948",
-            d:"1951",
-            correct:"1947",
+            question: "Você recebe um e-mail solicitando que clique num link para verificar a conta bancária, pois há uma atividade suspeita. O que você deve fazer?",
+            a: "Clicar no link e fornecer as informações solicitadas",
+            b: "Ignorar o e-mail e apagar imediatamente",
+            c: "Encaminhar o e-mail para os seus amigos",
+            d: "Verificar diretamente com o seu banco por meio de um canal seguro",
+            correct: "Verificar diretamente com o seu banco por meio de um canal seguro",
         },
         {
-            question:"What is the chemical formula for hydrocloric acid?",
-            a:"HCL",
-            b:"H2SO4",
-            c:"NA2O3",
-            d:"NACL",
-            correct:"HCL",
+            question: "Você está usando um computador público numa biblioteca e precisa fazer login na sua conta de e-mail. O que você deve fazer para proteger as suas informações pessoais?",
+            a: "Usar uma senha fácil de lembrar para não esquecer",
+            b: "Permitir que o computador guarde suas informações de login",
+            c: "Utilizar uma ligação VPN para criptografar os seus dados",
+            d: "Partilhar as suas informações de login com um amigo",
+            correct: "Utilizar uma ligação VPN para criptografar os seus dados",
         },
         {
-            question:"In which of the following festivals are boat races a special feature?",
-            a:"Rongali Bihu",
-            b:"Onam",
-            c:"Pongal",
-            d:"Navratri",
-            correct:"Onam",
-        },
-        {
-            question:"Pongal is a popular festival of which state?",
-            a:"Kerala",
-            b:"Karnataka",
-            c:"Tamil Nadu",
-            d:"Andhra Pradesh",
-            correct:"Tamil Nadu",
-        },
-        {
-            question:"What is said to someone who is being blessed to have a long life span?",
-            a:"Vijayi Bhava",
-            b:"Aayushmaan Bhava",
-            c:"Saubhagyavatee Bhava",
-            d:"Yashasvi Bhava",
-            correct:"Aayushmaan Bhava",
-        },
-        {
-            question:"Which of these animals does not have spots on their bodies in their adulthood?",
-            a:"Giraffe",
-            b:"Leopard",
-            c:"Cheetah",
-            d:"Lion",
-            correct:"Lion",
-        },
-        {
-            question:"Samukha, Vighnaharta, and Ekadanta are other names for which Hindu god?",
-            a:"Brahma",
-            b:"Krishna",
-            c:"Rama",
-            d:"Ganesha",
-            correct:"Ganesha",
-        },
-        {
-            question:"Who invented the Light Bulb?",
-            a:"Charles Babbage ",
-            b:"Alexander Graham Bell",
-            c:"Alexander Fleming",
-            d:"Thomas Alva Edison",
-            correct:"Thomas Alva Edison",
-        },
-        {
-            question:"Name the Father of the Indian Constitution?",
-            a:"Dr. B. R. Ambedkar",
-            b:"APJ Abdul Kalam",
-            c:"Jawaharlal Nehru",
-            d:"Indira Gandhi",
-            correct:"Dr. B. R. Ambedkar",
-        },
-        {
-            question:"Which of these pilgrimage sites is closest to the sea?",
-            a:"Amarnath",
-            b:"Bodh Gaya",
-            c:"Ujjain",
-            d:"Dwarka",
-            correct:"Dwarka",
-        },
-        {
-            question:"Which of these dishes is not a single item but has two separate components?",
-            a:"Batata vada",
-            b:"Dal makhni",
-            c:"Puran poli",
-            d:"Puri bhaji",
-            correct:"Puri bhaji",
-        },
-        {
-            question:"Which of the-following is wrongly matched?",
-            a:"Qutab Minar- Delhi",
-            b:"Taj Mahal -Agra",
-            c:"Ajanta Caves -Maharashtra",
-            d:"Charminar -Lucknow",
-            correct:"Charminar -Lucknow",
-        },
-        {
-            question:"Which planet is known as the Red Planet?",
-            a:"Mars",
-            b:"Mercury",
-            c:"Jupiter",
-            d:"Earth",
-            correct:"Mars",
-        },
-        ],
+            question: "Você recebe uma mensagem de texto de um número desconhecido, solicitando que você clique num link para ganhar um prémio. O que você deve fazer?",
+            a: "Clicar no link e seguir as instruções",
+            b: "Responder à mensagem com as suas informações pessoais",
+            c: "Ignorar a mensagem e apagar imediatamente",
+            d: "Informar um adulto responsável sobre a mensagem suspeita",
+            correct: "Ignorar a mensagem e apagar imediatamente",
+        }],
 // ----------------7 ------------------------------
         [{
-            question:"Which glacier is the primary source of the river Ganga?",
-            a:"Pindari ",
-            b:"Godwin-Austen",
-            c:"Siachen",
-            d:"Gangotri",
-            correct:"Gangotri",
+            question: "Você está usando um Wi-Fi público num café. O que você deve fazer para garantir a segurança das suas informações?",
+            a: "Realizar todas as transações financeiras e aceder as contas confidenciais",
+            b: "Desativar a firewall do seu dispositivo para uma ligação mais rápida",
+            c: "Evitar o acesso a sites que requerem senhas ou informações pessoais",
+            d: "Partilhar as suas informações de login com outros utilizadores do Wi-Fi",
+            correct: "Evitar o acesso a sites que requerem senhas ou informações pessoais",
         },
         {
-            question:"Who wrote the national anthem of India?",
-            a:"Mahatma Gandhi",
-            b:"Jawarharlal Nehru",
-            c:"Bankim Chandra Chatterjee",
-            d:"Rabindranath Tagore",
-            correct:"Rabindranath Tagore",
+            question: "Você recebe um telefonema de alguém se passando por um representante de suporte técnico. Eles solicitam acesso remoto ao seu computador para resolver um problema. O que você deve fazer?",
+            a: "Fornecer acesso remoto ao seu computador imediatamente",
+            b: "Desligar o telefone e bloquear o número",
+            c: "Seguir as instruções do suposto suporte técnico",
+            d: "Verificar a autenticidade da ligação com a empresa de suporte técnico",
+            correct: "Verificar a autenticidade da ligação com a empresa de suporte técnico",
         },
         {
-            question:"Union Budget is always presented first in ________",
-            a:"The Lok Sabha",
-            b:"The Rajya Sabha",
-            c:"Joint session of the Parliament",
-            d:"Meeting of the Union Cabinet",
-            correct:"The Lok Sabha",
-        },
-        {
-            question:"Smallest of all the continents?",
-            a:"Australia",
-            b:"Asia",
-            c:"Africa",
-            d:"America",
-            correct:"Australia",
-        },
-        {
-            question:"Haidar Ali and Tipu Sultan were rulers of which place?",
-            a:"Vijayanagar",
-            b:"Travancore",
-            c:"Mysore",
-            d:"Banganapalle",
-            correct:"Mysore",
-        },
-        {
-            question:"Which is the largest joint in the human body?",
-            a:"Elbow",
-            b:"Hip",
-            c:"Knee",
-            d:"Shoulder",
-            correct:"Knee",
-        },
-        {
-            question:"Which of these is the name of a type of women’s clothing?",
-            a:"Padmini",
-            b:"Man Bai",
-            c:"Jodha",
-            d:"Anarkali",
-            correct:"Anarkali",
-        },
-        {
-            question:"Which of these substances is composed of only two elements – hydrogen and oxygen?",
-            a:"Water",
-            b:"Salt",
-            c:"Sugar",
-            d:"Blood",
-            correct:"Water",
-        },
-        {
-            question:"Who is the executive head of the Union Territories?",
-            a:"President",
-            b:"Prime Minister",
-            c:"Home Minister",
-            d:"Governor",
-            correct:"President",
-        },
-        {
-            question:"'CD' computer abbreviation usually means?",
-            a:"Command Description",
-            b:"Change Data",
-            c:"Copy Density",
-            d:"Compact Disc",
-            correct:"Compact Disc",
-        },
-        {
-            question:"The Tropic of Cancer does not pass through which of these Indian states?",
-            a:"Gujarat",
-            b:"Chattisgarh",
-            c:"West Bengal",
-            d:"Odisha",
-            correct:"Odisha",
-        },
-        {
-            question:"P.V Sindhu excels in which one of the following sports?",
-            a:"Motorsports",
-            b:"Chess",
-            c:"Badminton",
-            d:"Tennis",
-            correct:"Badminton",
+            question: "Você recebe uma mensagem de um colega de turma pedindo que você partilhe as suas credenciais de login para aceder a um documento importante. O que você deve fazer?",
+            a: "Partilhar as suas credenciais de login com o colega",
+            b: "Ignorar a mensagem e não partilhar as suas credenciais",
+            c: "Responder à mensagem pedindo mais informações sobre o documento",
+            d: "Verificar com o professor ou responsável antes de partilhar qualquer informação",
+            correct: "Verificar com o professor ou responsável antes de partilhar qualquer informação",
         }],
 // ----------------- 8 ------------------------------
         [{
@@ -795,70 +199,6 @@ const kbcQuestions =
             c:"Krishna",
             d:"Sun-God",
             correct:"Sun-God",
-        },
-        {
-            question:"From which of these rivers did our country get its name 'India' ?",
-            a:"Sutlej",
-            b:"Sindhu",
-            c:"Shipra",
-            d:"Hindon",
-            correct:"Sindhu",
-        },
-        {
-            question:"The term of a State Governor is",
-            a:"3 years",
-            b:"4 years",
-            c:"5 years",
-            d:"6 years",
-            correct:"5 years",
-        },
-        {
-            question:"Which of the following state is bordered south to Bihar?",
-            a:"Uttarpradesh",
-            b:"West Bengal",
-            c:"Jharkhand",
-            d:"None of these",
-            correct:"Jharkhand",
-        },
-        {
-            question:"The national song of India was composed by",
-            a:"Iqbal",
-            b:"Rabindranath Tagore",
-            c:"Jai Shankar Prasad",
-            d:"Bankim Chandra Chatterji",
-            correct:"Bankim Chandra Chatterji",
-        },
-        {
-            question:"The ratio of width of our National flag to its length is ",
-            a:"2:3",
-            b:"2:4",
-            c:"3:4",
-            d:"3:5",
-            correct:"2:3",
-        },
-        {
-            question:"Which of the following is not a social networking site?",
-            a:"Twitter",
-            b:"Facebook",
-            c:"Google+",
-            d:"Wikipedia",
-            correct:"Wikipedia",
-        },
-        {
-            question:"In Ramayan Which of the following is a bird?",
-            a:"Jatayu",
-            b:"Balli",
-            c:"Sugreev",
-            d:"Jammvant",
-            correct:"Jatayu",
-        },
-        {
-            question:"Which bird is the universal symbol of peace?",
-            a:"Bluebird",
-            b:"Peacock",
-            c:"Dove",
-            d:"Kingfisher",
-            correct:"Dove",
         }],
 // ----------------- 9 ------------------------------
         [{
@@ -884,30 +224,6 @@ const kbcQuestions =
             c:"India/Bangladesh 1962",
             d:"India/SriLanka 1972",
             correct:"India/Pakistan 1999",
-        },
-        {
-            question:"When Indo China War happened",
-            a:"1972",
-            b:"1962",
-            c:"1965",
-            d:"1947",
-            correct:"1962",
-        },
-        {
-            question:"The United Nations Organization has its Headquarters at",
-            a:"Bali",
-            b:"Hague",
-            c:"New York, USA",
-            d:"Washington DC",
-            correct:"New York, USA",
-        },
-        {
-            question:"Who was the first Governor General of Pakistan?",
-            a:"Muhammed Ali Jinnah",
-            b:"Sir Ghulam Muhammed",
-            c:"Lord Mountbatten",
-            d:"Lord Wavell",
-            correct:"Muhammed Ali Jinnah",
         }],
 // ----------------- 10 ------------------------------
         [{
@@ -933,38 +249,6 @@ const kbcQuestions =
             c:"Sahara",
             d:"Sonoran",
             correct:"Sahara",
-        },
-        {
-            question:"The first Governor General of India was ?",
-            a:"Rajaji",
-            b:"Lord Canning",
-            c:"Warren Hasting",
-            d:"Lord Mount Batten",
-            correct:"Warren Hasting",
-        },
-        {
-            question:"The Battle of Plassey was fought in",
-            a:"1757",
-            b:"1857",
-            c:"1756",
-            d:"1856",
-            correct:"1757",
-        },
-        {
-            question:"Meenakshi Temple is in",
-            a:"Puri",
-            b:"Trivandrum",
-            c:"Chennai",
-            d:"Madurai",
-            correct:"Madurai",
-        },
-        {
-            question:"Which of these Union Territories or states is landlocked? ",
-            a:"Daman and Diu",
-            b:"Andhra Pradesh",
-            c:"West Bengal",
-            d:"Telangana",
-            correct:"Telangana",
         }],
 // ----------------- 11 ------------------------------
         [{
@@ -990,54 +274,6 @@ const kbcQuestions =
             c:"Karnaprayag",
             d:"Vishnuprayag",
             correct:"Devprayag",
-        },
-        {
-            question:"Who is considered the 'Father of the Indian Films'?",
-            a:"Prithviraj Kapoor",
-            b:"Dada Saheb Phalke",
-            c:"Raj Kapoor",
-            d:"Amitabh Bachchan",
-            correct:"Dada Saheb Phalke",
-        },
-        {
-            question:"Mohiniattam dance from developed originally in which state?",
-            a:"Tamil Nadu",
-            b:"Orissa",
-            c:"Kerala",
-            d:"Karnataka",
-            correct:"Kerala",
-        },
-        {
-            question:"Which of the following folk dance forms is associated with Gujarat?",
-            a:"Garba",
-            b:"Bhangra",
-            c:"Nautanki",
-            d:"Kathakal",
-            correct:"Garba",
-        },
-        {
-            question:"Of which of the following states is Nautanki, a folk dance?",
-            a:"Uttar Pradesh",
-            b:"Arunachal Pradesh",
-            c:"Meghalaya",
-            d:"Orissa",
-            correct:"Uttar Pradesh",
-        },
-        {
-            question:"The classical Indian dance of Andhra Pradesh is",
-            a:"Kathakali",
-            b:"Odissi",
-            c:"Bharatnalyam",
-            d:"Kuchipudi",
-            correct:"Kuchipudi",
-        },
-        {
-            question:" According to the Ramayana, which son of Vishwakarma built the bridge to Lanka? ",
-            a:"Ajakapat",
-            b:"Nahusha",
-            c:"Dvividha",
-            d:"Nala",
-            correct:"Nala",
         }],
 // ----------------- 12 ------------------------------
         [{
@@ -1063,22 +299,6 @@ const kbcQuestions =
             c:"Bangalore",
             d:"Quilon",
             correct:"Cuttack",
-        },
-        {
-            question:"when Jallianwala Bagh Massacre took place?",
-            a:"March 23, 1911",
-            b:"April 13, 1919",
-            c:"March 13, 1929",
-            d:"April 23, 1918",
-            correct:"April 13, 1919",
-        },
-        {
-            question:"Which one of these is an avatar of Lord Vishnu who once lifted the Earth with his tusk?",
-            a:"Vamana",
-            b:"Narasimha",
-            c:"Varah",
-            d:"Airavata",
-            correct:"Varah",
         }],
 // ----------------- 13 ------------------------------
         [{
@@ -1104,16 +324,8 @@ const kbcQuestions =
             c:"Panini",
             d:"Aryabhatt",
             correct:"Panini",
-        },
-        {
-            question:"Which of the following is a recipient of the Nobel Peace Prize?",
-            a:"Mahatma Gandhi",
-            b:"Swami Vivekananda",
-            c:"Rabindranath Tagore",
-            d:"Mother Teresa",
-            correct:"Mother Teresa",
         }],
-// ----------------- 14000 ------------------------------
+// ----------------- 14 ------------------------------
         [
         {
             question:"Right to property was removed from the list of Fundamental Rights during the rule of?",
@@ -1155,6 +367,14 @@ const kbcQuestions =
             c:"Equator",
             d:"Tropic of Capricorn",
             correct:"Tropic of Capricorn",
+        },
+        {
+            question:"Who became the first Indian woman to join the International Olympic Committee?",
+            a:"Anjum Chopra",
+            b:"P T Usha",
+            c:"Karnam Malleswari",
+            d:"Nita Ambani",
+            correct:"Nita Ambani",
         }],
 
 ];
@@ -1243,7 +463,7 @@ const timeUp = ()=>{
     document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
     document.getElementById(correctOptionId).style.color = "black";
 
-    document.getElementById("result").innerText = "#Acabou o Tempo";
+    document.getElementById("result").innerText = "#Time Up";
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
@@ -1254,7 +474,7 @@ const stopWatch = ()=>{
     tikTikSound();
 }
 const tikTikSound = ()=>{
-    document.querySelector(".timer").innerText = 30;
+    document.querySelector(".timer").innerText = 60;
     timerSound.currentTime=0;
     timerSound.play();
     tikTikText();
@@ -1306,7 +526,7 @@ const DoubleDipWrongAnswerSound = ()=>{
 
 function doubleDipLogic(e){
 
-    document.querySelector("#result").innerText = "Resposta errada! Tente outra vez";
+    document.querySelector("#result").innerText = "Wrong Answer ! Make Second Guess";
     e.style.backgroundColor = "lightcoral";
     optButtonEnabled();
     e.style.pointerEvents = "none";
@@ -1329,7 +549,7 @@ const resultAnalysis = (e)=>{
         let amount = document.getElementById(currentQuestIndex).innerText;
         amount = amount.replaceAll(",","");
         quitFlag.winningAmount = parseInt(amount);
-        document.getElementById("result").innerText = "";
+        document.getElementById("result").innerText = "Correct Answer";
         e.style.backgroundColor = "greenyellow";
         enableNextButton();
         enableQuitButton();
@@ -1349,7 +569,7 @@ const resultAnalysis = (e)=>{
         else
         {
             WrongAnswerSound();
-            document.getElementById("result").innerText = "";
+            document.getElementById("result").innerText = "Wrong Answer";
             e.style.backgroundColor = "lightcoral";
             correctOptionId = correctOptionAnsEle(correctAns);
             document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
@@ -1470,7 +690,7 @@ const doubleDipCrossMark = ()=>{
 const doubleDipHandler = ()=>{
     lifelineFlag["doubleDipFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar a dupla escolha ...";
+    document.getElementById("result").innerText = "Implementing double-dip ...";
     LifelineImplementationSound();
     document.querySelector(".double-dip").classList.add("pointer-events-none");
     doubleDipCrossMark();
@@ -1478,7 +698,7 @@ const doubleDipHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "--Escolha a primeira opção--";
+        document.getElementById("result").innerText = "--Make Your first Guess--";
         lifelineFlag.doubleDipMarker = 1;
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -1549,7 +769,7 @@ const flipTheQuestionLogic = ()=>{
 const flipTheQuestionHandler = ()=>{
     lifelineFlag["flipTheQuestionFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar troca de questão ...";
+    document.getElementById("result").innerText = "Implementing flip-the-question ...";
     LifelineImplementationSound();
     document.querySelector(".flip-the-question").classList.add("pointer-events-none");
     flipTheQuestionCrossMark();
@@ -1557,7 +777,7 @@ const flipTheQuestionHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Questão trocada!!";
+        document.getElementById("result").innerText = "Question flipped!!";
         flipTheQuestionLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -1631,7 +851,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineFlag["fiftyFiftyFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar o 50-50 ...";
+    document.getElementById("result").innerText = "Implementing 50-50 ...";
     LifelineImplementationSound();
     document.querySelector(".fifty-fifty").classList.add("pointer-events-none");
     fiftyFiftyCrossMark();
@@ -1639,7 +859,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Duas respotas erradas removidas!";
+        document.getElementById("result").innerText = "Two Wrong Answers Removed!!";
         fiftyFiftyLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -1763,7 +983,7 @@ const audiencePollAddHandler = ()=>{
     lifelineFlag["audiencePollFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar a Ajuda do Público ...";
+    document.getElementById("result").innerText = "Implementing Audience Poll ...";
     AudiencePollImplementationSound();
     document.querySelector(".audience-poll").classList.add("pointer-events-none");
     audiencePollCrossMark();
@@ -1889,17 +1109,17 @@ const buildMoneyArea = ()=>{
             <div id="1" class="each-prize">2000</div>
             <div id="2" class="each-prize">3000</div>
             <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10.000</div>
-            <div id="5" class="each-prize">20.000</div>
-            <div id="6" class="each-prize">40.000</div>
-            <div id="7" class="each-prize">80.000</div>
-            <div id="8" class="each-prize">160.000</div>
-            <div id="9" class="each-prize">320.000</div>
-            <div id="10" class="each-prize">640.000</div>
-            <div id="11" class="each-prize">1.250.000</div>
-            <div id="12" class="each-prize">2.500.000</div>
-            <div id="13" class="each-prize">5.000.000</div>
-            <div id="14" class="each-prize">10.000.000</div>
+            <div id="4" class="each-prize">10,000</div>
+            <div id="5" class="each-prize">20,000</div>
+            <div id="6" class="each-prize">40,000</div>
+            <div id="7" class="each-prize">80,000</div>
+            <div id="8" class="each-prize">1,60,000</div>
+            <div id="9" class="each-prize">3,20,000</div>
+            <div id="10" class="each-prize">6,40,000</div>
+            <div id="11" class="each-prize">12,50,000</div>
+            <div id="12" class="each-prize">25,00,000</div>
+            <div id="13" class="each-prize">50,00,000</div>
+            <div id="14" class="each-prize">1 Crore</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
@@ -1913,7 +1133,7 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
+    document.getElementById("result").innerText = `Question for ${prizeValue}`;
 }
 
 function congratulationComment(ind){
@@ -2093,21 +1313,21 @@ const WelcomeSound = ()=>{
 // just to show the money stack before the game begins..
 const showMoneyStack = ()=>{
     let moneyAreaPrizes = `
-    <div id="0" class="each-prize">1000</div>
-    <div id="1" class="each-prize">2000</div>
-    <div id="2" class="each-prize">3000</div>
-    <div id="3" class="each-prize">5000</div>
-    <div id="4" class="each-prize">10.000</div>
-    <div id="5" class="each-prize">20.000</div>
-    <div id="6" class="each-prize">40.000</div>
-    <div id="7" class="each-prize">80.000</div>
-    <div id="8" class="each-prize">160.000</div>
-    <div id="9" class="each-prize">320.000</div>
-    <div id="10" class="each-prize">640.000</div>
-    <div id="11" class="each-prize">1.250.000</div>
-    <div id="12" class="each-prize">2.500.000</div>
-    <div id="13" class="each-prize">5.000.000</div>
-    <div id="14" class="each-prize">10.000.000</div>
+            <div id="0" class="each-prize">1000</div>
+            <div id="1" class="each-prize">2000</div>
+            <div id="2" class="each-prize">3000</div>
+            <div id="3" class="each-prize">5000</div>
+            <div id="4" class="each-prize">10,000</div>
+            <div id="5" class="each-prize">20,000</div>
+            <div id="6" class="each-prize">40,000</div>
+            <div id="7" class="each-prize">80,000</div>
+            <div id="8" class="each-prize">1,60,000</div>
+            <div id="9" class="each-prize">3,20,000</div>
+            <div id="10" class="each-prize">6,40,000</div>
+            <div id="11" class="each-prize">12,50,000</div>
+            <div id="12" class="each-prize">25,00,000</div>
+            <div id="13" class="each-prize">50,00,000</div>
+            <div id="14" class="each-prize">1 Crore</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
@@ -2142,7 +1362,7 @@ const showLifeline = ()=>{
 const sitOnTheHotSeatFun = ()=>{
     let contestantName = document.getElementById("contestant-name-input").value;
     if(contestantName=="")
-        contestantName = "Anónimo";
+        contestantName = "Anonymous";
     page1Sound.pause();
     WelcomeSound();
     document.getElementById("page2").classList.add("show-modal");
