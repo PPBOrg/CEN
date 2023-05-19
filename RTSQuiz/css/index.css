@@ -26,7 +26,7 @@
 
 .page-container{
 
-    margin-top: 300px;
+    margin-top: 250px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -54,6 +54,21 @@ input[type='text']::placeholder{
     text-align: center;
 }
 
+#contestant-name-input{
+    background-color: darkred;
+    width: 20em;
+    font-size:1em;
+    outline:none;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    padding: 7px;
+    border-color: black;
+    text-align:center;
+    
+
+}
 .btn , .lifeline-no{
     font-size:1em;
     padding:8px;
@@ -87,17 +102,21 @@ a{
 }
 
 .btn-rules{
-    width: 200px;
+    width: 100px;
     font-size:1em;
     outline:none;
     background:none;
     color:white;
     border:none;
     cursor: pointer;
+
 }
 
 #sitOnTheHotSeat{
     background-color: darkred;
+    width: 20em;
+    text-align: center;
+    border-radius: 20px;
 }
 
 #sitOnTheHotSeat:hover{
@@ -173,20 +192,22 @@ a{
 
 .game-area-people{
     /* border:1px solid orange; */
+    margin-top: 5px;
     flex-basis:10%;
     display:flex;
     justify-content: space-around;
     align-items:center;
+    
 }
 
 .people{
     /* border:1px solid orange; */
     display: flex;
     margin-top:0.3em;
+    margin-top: 10px;
 }
 
 .person-image,.lets-play-image{
-    border:1px solid var(--page2btn);
     height:50px;
     width:50px;
     background-image: url(https://icon-library.com/images/my-account-icon-png/my-account-icon-png-22.jpg);
@@ -198,6 +219,7 @@ a{
 
 .person-info p{
     font-size:1rem;
+    padding: 10px;
 }
 .person-info span{
     font-size:0.7rem;
@@ -259,6 +281,7 @@ a{
     justify-content: center;
     align-items: center;
 }
+
 .lets-play-image{
     height:500px;
     width:500px;
@@ -298,10 +321,11 @@ a{
     /* background-color:yellowgreen; */
 }
 .question{
-    /* border:1px solid var(--page2btn); */
-    /* height:108px; */
+    font-weight: bold;
     padding:0.7em;
-    /* text-align:center; */
+    text-align: center;
+    color: white;
+    font-size: 1.3em;
     /* background-color:rgba(137, 43, 226, 0.1); */
 }
 .answer-box{
@@ -352,7 +376,7 @@ a{
     display:flex;
     flex-direction: column-reverse;
     justify-content: center;
-    background-color:darkcyan;
+    background-color:#2abe76;
     box-shadow: 0px 3px 3px white;
     /* align-items:center; */
 }
@@ -528,7 +552,7 @@ a{
 .transfer-image{
     /* border:2px solid red; */
     border-radius: 5px;
-    height:400px;
+    height:600px;
     /* width:300px; */
     background-color: green;
     background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.jpg");
@@ -628,16 +652,19 @@ a{
 
     /* --------------- QUIT PAGE --------- */
     .quit-container{
-        margin-top: 150px;
+        margin-top: 30px;
     }
     .transfer-image{
         position:absolute;
         opacity:0;
         pointer-events: none;
+        margin-top:15em;
+
     }
     .quit-info-container{
         width:90vw;
         text-align:center;
+        margin-top:15em;
         /* border:1px solid white; */
     }
     .people{
@@ -647,7 +674,7 @@ a{
         font-size:3rem;
     }
     .money{
-        font-size:2.8rem;
+        font-size:2.5rem;
     }
 }
 

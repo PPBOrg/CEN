@@ -413,7 +413,7 @@ let quitFlag = {
 }
 
 let colors = {
-    page2btn : "rgb(30, 115, 125)",
+    page2btn : "#03318c",
 }
 
 
@@ -467,7 +467,7 @@ const timeUp = ()=>{
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
-    setTimeout(openQuitPage,8000);
+    setTimeout(openQuitPage,5000);
 }
 
 const stopWatch = ()=>{
@@ -554,7 +554,7 @@ const resultAnalysis = (e)=>{
         enableNextButton();
         enableQuitButton();
         if(currentQuestIndex==14){
-            setTimeout(openQuitPage,5000);
+            setTimeout(openQuitPage,3000);
             quitFlag.oneCroreFlag = 1;
             disableQuitButton();
         }
@@ -576,7 +576,7 @@ const resultAnalysis = (e)=>{
             document.getElementById(correctOptionId).style.color = "black";
             disableQuitButton();
             quitFlag.wrongAnswerFlag = 1;
-            setTimeout(openQuitPage,12000);
+            setTimeout(openQuitPage,5000);
         }
     }
 }
@@ -1063,7 +1063,7 @@ const buildKBCquestions = ()=>{
         <div class="timer-container">
             <div class="timer">0</div>
         </div>
-        <div class="question-box">
+        <div class="question-box" style="background-color:#03318c">
             <div class="question">${currQuestObject.question}</div>
         </div>
         <div class="answer-box">
@@ -1109,25 +1109,28 @@ const buildMoneyArea = ()=>{
             <div id="1" class="each-prize">2000</div>
             <div id="2" class="each-prize">3000</div>
             <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10,000</div>
-            <div id="5" class="each-prize">20,000</div>
-            <div id="6" class="each-prize">40,000</div>
-            <div id="7" class="each-prize">80,000</div>
-            <div id="8" class="each-prize">1,60,000</div>
-            <div id="9" class="each-prize">3,20,000</div>
-            <div id="10" class="each-prize">6,40,000</div>
-            <div id="11" class="each-prize">12,50,000</div>
-            <div id="12" class="each-prize">25,00,000</div>
-            <div id="13" class="each-prize">50,00,000</div>
-            <div id="14" class="each-prize">1 Crore</div>
+            <div id="4" class="each-prize">10.000</div>
+            <div id="5" class="each-prize">20.000</div>
+            <div id="6" class="each-prize">40.000</div>
+            <div id="7" class="each-prize">80.000</div>
+            <div id="8" class="each-prize">160.000</div>
+            <div id="9" class="each-prize">320.000</div>
+            <div id="10" class="each-prize">640.000</div>
+            <div id="11" class="each-prize">1.250.000</div>
+            <div id="12" class="each-prize">2.500.000</div>
+            <div id="13" class="each-prize">5.000.000</div>
+            <div id="14" class="each-prize">10.000.000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
-    document.getElementById('4').style.color = "gold";
-    document.getElementById('9').style.color = "gold";
+    document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
+    document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
+    document.getElementById('14').style.cssText = "color: gold; font-size: 30px;";
+
+    
     let prizeId = `${currentQuestIndex}`;
     document.getElementById(prizeId).style.backgroundColor = colors.page2btn;
-    document.getElementById(prizeId).style.borderRadius = "5px";
+    document.getElementById(prizeId).style.borderRadius = "10px";
 }
 
 const questForSpecificPrizeMoney = ()=>{
@@ -1257,7 +1260,7 @@ function openQuitPage(){
                 <div class="person-image"></div>
                 <div class="person-info">
                     <p id="contestant-name">${contestantName}</p>
-                    <span>contestant</span>
+                    <span>Competidor</span>
                 </div>
             </div>
             <div class="congratulation">${congratulation}</div>
@@ -1284,7 +1287,7 @@ function quitButton(){
         optButtonDisabled();
         clearStopWatch();
         correctAnswerSound.pause();
-        setTimeout(openQuitPage,4000);
+        setTimeout(openQuitPage,3000);
     });
 }
 
@@ -1317,22 +1320,23 @@ const showMoneyStack = ()=>{
             <div id="1" class="each-prize">2000</div>
             <div id="2" class="each-prize">3000</div>
             <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10,000</div>
-            <div id="5" class="each-prize">20,000</div>
-            <div id="6" class="each-prize">40,000</div>
-            <div id="7" class="each-prize">80,000</div>
-            <div id="8" class="each-prize">1,60,000</div>
-            <div id="9" class="each-prize">3,20,000</div>
-            <div id="10" class="each-prize">6,40,000</div>
-            <div id="11" class="each-prize">12,50,000</div>
-            <div id="12" class="each-prize">25,00,000</div>
-            <div id="13" class="each-prize">50,00,000</div>
-            <div id="14" class="each-prize">1 Crore</div>
+            <div id="4" class="each-prize">10.000</div>
+            <div id="5" class="each-prize">20.000</div>
+            <div id="6" class="each-prize">40.000</div>
+            <div id="7" class="each-prize">80.000</div>
+            <div id="8" class="each-prize">160.000</div>
+            <div id="9" class="each-prize">320.000</div>
+            <div id="10" class="each-prize">640.000</div>
+            <div id="11" class="each-prize">1.250.000</div>
+            <div id="12" class="each-prize">2.500.000</div>
+            <div id="13" class="each-prize">5.000.000</div>
+            <div id="14" class="each-prize">10.000.000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
-    document.getElementById('4').style.color = "gold";
-    document.getElementById('9').style.color = "gold";
+    document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
+    document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
+    document.getElementById('14').style.cssText = "color: gold; font-size: 30px;";
 }
 
 const hoverLifeline = ()=>{
