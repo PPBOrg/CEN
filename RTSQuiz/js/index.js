@@ -460,10 +460,10 @@ const timeUp = ()=>{
     quitFlag.timeUpFlag = 1;
     correctAns = currQuestObject.correct;
     correctOptionId = correctOptionAnsEle(correctAns);
-    document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
+    document.getElementById(correctOptionId).style.backgroundColor = "green";
     document.getElementById(correctOptionId).style.color = "black";
 
-    document.getElementById("result").innerText = "#Time Up";
+    document.getElementById("result").innerText = "#Tempo Limite";
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
@@ -526,7 +526,7 @@ const DoubleDipWrongAnswerSound = ()=>{
 
 function doubleDipLogic(e){
 
-    document.querySelector("#result").innerText = "Wrong Answer ! Make Second Guess";
+    document.querySelector("#result").innerText = "Resposta Errada! Faça a Segunda Escolha.";
     e.style.backgroundColor = "lightcoral";
     optButtonEnabled();
     e.style.pointerEvents = "none";
@@ -549,8 +549,8 @@ const resultAnalysis = (e)=>{
         let amount = document.getElementById(currentQuestIndex).innerText;
         amount = amount.replaceAll(",","");
         quitFlag.winningAmount = parseInt(amount);
-        document.getElementById("result").innerText = "Correct Answer";
-        e.style.backgroundColor = "greenyellow";
+        document.getElementById("result").innerText = "Resposta Correcta";
+        e.style.backgroundColor = "green";
         enableNextButton();
         enableQuitButton();
         if(currentQuestIndex==14){
@@ -569,10 +569,10 @@ const resultAnalysis = (e)=>{
         else
         {
             WrongAnswerSound();
-            document.getElementById("result").innerText = "Wrong Answer";
+            document.getElementById("result").innerText = "Resposta Errada";
             e.style.backgroundColor = "lightcoral";
             correctOptionId = correctOptionAnsEle(correctAns);
-            document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
+            document.getElementById(correctOptionId).style.backgroundColor = "green";
             document.getElementById(correctOptionId).style.color = "black";
             disableQuitButton();
             quitFlag.wrongAnswerFlag = 1;
@@ -678,7 +678,7 @@ function LifelineImplementationSound(){
     audiencePollSound.play();
 }
 
-// double dip lifeline --------------------
+//_____________________________________double dip_____________________________________
 
 
 const doubleDipCrossMark = ()=>{
@@ -698,7 +698,7 @@ const doubleDipHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "--Make Your first Guess--";
+        document.getElementById("result").innerText = "--Faça a Primeira Escolha";
         lifelineFlag.doubleDipMarker = 1;
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -719,7 +719,7 @@ const doubleDip = ()=>{
     }
 }
 
-// flip the question lifeline -------------
+// ________________________________flip the question_____________________________________
 
 
 const flipTheQuestionCrossMark = ()=>{
@@ -769,7 +769,7 @@ const flipTheQuestionLogic = ()=>{
 const flipTheQuestionHandler = ()=>{
     lifelineFlag["flipTheQuestionFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing flip-the-question ...";
+    document.getElementById("result").innerText = "Implementa Mudar de Pergunta";
     LifelineImplementationSound();
     document.querySelector(".flip-the-question").classList.add("pointer-events-none");
     flipTheQuestionCrossMark();
@@ -777,7 +777,7 @@ const flipTheQuestionHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Question flipped!!";
+        document.getElementById("result").innerText = "Pergunta Mudada!!";
         flipTheQuestionLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -797,7 +797,7 @@ const flipTheQuestion = ()=>{
         document.querySelector(".flip-the-question").classList.add("pointer-events-none"); 
     }
 }
-// 50-50 lifeline-----------
+// _____________________________________50-50_____________________________________
 
 const fiftyFiftyCrossMark = ()=>{
     let t = document.querySelector(".fifty-fifty").children;
@@ -851,7 +851,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineFlag["fiftyFiftyFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing 50-50 ...";
+    document.getElementById("result").innerText = "Implementa 50-50";
     LifelineImplementationSound();
     document.querySelector(".fifty-fifty").classList.add("pointer-events-none");
     fiftyFiftyCrossMark();
@@ -859,7 +859,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Two Wrong Answers Removed!!";
+        document.getElementById("result").innerText = "Duas Resposta Erradas!!";
         fiftyFiftyLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -879,7 +879,7 @@ const fiftyFifty = ()=>{
         document.querySelector(".fifty-fifty").classList.add("pointer-events-none"); 
     }
 }
-// audience-poll---------------
+// __________________________________audience-poll_____________________________________
 
 const audiencePollCrossMark = ()=>{
     let t = document.querySelector(".audience-poll").children;
@@ -983,7 +983,7 @@ const audiencePollAddHandler = ()=>{
     lifelineFlag["audiencePollFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing Audience Poll ...";
+    document.getElementById("result").innerText = "Implementa a Audiencia";
     AudiencePollImplementationSound();
     document.querySelector(".audience-poll").classList.add("pointer-events-none");
     audiencePollCrossMark();
@@ -1105,27 +1105,29 @@ const nextButtonFun = ()=>{
 
 const buildMoneyArea = ()=>{
     let moneyAreaPrizes = `
-            <div id="0" class="each-prize">1000</div>
-            <div id="1" class="each-prize">2000</div>
-            <div id="2" class="each-prize">3000</div>
-            <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10.000</div>
-            <div id="5" class="each-prize">20.000</div>
-            <div id="6" class="each-prize">40.000</div>
-            <div id="7" class="each-prize">80.000</div>
-            <div id="8" class="each-prize">160.000</div>
-            <div id="9" class="each-prize">320.000</div>
-            <div id="10" class="each-prize">640.000</div>
-            <div id="11" class="each-prize">1.250.000</div>
-            <div id="12" class="each-prize">2.500.000</div>
-            <div id="13" class="each-prize">5.000.000</div>
-            <div id="14" class="each-prize">10.000.000</div>
+            <div id="0" class="each-prize">100</div>
+            <div id="1" class="each-prize">200</div>
+            <div id="2" class="each-prize">400</div>
+            <div id="3" class="each-prize">800</div>
+            <div id="4" class="each-prize">1,000</div>
+            <div id="5" class="each-prize">2,000</div>
+            <div id="6" class="each-prize">4,000</div>
+            <div id="7" class="each-prize">8,000</div>
+            <div id="8" class="each-prize">16,000</div>
+            <div id="9" class="each-prize">32,000</div>
+            <div id="10" class="each-prize">64,000</div>
+            <div id="11" class="each-prize">125,000</div>
+            <div id="12" class="each-prize">250,000</div>
+            <div id="13" class="each-prize">500,000</div>
+            <div id="14" class="each-prize">1000,000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
-    document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
-    document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
-    document.getElementById('14').style.cssText = "color: gold; font-size: 30px;";
+    document.getElementById('0').style.cssText = "color: gold;";
+    document.getElementById('8').style.cssText = "color: gold;";
+    document.getElementById('11').style.cssText = "color: gold;"
+    document.getElementById('8').style.cssText = "color: gold;"
+    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
 
     
     let prizeId = `${currentQuestIndex}`;
@@ -1136,21 +1138,23 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Question for ${prizeValue}`;
+    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
 }
 
 function congratulationComment(ind){
     let comment ;
-    if(ind<1)
+    if(ind >= 0 && ind < 5)
         comment = "Estagiário de Cibersegurança";
-    else if(ind>=2 && ind<5)
+    
+    else if( ind >= 5 && ind < 9)
         comment = "Técnico de Cibersegurança";
-    else if(ind>=5 && ind<8)
+    
+    else if(ind >= 9 && ind < 12)
         comment = "Analista de Cibersegurança";
-    else if(ind>=8 && ind<11)
+    
+    else if( ind >= 12 && ind < 14)
         comment = "Engenheiro de Cibersegurança";
-    else if(ind>=11 && ind<14)
-        comment = "Consultor de Cibersegurança";
+    
     else
         comment = "Especialista em Cibersegurança";
 
@@ -1158,15 +1162,23 @@ function congratulationComment(ind){
 }
 
 function lastEndComment(money){
-    let com;
-    if(money>=320000)
-        com = "congratulation for winning such a huge amount!";
-    else if(money>0)
-        com = "It was a good game. played nicely!!";
-    else
-        com = "Sorry you could not win anything.";
+    let comment;
+    if(money >= 0 && money < 2000)
+        comment = "Precisas de Aprender de Cibersegurança";
 
-    return com;
+    else if(money >= 2000 && money < 32,000)
+        comment = "Foste Insufeciente no Jogo. Mostras te que tens poucos conhecimentos de Cibersegurança";
+
+    else if(money >= 32,000 && money < 250,000) 
+        comment = "Bom Jogo. Tens conhecimentos de Cibersegurança!";
+
+    else if(money >= 250,000 && money < 1000,000) 
+        comment = "Muito Bom Jogo. Tens grandes conhecimentos de Cibersegurança!";
+
+    else
+        comment = "Parabéns. Tu percebes tudo de Cibersegurança!";
+
+    return comment;
 }
 
 function reverseString(str) {
@@ -1235,14 +1247,20 @@ function openQuitPage(){
     {
         let temp = currentQuestIndex-1;
         congratulation = congratulationComment(temp);
-        if(quitFlag.winningAmount>=320000)
-            money = 320000;
-        else if(quitFlag.winningAmount>=10000)
-            money = 10000;
-        else 
-            money = 0;        
-        lastComment =  `Seus pontos em prêmio cairam de  ${quitFlag.winningAmount} para ${money} devido à resposta errada.`;
-        money = formatedMoney(money);    
+        if(quitFlag.winningAmount>=32,000){
+            lastComment = lastEndComment(money);
+            money = 32,000;
+        }
+         
+        else if(quitFlag.winningAmount>=1000){
+            lastComment = lastEndComment(money);
+            money = 1000;
+        }       
+        else {
+            lastComment = lastEndComment(money);
+            money = 0; 
+        }
+        money = formatedMoney(money);     
     }
     else 
     {
@@ -1264,8 +1282,9 @@ function openQuitPage(){
                 </div>
             </div>
             <div class="congratulation">${congratulation}</div>
-            <div class="prize-money-earned">Prêmio em Pontos: </div>
+            <div class="prize-money-earned">Pontos Adquiridos: </div>
             <div class="money">${money}</div>
+            <br>
             <div class="last-comment">${lastComment}</div>
         </div>
     </div>
@@ -1281,7 +1300,7 @@ function quitButton(){
         quitFlag.quitButtonFlag = 1;
         correctAns = currQuestObject.correct;
         correctOptionId = correctOptionAnsEle(correctAns);
-        document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
+        document.getElementById(correctOptionId).style.backgroundColor = "green";
         document.getElementById(correctOptionId).style.color = "black";
         DoubleDipWrongAnswerSound();
         optButtonDisabled();
@@ -1316,27 +1335,27 @@ const WelcomeSound = ()=>{
 // just to show the money stack before the game begins..
 const showMoneyStack = ()=>{
     let moneyAreaPrizes = `
-            <div id="0" class="each-prize">1000</div>
-            <div id="1" class="each-prize">2000</div>
-            <div id="2" class="each-prize">3000</div>
-            <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10.000</div>
-            <div id="5" class="each-prize">20.000</div>
-            <div id="6" class="each-prize">40.000</div>
-            <div id="7" class="each-prize">80.000</div>
-            <div id="8" class="each-prize">160.000</div>
-            <div id="9" class="each-prize">320.000</div>
-            <div id="10" class="each-prize">640.000</div>
-            <div id="11" class="each-prize">1.250.000</div>
-            <div id="12" class="each-prize">2.500.000</div>
-            <div id="13" class="each-prize">5.000.000</div>
-            <div id="14" class="each-prize">10.000.000</div>
+            <div id="0" class="each-prize">100</div>
+            <div id="1" class="each-prize">200</div>
+            <div id="2" class="each-prize">400</div>
+            <div id="3" class="each-prize">800</div>
+            <div id="4" class="each-prize">1,000</div>
+            <div id="5" class="each-prize">2,000</div>
+            <div id="6" class="each-prize">4,000</div>
+            <div id="7" class="each-prize">8,000</div>
+            <div id="8" class="each-prize">16,000</div>
+            <div id="9" class="each-prize">32,000</div>
+            <div id="10" class="each-prize">64,000</div>
+            <div id="11" class="each-prize">125,000</div>
+            <div id="12" class="each-prize">250,000</div>
+            <div id="13" class="each-prize">500,000</div>
+            <div id="14" class="each-prize">1000,000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
-    document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
-    document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
-    document.getElementById('14').style.cssText = "color: gold; font-size: 30px;";
+    document.getElementById('4').style.cssText = "color: gold;";
+    document.getElementById('9').style.cssText = "color: gold;";
+    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
 }
 
 const hoverLifeline = ()=>{
