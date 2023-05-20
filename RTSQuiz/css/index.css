@@ -130,7 +130,7 @@ a{
     height:75vh;
     width:75vw;
     background-color:lightseagreen;
-    background-image:url("../images/walpaperend.jpg");
+    background-image:url("../images/background.png");
     background-repeat: no-repeat;
     background-position:right;
     background-size:cover;
@@ -290,7 +290,7 @@ a{
     margin-bottom: 100px;
     border:none;
     cursor:pointer;
-    background-image:url("../images/logo.png");
+    background-image:url("../images/logo3.png");
 }
 
 
