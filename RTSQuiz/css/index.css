@@ -15,7 +15,7 @@
     height:100vh;
     width:100vw;
     background-color:rgb(1, 1, 27);
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/welcomescreen.png");
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("welcomescreen.png");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ a{
     height:75vh;
     width:75vw;
     background-color:lightseagreen;
-    background-image:url("../images/walpaperend.jpg");
+    background-image:url("walpaperend.jpg");
     background-repeat: no-repeat;
     background-position:right;
     background-size:cover;
@@ -290,7 +290,7 @@ a{
     margin-bottom: 100px;
     border:none;
     cursor:pointer;
-    background-image:url("../images/logo.png");
+    background-image:url("logo.png");
 }
 
 
@@ -450,18 +450,18 @@ a{
   }
 
   .audience-poll{
-    background-image:url("../images/AudiencePoll.jpeg");
+    background-image:url("AudiencePoll.jpeg");
   }
 
   .fifty-fifty{
-    background-image:url("../images/fifty-fifty.jpeg");
+    background-image:url("fifty-fifty.jpeg");
   }
 
   .flip-the-question{
-    background-image:url("../images/switchQuest.jpeg");
+    background-image:url("switchQuest.jpeg");
   }
   .double-dip{
-    background-image:url("../images/doubleDip.jpeg");
+    background-image:url("images/doubleDip.jpeg");
   }
 
   
@@ -557,7 +557,7 @@ a{
     height:600px;
     /* width:300px; */
     background-color: green;
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("moneyTransfer.jpg");
     background-position:center;
     background-size:cover;
     margin-right:2rem;
@@ -599,7 +599,7 @@ a{
 
 @media screen and (max-width:480px){
     .container{
-        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart2.jpg");
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("walpaperstart2.jpg");
         background-size:cover;
         background-position:center;
         background-repeat: no-repeat;
