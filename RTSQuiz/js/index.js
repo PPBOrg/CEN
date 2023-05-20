@@ -586,7 +586,7 @@ const bulletTimeout = (flag,bullets,clearTimeoutId,e)=>{
     if(flag==3)
         {
             document.querySelector("#game-area-result").classList.remove("checking-bullets-container");
-            let resultBack = `<div id="result" class="result">Welcome to Kaun Banega Crorepati</div>`;
+            let resultBack = `<div id="result" class="result">Pronto para a aventura?<p>Clica na imagem abaixo para começares a jogar!</p></div>`;
             let lifelineBox = `
                 <div class="lifeline-box">
                     <div class="lifeline-item audience-poll">
@@ -691,7 +691,7 @@ const doubleDipCrossMark = ()=>{
 const doubleDipHandler = ()=>{
     lifelineFlag["doubleDipFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing double-dip ...";
+    document.getElementById("result").innerText = "A implementar palpite duplo ...";
     LifelineImplementationSound();
     document.querySelector(".double-dip").classList.add("pointer-events-none");
     doubleDipCrossMark();
@@ -699,7 +699,7 @@ const doubleDipHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "--Make Your first Guess--";
+        document.getElementById("result").innerText = "--Faz o teu 1º palpite--";
         lifelineFlag.doubleDipMarker = 1;
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -770,7 +770,7 @@ const flipTheQuestionLogic = ()=>{
 const flipTheQuestionHandler = ()=>{
     lifelineFlag["flipTheQuestionFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing flip-the-question ...";
+    document.getElementById("result").innerText = "A implementar troca de pergunta ...";
     LifelineImplementationSound();
     document.querySelector(".flip-the-question").classList.add("pointer-events-none");
     flipTheQuestionCrossMark();
@@ -778,7 +778,7 @@ const flipTheQuestionHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Question flipped!!";
+        document.getElementById("result").innerText = "Pergunta trocada!!";
         flipTheQuestionLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -852,7 +852,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineFlag["fiftyFiftyFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing 50-50 ...";
+    document.getElementById("result").innerText = "A implementar 50-50 ...";
     LifelineImplementationSound();
     document.querySelector(".fifty-fifty").classList.add("pointer-events-none");
     fiftyFiftyCrossMark();
@@ -860,7 +860,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Duas Respostas Erradas Removidas!";
+        document.getElementById("result").innerText = "Duas respostas erradas removidas!";
         fiftyFiftyLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -984,7 +984,7 @@ const audiencePollAddHandler = ()=>{
     lifelineFlag["audiencePollFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing Audience Poll ...";
+    document.getElementById("result").innerText = "A implementar ajuda do público ...";
     AudiencePollImplementationSound();
     document.querySelector(".audience-poll").classList.add("pointer-events-none");
     audiencePollCrossMark();
