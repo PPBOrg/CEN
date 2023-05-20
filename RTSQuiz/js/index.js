@@ -2,7 +2,7 @@ const kbcQuestions =
 [
 // ----------------- 1 ------------------------------
 [{
-    question: "Qual dos seguintes opções é um exemplo de informação pessoal sensível?",
+    question: "Qual das seguintes opções é um exemplo de informação pessoal sensível?",
     a: "Nome de um filme favorito",
     b: "Endereço de e-mail",
     c: "Cor favorita",
@@ -1160,7 +1160,7 @@ function congratulationComment(ind){
 
 function lastEndComment(money){
     let com;
-    if(money>=320000)
+    if(money>=10000)
         com = "Parabéns, és o grande vencedor!";
     else if(money>0)
         com = "Foi um bom jogo, jogaste bem!";
