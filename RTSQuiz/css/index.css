@@ -15,7 +15,7 @@
     height:100vh;
     width:100vw;
     background-color:rgb(1, 1, 27);
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart1.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/welcomescreen.png");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -26,16 +26,17 @@
 
 .page-container{
 
-    margin-top: 250px;
+    margin-top: auto;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
 .input-box{
-    margin-bottom:1.7em;
+    margin-bottom: 35px;
+    width: 30em;
 }
 .input-box input{
 
@@ -55,15 +56,15 @@ input[type='text']::placeholder{
 }
 
 #contestant-name-input{
-    background-color: darkred;
-    width: 20em;
+    background-color: rgb(230, 66, 66);
+    width: 25em;
     font-size:1em;
     outline:none;
     text-align: center;
     border-radius: 20px;
     background-color: white;
     color: black;
-    padding: 7px;
+    padding: 9px;
     border-color: black;
     text-align:center;
     
@@ -113,10 +114,11 @@ a{
 }
 
 #sitOnTheHotSeat{
-    background-color: darkred;
+    background-color: rgb(102, 148, 233);
     width: 20em;
     text-align: center;
     border-radius: 20px;
+    margin-bottom: 35px;
 }
 
 #sitOnTheHotSeat:hover{
