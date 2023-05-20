@@ -6,7 +6,7 @@
 }
 
 :root{
-    --page2btn:rgb(77, 77, 77);
+    --page2btn:rgb(59, 127, 204);
 }
 
 
@@ -122,7 +122,7 @@ a{
 }
 
 #sitOnTheHotSeat:hover{
-    background-color: darkgreen;
+    background-color: rgb(63, 170, 63);
 }
 
 /* -------------------------modal for rules ------------- */
@@ -237,7 +237,7 @@ a{
 
 .lifeline-no{
     background:none;
-    font-family: "Algerian", Arial , Helvetica , sans-serif;
+    font-family: "Arial" , Helvetica , sans-serif;
     font-size:1.6em;
     padding:0 6px;
     margin-right:2px;
@@ -552,16 +552,12 @@ a{
     /* transform:translate(-50%,-50%); */
 }
 .transfer-image{
-    /* border:2px solid red; */
-    border-radius: 5px;
-    height:600px;
-    /* width:300px; */
-    background-color: green;
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.jpg");
+    border-radius: none;
+    height:500px;
+    width:500px;
+    background-image:url("../images/logo3.png");
     background-position:center;
     background-size:cover;
-    margin-right:2rem;
-    flex-basis:30%;
 }
 
 .quit-info-container{

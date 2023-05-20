@@ -2,7 +2,7 @@ const kbcQuestions =
 [
 // ----------------- 1 ------------------------------
 [{
-    question: "Qual dos seguintes opções é um exemplo de informação pessoal sensível?",
+    question: "Qual das seguintes opções é um exemplo de informação pessoal sensível?",
     a: "Nome de um filme favorito",
     b: "Endereço de e-mail",
     c: "Cor favorita",
