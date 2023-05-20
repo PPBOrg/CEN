@@ -527,7 +527,7 @@ const DoubleDipWrongAnswerSound = ()=>{
 
 function doubleDipLogic(e){
 
-    document.querySelector("#result").innerText = "Wrong Answer ! Make Second Guess";
+    document.querySelector("#result").innerText = "Resposta Errada! Tenta o 2º palpite!";
     e.style.backgroundColor = "lightcoral";
     optButtonEnabled();
     e.style.pointerEvents = "none";
@@ -550,7 +550,7 @@ const resultAnalysis = (e)=>{
         let amount = document.getElementById(currentQuestIndex).innerText;
         amount = amount.replaceAll(",","");
         quitFlag.winningAmount = parseInt(amount);
-        document.getElementById("result").innerText = "Correct Answer";
+        document.getElementById("result").innerText = "Resposta Correcta!";
         e.style.backgroundColor = "greenyellow";
         enableNextButton();
         enableQuitButton();
@@ -570,7 +570,7 @@ const resultAnalysis = (e)=>{
         else
         {
             WrongAnswerSound();
-            document.getElementById("result").innerText = "Wrong Answer";
+            document.getElementById("result").innerText = "Resposta Errada!";
             e.style.backgroundColor = "lightcoral";
             correctOptionId = correctOptionAnsEle(correctAns);
             document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
@@ -860,7 +860,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Two Wrong Answers Removed!!";
+        document.getElementById("result").innerText = "Duas Respostas Erradas Removidas!";
         fiftyFiftyLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -1137,7 +1137,7 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Question for ${prizeValue}`;
+    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
 }
 
 function congratulationComment(ind){
@@ -1161,11 +1161,11 @@ function congratulationComment(ind){
 function lastEndComment(money){
     let com;
     if(money>=320000)
-        com = "congratulation for winning such a huge amount!";
+        com = "Parabéns, és o grande vencedor!";
     else if(money>0)
-        com = "It was a good game. played nicely!!";
+        com = "Foi um bom jogo, jogaste bem!";
     else
-        com = "Sorry you could not win anything.";
+        com = "Que pena, não conseguiste ganhar nenhum ponto.";
 
     return com;
 }
@@ -1221,7 +1221,7 @@ function openQuitPage(){
     {
         congratulation = congratulationComment(14);
         money = "1 Ponto";
-        lastComment = "Parabens pela sua Vitória";
+        lastComment = "Parabéns pela tua vitória";
     }
     else if(quitFlag.timeUpFlag)
     {
@@ -1242,7 +1242,7 @@ function openQuitPage(){
             money = 10000;
         else 
             money = 0;        
-        lastComment =  `Seus pontos em prêmio cairam de  ${quitFlag.winningAmount} para ${money} devido à resposta errada.`;
+        lastComment =  `Os teus pontos caíram de  ${quitFlag.winningAmount} para ${money} devido à resposta errada.`;
         money = formatedMoney(money);    
     }
     else 
@@ -1261,11 +1261,11 @@ function openQuitPage(){
                 <div class="person-image"></div>
                 <div class="person-info">
                     <p id="contestant-name">${contestantName}</p>
-                    <span>Competidor</span>
+                    <span>Jogador</span>
                 </div>
             </div>
             <div class="congratulation">${congratulation}</div>
-            <div class="prize-money-earned">Prêmio em Pontos: </div>
+            <div class="prize-money-earned">Prémio em Pontos: </div>
             <div class="money">${money}</div>
             <div class="last-comment">${lastComment}</div>
         </div>
@@ -1367,7 +1367,7 @@ const showLifeline = ()=>{
 const sitOnTheHotSeatFun = ()=>{
     let contestantName = document.getElementById("contestant-name-input").value;
     if(contestantName=="")
-        contestantName = "Anonymous";
+        contestantName = "Anónimo";
     page1Sound.pause();
     WelcomeSound();
     document.getElementById("page2").classList.add("show-modal");
