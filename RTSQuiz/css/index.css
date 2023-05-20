@@ -308,7 +308,7 @@ a{
     justify-content: center;
     align-items:center;
     font-size:2rem;
-    font-family: "Algerian", Arial , Helvetica , sans-serif;
+    font-family: "Arial" , Helvetica , sans-serif;
     box-shadow:0px 0px 10px 3px var(--page2btn);
 }
 .question-box{
@@ -425,7 +425,7 @@ a{
   .lifeline-item{
     height:2rem;
     width:3.4rem;
-    box-shadow:0px 0px 6px 2px aqua;
+    box-shadow:0px 0px 6px 2px #00ffff;
     background-color: aqua;
     background-position:center;
     background-size: cover;
