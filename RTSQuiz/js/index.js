@@ -464,7 +464,7 @@ const timeUp = ()=>{
     document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
     document.getElementById(correctOptionId).style.color = "black";
 
-    document.getElementById("result").innerText = "#Time Up";
+    document.getElementById("result").innerText = "Acabou o tempo!";
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
@@ -747,14 +747,14 @@ const flipTheQuestionLogic = ()=>{
         <div class="timer-container">
             <div class="timer">0</div>
         </div>
-        <div class="question-box">
+        <div class="question-box" style="background-color:#3b7fcc">
             <div class="question">${currQuestObject.question}</div>
         </div>
         <div class="answer-box">
-            <div id="a" class="answer-opt"><span>A)</span>${currQuestObject.a}</div>
-            <div id="b" class="answer-opt"><span>B)</span>${currQuestObject.b}</div>
-            <div id="c" class="answer-opt"><span>C)</span>${currQuestObject.c}</div>
-            <div id="d" class="answer-opt"><span>D)</span>${currQuestObject.d}</div>
+            <div id="a" class="answer-opt" style="background-color:#3b7fcc"><span>A)</span>${currQuestObject.a}</div>
+            <div id="b" class="answer-opt" style="background-color:#3b7fcc"><span>B)</span>${currQuestObject.b}</div>
+            <div id="c" class="answer-opt" style="background-color:#3b7fcc"><span>C)</span>${currQuestObject.c}</div>
+            <div id="d" class="answer-opt" style="background-color:#3b7fcc"><span>D)</span>${currQuestObject.d}</div>
         </div>
     `;
 
@@ -1064,14 +1064,14 @@ const buildKBCquestions = ()=>{
         <div class="timer-container">
             <div class="timer">0</div>
         </div>
-        <div class="question-box" style="background-color:#03318c">
+        <div class="question-box" style="background-color:#3b7fcc">
             <div class="question">${currQuestObject.question}</div>
         </div>
         <div class="answer-box">
-            <div id="a" class="answer-opt"><span>A)</span>${currQuestObject.a}</div>
-            <div id="b" class="answer-opt"><span>B)</span>${currQuestObject.b}</div>
-            <div id="c" class="answer-opt"><span>C)</span>${currQuestObject.c}</div>
-            <div id="d" class="answer-opt"><span>D)</span>${currQuestObject.d}</div>
+            <div id="a" class="answer-opt" style="background-color:#3b7fcc"><span>A)</span>${currQuestObject.a}</div>
+            <div id="b" class="answer-opt" style="background-color:#3b7fcc"><span>B)</span>${currQuestObject.b}</div>
+            <div id="c" class="answer-opt" style="background-color:#3b7fcc"><span>C)</span>${currQuestObject.c}</div>
+            <div id="d" class="answer-opt" style="background-color:#3b7fcc"><span>D)</span>${currQuestObject.d}</div>
         </div>
     `;
 
@@ -1121,12 +1121,14 @@ const buildMoneyArea = ()=>{
             <div id="12" class="each-prize">2.500.000</div>
             <div id="13" class="each-prize">5.000.000</div>
             <div id="14" class="each-prize">10.000.000</div>
+            <div id="15" class="each-prize">Pontos</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
     document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
     document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
-    document.getElementById('14').style.cssText = "color: gold; font-size: 30px;";
+    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
+    document.getElementById('15').style.cssText = "color: gold; font-size: 40px;";
 
     
     let prizeId = `${currentQuestIndex}`;
@@ -1137,7 +1139,7 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
+    document.getElementById("result").innerText = `Pergunta para ${prizeValue} pontos`;
 }
 
 function congratulationComment(ind){
@@ -1332,12 +1334,14 @@ const showMoneyStack = ()=>{
             <div id="12" class="each-prize">2.500.000</div>
             <div id="13" class="each-prize">5.000.000</div>
             <div id="14" class="each-prize">10.000.000</div>
+            <div id="15" class="each-prize">Pontos</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
     document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
     document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
-    document.getElementById('14').style.cssText = "color: gold; font-size: 30px;";
+    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
+    document.getElementById('15').style.cssText = "color: gold; font-size: 40px;";
 }
 
 const hoverLifeline = ()=>{
