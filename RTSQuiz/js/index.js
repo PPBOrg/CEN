@@ -96,7 +96,7 @@ const kbcQuestions =
     question: "O que é importante fazer ao receber um e-mail suspeito de um remetente desconhecido?",
     a: "Abrir os anexos e links fornecidos no e-mail",
     b: "Responder ao e-mail fornecendo suas informações pessoais",
-    c: "Apagar o e-mail sem abrir ou clicar em qualquer coisa",
+    c: "Excluir o e-mail sem abrir ou clicar em qualquer coisa",
     d: "Encaminhar o e-mail para todos os seus contatos",
     correct: "Excluir o e-mail sem abrir ou clicar em qualquer coisa",
 }],
@@ -379,17 +379,17 @@ const kbcQuestions =
 
 
 ];
-const page1Sound = new Audio("Kaun_Banega_Crorepati_Bgm.mp3");
-const welcomeSound = new Audio("page2_kbc_intro_audio.mp3")
-const timerSound = new Audio("Kbc Timer - Tik Tik KBC Clock.mp3");
-const wrongAnswerSound = new Audio("wrong_with_dramatic.mp3");
-const correctAnswerSound = new Audio("kbc_background.mp3");
-const answerLockSound = new Audio("ans_lock2.mp3");
-const lifelineComesUpSound = new Audio("lifeline-comesUp.mp3");
-const audiencePollSound = new Audio("/audience_poll.mp3");
-const audiencePollImplementationSound = new Audio("audiencePoll_Implementation.mp3");
-const doubleDipWrongAnswerSound = new Audio("wrong_ans.mp3");
-const themeMusic = new Audio("THEME_MUSIC2.mp3");
+const page1Sound = new Audio("./sounds/Kaun_Banega_Crorepati_Bgm.mp3");
+const welcomeSound = new Audio("./sounds/page2_kbc_intro_audio.mp3")
+const timerSound = new Audio("./sounds/Kbc Timer - Tik Tik KBC Clock.mp3");
+const wrongAnswerSound = new Audio("./sounds/wrong_with_dramatic.mp3");
+const correctAnswerSound = new Audio("./sounds/kbc_background.mp3");
+const answerLockSound = new Audio("./sounds/ans_lock2.mp3");
+const lifelineComesUpSound = new Audio("./sounds/lifeline-comesUp.mp3");
+const audiencePollSound = new Audio("./sounds/audience_poll.mp3");
+const audiencePollImplementationSound = new Audio("./sounds/audiencePoll_Implementation.mp3");
+const doubleDipWrongAnswerSound = new Audio("./sounds/wrong_ans.mp3");
+const themeMusic = new Audio("./sounds/THEME_MUSIC2.mp3");
 
 let currentQuestIndex = 0;
 let currentRandomQuestIndex;
@@ -461,10 +461,10 @@ const timeUp = ()=>{
     quitFlag.timeUpFlag = 1;
     correctAns = currQuestObject.correct;
     correctOptionId = correctOptionAnsEle(correctAns);
-    document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
+    document.getElementById(correctOptionId).style.backgroundColor = "green";
     document.getElementById(correctOptionId).style.color = "black";
 
-    document.getElementById("result").innerText = "Acabou o tempo!";
+    document.getElementById("result").innerText = "#Tempo Limite";
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
@@ -527,7 +527,7 @@ const DoubleDipWrongAnswerSound = ()=>{
 
 function doubleDipLogic(e){
 
-    document.querySelector("#result").innerText = "Resposta Errada! Tenta o 2º palpite!";
+    document.querySelector("#result").innerText = "Resposta Errada! Faça a Segunda Escolha.";
     e.style.backgroundColor = "lightcoral";
     optButtonEnabled();
     e.style.pointerEvents = "none";
@@ -550,8 +550,8 @@ const resultAnalysis = (e)=>{
         let amount = document.getElementById(currentQuestIndex).innerText;
         amount = amount.replaceAll(",","");
         quitFlag.winningAmount = parseInt(amount);
-        document.getElementById("result").innerText = "Resposta Correcta!";
-        e.style.backgroundColor = "greenyellow";
+        document.getElementById("result").innerText = "Resposta Correcta";
+        e.style.backgroundColor = "green";
         enableNextButton();
         enableQuitButton();
         if(currentQuestIndex==14){
@@ -570,10 +570,10 @@ const resultAnalysis = (e)=>{
         else
         {
             WrongAnswerSound();
-            document.getElementById("result").innerText = "Resposta Errada!";
+            document.getElementById("result").innerText = "Resposta Errada";
             e.style.backgroundColor = "lightcoral";
             correctOptionId = correctOptionAnsEle(correctAns);
-            document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
+            document.getElementById(correctOptionId).style.backgroundColor = "green";
             document.getElementById(correctOptionId).style.color = "black";
             disableQuitButton();
             quitFlag.wrongAnswerFlag = 1;
@@ -586,7 +586,7 @@ const bulletTimeout = (flag,bullets,clearTimeoutId,e)=>{
     if(flag==3)
         {
             document.querySelector("#game-area-result").classList.remove("checking-bullets-container");
-            let resultBack = `<div id="result" class="result">Pronto para a aventura?<p>Clica na imagem abaixo para começares a jogar!</p></div>`;
+            let resultBack = `<div id="result" class="result">Welcome to Kaun Banega Crorepati</div>`;
             let lifelineBox = `
                 <div class="lifeline-box">
                     <div class="lifeline-item audience-poll">
@@ -679,7 +679,7 @@ function LifelineImplementationSound(){
     audiencePollSound.play();
 }
 
-// double dip lifeline --------------------
+//_____________________________________double dip_____________________________________
 
 
 const doubleDipCrossMark = ()=>{
@@ -691,7 +691,7 @@ const doubleDipCrossMark = ()=>{
 const doubleDipHandler = ()=>{
     lifelineFlag["doubleDipFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar palpite duplo ...";
+    document.getElementById("result").innerText = "Implementing double-dip ...";
     LifelineImplementationSound();
     document.querySelector(".double-dip").classList.add("pointer-events-none");
     doubleDipCrossMark();
@@ -699,7 +699,7 @@ const doubleDipHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "--Faz o teu 1º palpite--";
+        document.getElementById("result").innerText = "--Faça a Primeira Escolha";
         lifelineFlag.doubleDipMarker = 1;
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -720,7 +720,7 @@ const doubleDip = ()=>{
     }
 }
 
-// flip the question lifeline -------------
+// ________________________________flip the question_____________________________________
 
 
 const flipTheQuestionCrossMark = ()=>{
@@ -747,14 +747,14 @@ const flipTheQuestionLogic = ()=>{
         <div class="timer-container">
             <div class="timer">0</div>
         </div>
-        <div class="question-box" style="background-color:#3b7fcc">
+        <div class="question-box">
             <div class="question">${currQuestObject.question}</div>
         </div>
         <div class="answer-box">
-            <div id="a" class="answer-opt" style="background-color:#3b7fcc"><span>A)</span>${currQuestObject.a}</div>
-            <div id="b" class="answer-opt" style="background-color:#3b7fcc"><span>B)</span>${currQuestObject.b}</div>
-            <div id="c" class="answer-opt" style="background-color:#3b7fcc"><span>C)</span>${currQuestObject.c}</div>
-            <div id="d" class="answer-opt" style="background-color:#3b7fcc"><span>D)</span>${currQuestObject.d}</div>
+            <div id="a" class="answer-opt"><span>A)</span>${currQuestObject.a}</div>
+            <div id="b" class="answer-opt"><span>B)</span>${currQuestObject.b}</div>
+            <div id="c" class="answer-opt"><span>C)</span>${currQuestObject.c}</div>
+            <div id="d" class="answer-opt"><span>D)</span>${currQuestObject.d}</div>
         </div>
     `;
 
@@ -770,7 +770,7 @@ const flipTheQuestionLogic = ()=>{
 const flipTheQuestionHandler = ()=>{
     lifelineFlag["flipTheQuestionFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar troca de pergunta ...";
+    document.getElementById("result").innerText = "Implementa Mudar de Pergunta";
     LifelineImplementationSound();
     document.querySelector(".flip-the-question").classList.add("pointer-events-none");
     flipTheQuestionCrossMark();
@@ -778,7 +778,7 @@ const flipTheQuestionHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Pergunta trocada!!";
+        document.getElementById("result").innerText = "Pergunta Mudada!!";
         flipTheQuestionLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -798,7 +798,7 @@ const flipTheQuestion = ()=>{
         document.querySelector(".flip-the-question").classList.add("pointer-events-none"); 
     }
 }
-// 50-50 lifeline-----------
+// _____________________________________50-50_____________________________________
 
 const fiftyFiftyCrossMark = ()=>{
     let t = document.querySelector(".fifty-fifty").children;
@@ -852,7 +852,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineFlag["fiftyFiftyFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar 50-50 ...";
+    document.getElementById("result").innerText = "Implementa 50-50";
     LifelineImplementationSound();
     document.querySelector(".fifty-fifty").classList.add("pointer-events-none");
     fiftyFiftyCrossMark();
@@ -860,7 +860,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Duas respostas erradas removidas!";
+        document.getElementById("result").innerText = "Duas Resposta Erradas!!";
         fiftyFiftyLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -880,7 +880,7 @@ const fiftyFifty = ()=>{
         document.querySelector(".fifty-fifty").classList.add("pointer-events-none"); 
     }
 }
-// audience-poll---------------
+// __________________________________audience-poll_____________________________________
 
 const audiencePollCrossMark = ()=>{
     let t = document.querySelector(".audience-poll").children;
@@ -984,7 +984,7 @@ const audiencePollAddHandler = ()=>{
     lifelineFlag["audiencePollFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "A implementar ajuda do público ...";
+    document.getElementById("result").innerText = "Implementa a Audiencia";
     AudiencePollImplementationSound();
     document.querySelector(".audience-poll").classList.add("pointer-events-none");
     audiencePollCrossMark();
@@ -1064,14 +1064,14 @@ const buildKBCquestions = ()=>{
         <div class="timer-container">
             <div class="timer">0</div>
         </div>
-        <div class="question-box" style="background-color:#3b7fcc">
+        <div class="question-box" style="background-color:#03318c">
             <div class="question">${currQuestObject.question}</div>
         </div>
         <div class="answer-box">
-            <div id="a" class="answer-opt" style="background-color:#3b7fcc"><span>A)</span>${currQuestObject.a}</div>
-            <div id="b" class="answer-opt" style="background-color:#3b7fcc"><span>B)</span>${currQuestObject.b}</div>
-            <div id="c" class="answer-opt" style="background-color:#3b7fcc"><span>C)</span>${currQuestObject.c}</div>
-            <div id="d" class="answer-opt" style="background-color:#3b7fcc"><span>D)</span>${currQuestObject.d}</div>
+            <div id="a" class="answer-opt"><span>A)</span>${currQuestObject.a}</div>
+            <div id="b" class="answer-opt"><span>B)</span>${currQuestObject.b}</div>
+            <div id="c" class="answer-opt"><span>C)</span>${currQuestObject.c}</div>
+            <div id="d" class="answer-opt"><span>D)</span>${currQuestObject.d}</div>
         </div>
     `;
 
@@ -1106,29 +1106,29 @@ const nextButtonFun = ()=>{
 
 const buildMoneyArea = ()=>{
     let moneyAreaPrizes = `
-            <div id="0" class="each-prize">1000</div>
-            <div id="1" class="each-prize">2000</div>
-            <div id="2" class="each-prize">3000</div>
-            <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10.000</div>
-            <div id="5" class="each-prize">20.000</div>
-            <div id="6" class="each-prize">40.000</div>
-            <div id="7" class="each-prize">80.000</div>
-            <div id="8" class="each-prize">160.000</div>
-            <div id="9" class="each-prize">320.000</div>
-            <div id="10" class="each-prize">640.000</div>
-            <div id="11" class="each-prize">1.250.000</div>
-            <div id="12" class="each-prize">2.500.000</div>
-            <div id="13" class="each-prize">5.000.000</div>
-            <div id="14" class="each-prize">10.000.000</div>
-            <div id="15" class="each-prize">Pontos</div>
+            <div id="0" class="each-prize">100</div>
+            <div id="1" class="each-prize">200</div>
+            <div id="2" class="each-prize">400</div>
+            <div id="3" class="each-prize">800</div>
+            <div id="4" class="each-prize">1000</div>
+            <div id="5" class="each-prize">2000</div>
+            <div id="6" class="each-prize">4000</div>
+            <div id="7" class="each-prize">8000</div>
+            <div id="8" class="each-prize">16000</div>
+            <div id="9" class="each-prize">32000</div>
+            <div id="10" class="each-prize">64000</div>
+            <div id="11" class="each-prize">125000</div>
+            <div id="12" class="each-prize">250000</div>
+            <div id="13" class="each-prize">500000</div>
+            <div id="14" class="each-prize">1000000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
-    document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
-    document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
-    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
-    document.getElementById('15').style.cssText = "color: gold; font-size: 40px;";
+    document.getElementById('0').style.cssText = "color: gold;";
+    document.getElementById('5').style.cssText = "color: gold;";
+    document.getElementById('9').style.cssText = "color: gold;";
+    document.getElementById('12').style.cssText = "color: gold;"
+    document.getElementById('14').style.cssText = "color: gold; font-size: 20px;";
 
     
     let prizeId = `${currentQuestIndex}`;
@@ -1139,21 +1139,23 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Pergunta para ${prizeValue} pontos`;
+    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
 }
 
 function congratulationComment(ind){
     let comment ;
-    if(ind<1)
+    if(ind >= 0 && ind < 5)
         comment = "Estagiário de Cibersegurança";
-    else if(ind>=2 && ind<5)
+    
+    else if( ind >= 5 && ind < 9)
         comment = "Técnico de Cibersegurança";
-    else if(ind>=5 && ind<8)
+    
+    else if(ind >= 9 && ind < 12)
         comment = "Analista de Cibersegurança";
-    else if(ind>=8 && ind<11)
+    
+    else if( ind >= 12 && ind < 14)
         comment = "Engenheiro de Cibersegurança";
-    else if(ind>=11 && ind<14)
-        comment = "Consultor de Cibersegurança";
+    
     else
         comment = "Especialista em Cibersegurança";
 
@@ -1161,15 +1163,23 @@ function congratulationComment(ind){
 }
 
 function lastEndComment(money){
-    let com;
-    if(money>=10000)
-        com = "Parabéns, és o grande vencedor!";
-    else if(money>0)
-        com = "Foi um bom jogo, jogaste bem!";
-    else
-        com = "Que pena, não conseguiste ganhar nenhum ponto.";
+    let comment;
+    if(money >= 0 && money < 2000)
+        comment = "Precisas de Aprender de Cibersegurança";
 
-    return com;
+    else if(money >= 2000 && money < 32000)
+        comment = "Foste Insufeciente no Jogo. Mostras te que tens poucos conhecimentos de Cibersegurança";
+
+    else if(money >= 32000 && money < 250000) 
+        comment = "Bom Jogo. Tens conhecimentos de Cibersegurança!";
+
+    else if(money >= 250000 && money < 1000000) 
+        comment = "Muito Bom Jogo. Tens grandes conhecimentos de Cibersegurança!";
+
+    else
+        comment = "Parabéns. Tu percebes tudo de Cibersegurança!";
+
+    return comment;
 }
 
 function reverseString(str) {
@@ -1223,7 +1233,7 @@ function openQuitPage(){
     {
         congratulation = congratulationComment(14);
         money = "1 Ponto";
-        lastComment = "Parabéns pela tua vitória";
+        lastComment = "Parabens pela sua Vitória";
     }
     else if(quitFlag.timeUpFlag)
     {
@@ -1238,14 +1248,33 @@ function openQuitPage(){
     {
         let temp = currentQuestIndex-1;
         congratulation = congratulationComment(temp);
-        if(quitFlag.winningAmount>=320000)
-            money = 320000;
-        else if(quitFlag.winningAmount>=10000)
-            money = 10000;
-        else 
-            money = 0;        
-        lastComment =  `Os teus pontos caíram de  ${quitFlag.winningAmount} para ${money} devido à resposta errada.`;
-        money = formatedMoney(money);    
+        if(quitFlag.winningAmount==1000000){
+            lastComment = lastEndComment(money);
+            money = 1000000;
+        }       
+        else if(quitFlag.winningAmount>=250000){
+            lastComment = lastEndComment(money);
+            money = 250000;
+        }     
+        else if(quitFlag.winningAmount>=32000){
+            lastComment = lastEndComment(money);
+            money = 32000;
+        } 
+                 
+        else if(quitFlag.winningAmount>=2000){
+            lastComment = lastEndComment(money);
+            money = 2000;
+        } 
+                 
+        else if(quitFlag.winningAmount>=100){
+            lastComment = lastEndComment(money);
+            money = 100;
+        }   
+        else {
+            lastComment = lastEndComment(money);
+            money = 0; 
+        }
+        money = formatedMoney(money);     
     }
     else 
     {
@@ -1263,12 +1292,13 @@ function openQuitPage(){
                 <div class="person-image"></div>
                 <div class="person-info">
                     <p id="contestant-name">${contestantName}</p>
-                    <span>Jogador</span>
+                    <span>Competidor</span>
                 </div>
             </div>
             <div class="congratulation">${congratulation}</div>
-            <div class="prize-money-earned">Prémio em Pontos: </div>
+            <div class="prize-money-earned">Pontos Adquiridos: </div>
             <div class="money">${money}</div>
+            <br>
             <div class="last-comment">${lastComment}</div>
         </div>
     </div>
@@ -1284,7 +1314,7 @@ function quitButton(){
         quitFlag.quitButtonFlag = 1;
         correctAns = currQuestObject.correct;
         correctOptionId = correctOptionAnsEle(correctAns);
-        document.getElementById(correctOptionId).style.backgroundColor = "greenyellow";
+        document.getElementById(correctOptionId).style.backgroundColor = "green";
         document.getElementById(correctOptionId).style.color = "black";
         DoubleDipWrongAnswerSound();
         optButtonDisabled();
@@ -1319,29 +1349,29 @@ const WelcomeSound = ()=>{
 // just to show the money stack before the game begins..
 const showMoneyStack = ()=>{
     let moneyAreaPrizes = `
-            <div id="0" class="each-prize">1000</div>
-            <div id="1" class="each-prize">2000</div>
-            <div id="2" class="each-prize">3000</div>
-            <div id="3" class="each-prize">5000</div>
-            <div id="4" class="each-prize">10.000</div>
-            <div id="5" class="each-prize">20.000</div>
-            <div id="6" class="each-prize">40.000</div>
-            <div id="7" class="each-prize">80.000</div>
-            <div id="8" class="each-prize">160.000</div>
-            <div id="9" class="each-prize">320.000</div>
-            <div id="10" class="each-prize">640.000</div>
-            <div id="11" class="each-prize">1.250.000</div>
-            <div id="12" class="each-prize">2.500.000</div>
-            <div id="13" class="each-prize">5.000.000</div>
-            <div id="14" class="each-prize">10.000.000</div>
-            <div id="15" class="each-prize">Pontos</div>
+            <div id="0" class="each-prize">100</div>
+            <div id="1" class="each-prize">200</div>
+            <div id="2" class="each-prize">400</div>
+            <div id="3" class="each-prize">800</div>
+            <div id="4" class="each-prize">1000</div>
+            <div id="5" class="each-prize">2000</div>
+            <div id="6" class="each-prize">4000</div>
+            <div id="7" class="each-prize">8000</div>
+            <div id="8" class="each-prize">16000</div>
+            <div id="9" class="each-prize">32000</div>
+            <div id="10" class="each-prize">64000</div>
+            <div id="11" class="each-prize">125000</div>
+            <div id="12" class="each-prize">250000</div>
+            <div id="13" class="each-prize">500000</div>
+            <div id="14" class="each-prize">1000000</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
-    document.getElementById('4').style.cssText = "color: gold; font-size: 15px;";
-    document.getElementById('9').style.cssText = "color: gold; font-size: 17px;";
-    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
-    document.getElementById('15').style.cssText = "color: gold; font-size: 40px;";
+    document.getElementById('0').style.cssText = "color: gold;";
+    document.getElementById('5').style.cssText = "color: gold;";
+    document.getElementById('9').style.cssText = "color: gold;";
+    document.getElementById('12').style.cssText = "color: gold;"
+    document.getElementById('14').style.cssText = "color: gold; font-size: 20px;";
 }
 
 const hoverLifeline = ()=>{
@@ -1371,7 +1401,7 @@ const showLifeline = ()=>{
 const sitOnTheHotSeatFun = ()=>{
     let contestantName = document.getElementById("contestant-name-input").value;
     if(contestantName=="")
-        contestantName = "Anónimo";
+        contestantName = "Anonymous";
     page1Sound.pause();
     WelcomeSound();
     document.getElementById("page2").classList.add("show-modal");
