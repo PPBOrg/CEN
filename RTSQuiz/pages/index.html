@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="index.css">
+    <title>RumoAoTopoDaCibersegurança</title>
+
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+ 
+    <div class="container">
+        <div class="page-container">
+
+            <div class="input-box">
+                <input id="contestant-name-input" type="text"  placeholder="Escreve aqui o teu nome e clica em começar" onclick="openingSound()">
+            </div>
+            <div  id="sitOnTheHotSeat" class="btn ">
+                <button class="btn-rules">Começar</button>
+
+            </div>
+
+            <!-- <div id="btn-rules" class="btn " >
+                <button class="btn-rules">Regras</button>
+            </div> -->
+        </div>
+    </div>
+
+            <!-- ------------------------------- page 2 -------------- -->
+    <section id="page2" class="modal-container-page2">
+
+        <div class="audience-poll-outer-container"></div>
+
+        <div class="game-area">
+            <div class="game-area-people">
+                <div class="people">
+                    <div class="person-image"></div>
+                    <div class="person-info">
+                        <p id="contestant-name">Pessoa Um</p>
+                        <span>Jogador</span>
+                    </div>
+                </div>
+                
+                <div class="lifeline-set">
+                    <div class="lifeline-no">4</div>
+                    <div id="lifeline-button" class="btn page2btn" >
+                        <button class="btn-rules " style="  width: 70px;">Ajudas</button>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id ="game-area-result" class="game-area-result">
+                <div id="result" class="result">Pronto para a aventura?<p>Clica na imagem abaixo para começares a jogar!</p></div>
+                <div class="lifeline-box">
+                    <div class="lifeline-item audience-poll">
+                        <div class="cross-mark cross-one "></div>
+                        <div class="cross-mark cross-two "></div>
+                    </div>
+                    <div class="lifeline-item flip-the-question">
+                        <div class="cross-mark cross-one "></div>
+                        <div class="cross-mark cross-two "></div>
+                    </div>
+                    <div class="lifeline-item fifty-fifty">
+                        <div class="cross-mark cross-one "></div>
+                        <div class="cross-mark cross-two "></div>
+                    </div>
+                    <div class="lifeline-item double-dip">
+                        <div class="cross-mark cross-one "></div>
+                        <div class="cross-mark cross-two "></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-area-ques-ans">
+                <div class="lets-play-container">
+                    <div class="lets-play-image"></div>
+                </div>
+            </div>
+
+            <div class="game-area-btns">
+                <div id="Quit" class="btn page2btn" >
+                    <button class="btn-rules ">Sair do Jogo</button>
+                </div>
+                <div id="Next" class="btn page2btn" >
+                    <button class="btn-rules ">Próxima</button>
+                </div>
+            </div>
+        </div>
+        <div id="money-area">
+
+        </div>
+    </section>
+
+    <script src="index.js">
+
+    </script>
+</body>
+</html>

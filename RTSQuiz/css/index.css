@@ -6,7 +6,7 @@
 }
 
 :root{
-    --page2btn:rgb(77, 77, 77);
+    --page2btn:rgb(59, 127, 204);
 }
 
 
@@ -15,7 +15,7 @@
     height:100vh;
     width:100vw;
     background-color:rgb(1, 1, 27);
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart1.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("welcomescreen.png");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -26,16 +26,17 @@
 
 .page-container{
 
-    margin-top: 250px;
+    margin-top: auto;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
 .input-box{
-    margin-bottom:1.7em;
+    margin-bottom: 35px;
+    width: 30em;
 }
 .input-box input{
 
@@ -55,15 +56,15 @@ input[type='text']::placeholder{
 }
 
 #contestant-name-input{
-    background-color: darkred;
-    width: 20em;
+    background-color: rgb(230, 66, 66);
+    width: 25em;
     font-size:1em;
     outline:none;
     text-align: center;
     border-radius: 20px;
     background-color: white;
     color: black;
-    padding: 7px;
+    padding: 9px;
     border-color: black;
     text-align:center;
     
@@ -113,14 +114,15 @@ a{
 }
 
 #sitOnTheHotSeat{
-    background-color: darkred;
+    background-color: rgb(102, 148, 233);
     width: 20em;
     text-align: center;
     border-radius: 20px;
+    margin-bottom: 35px;
 }
 
 #sitOnTheHotSeat:hover{
-    background-color: darkgreen;
+    background-color: rgb(63, 170, 63);
 }
 
 /* -------------------------modal for rules ------------- */
@@ -128,7 +130,7 @@ a{
     height:75vh;
     width:75vw;
     background-color:lightseagreen;
-    background-image:url("../images/walpaperend.jpg");
+    background-image:url("background.png");
     background-repeat: no-repeat;
     background-position:right;
     background-size:cover;
@@ -192,11 +194,11 @@ a{
 
 .game-area-people{
     /* border:1px solid orange; */
-    flex-basis: 10%;
-    margin: 0em 1.6em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-top: 5px;
+    flex-basis:10%;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
     
 }
 
@@ -235,7 +237,7 @@ a{
 
 .lifeline-no{
     background:none;
-    font-family: "Algerian", Arial , Helvetica , sans-serif;
+    font-family: "Arial" , Helvetica , sans-serif;
     font-size:1.6em;
     padding:0 6px;
     margin-right:2px;
@@ -260,8 +262,7 @@ a{
     /* border:2px solid red; */
     border-radius:5px;
     text-align:center;
-    /* font-size:2rem; */       /* legendas */
-    font-size:0rem; 
+    font-size:2rem;
     text-shadow:10px 10px 20px black;
     
 }
@@ -289,7 +290,7 @@ a{
     margin-bottom: 100px;
     border:none;
     cursor:pointer;
-    background-image:url("../images/logo.png");
+    background-image:url("logo3.png");
 }
 
 
@@ -307,11 +308,11 @@ a{
     justify-content: center;
     align-items:center;
     font-size:2rem;
-    font-family: "Algerian", Arial , Helvetica , sans-serif;
+    font-family: "Arial" , Helvetica , sans-serif;
     box-shadow:0px 0px 10px 3px var(--page2btn);
 }
 .question-box{
-    flex-basis:60%;
+    flex-basis:40%;
     box-shadow:0px 0px 10px 3px var(--page2btn);
     border-radius: 5px;
     display: flex;
@@ -330,7 +331,7 @@ a{
     /* background-color:rgba(137, 43, 226, 0.1); */
 }
 .answer-box{
-    flex-basis:60%;
+    flex-basis:40%;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
@@ -377,7 +378,7 @@ a{
     display:flex;
     flex-direction: column-reverse;
     justify-content: center;
-    background-color:#2abe76;
+    background-color:#2eb875;
     box-shadow: 0px 3px 3px white;
     /* align-items:center; */
 }
@@ -424,7 +425,7 @@ a{
   .lifeline-item{
     height:2rem;
     width:3.4rem;
-    box-shadow:0px 0px 6px 2px aqua;
+    box-shadow:0px 0px 6px 2px #00ffff;
     background-color: aqua;
     background-position:center;
     background-size: cover;
@@ -441,8 +442,7 @@ a{
     opacity:1;
     pointer-events: auto;
     height:11rem;
-    top:-20%;
-    margin-right: -30px;
+    top:-30%;
   }
 
   .lifeline-item:hover{
@@ -450,18 +450,18 @@ a{
   }
 
   .audience-poll{
-    background-image:url("../images/AudiencePoll.jpeg");
+    background-image:url("AudiencePoll.jpeg");
   }
 
   .fifty-fifty{
-    background-image:url("../images/fifty-fifty.jpeg");
+    background-image:url("fifty-fifty.jpeg");
   }
 
   .flip-the-question{
-    background-image:url("../images/switchQuest.jpeg");
+    background-image:url("switchQuest.jpeg");
   }
   .double-dip{
-    background-image:url("../images/doubleDip.jpeg");
+    background-image:url("images/doubleDip.jpeg");
   }
 
   
@@ -552,16 +552,12 @@ a{
     /* transform:translate(-50%,-50%); */
 }
 .transfer-image{
-    /* border:2px solid red; */
-    border-radius: 5px;
-    height:600px;
-    /* width:300px; */
-    background-color: green;
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.jpg");
+    border-radius: none;
+    height:500px;
+    width:500px;
+    background-image:url("logo3.png");
     background-position:center;
     background-size:cover;
-    margin-right:2rem;
-    flex-basis:30%;
 }
 
 .quit-info-container{
@@ -599,7 +595,7 @@ a{
 
 @media screen and (max-width:480px){
     .container{
-        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart2.jpg");
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("walpaperstart2.jpg");
         background-size:cover;
         background-position:center;
         background-repeat: no-repeat;
