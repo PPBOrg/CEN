@@ -6,7 +6,7 @@
 }
 
 :root{
-    --page2btn:rgb(59, 127, 204);
+    --page2btn:rgb(77, 77, 77);
 }
 
 
@@ -15,7 +15,7 @@
     height:100vh;
     width:100vw;
     background-color:rgb(1, 1, 27);
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("welcomescreen.png");
+    background-image:url("walpaperstart1.jpg");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -26,17 +26,16 @@
 
 .page-container{
 
-    margin-top: auto;
+    margin-top: 250px;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
 .input-box{
-    margin-bottom: 35px;
-    width: 30em;
+    margin-bottom:1.7em;
 }
 .input-box input{
 
@@ -56,15 +55,15 @@ input[type='text']::placeholder{
 }
 
 #contestant-name-input{
-    background-color: rgb(230, 66, 66);
-    width: 25em;
+    background-color: darkred;
+    width: 20em;
     font-size:1em;
     outline:none;
     text-align: center;
     border-radius: 20px;
     background-color: white;
     color: black;
-    padding: 9px;
+    padding: 7px;
     border-color: black;
     text-align:center;
     
@@ -114,15 +113,14 @@ a{
 }
 
 #sitOnTheHotSeat{
-    background-color: rgb(102, 148, 233);
+    background-color: darkred;
     width: 20em;
     text-align: center;
     border-radius: 20px;
-    margin-bottom: 35px;
 }
 
 #sitOnTheHotSeat:hover{
-    background-color: rgb(63, 170, 63);
+    background-color: darkgreen;
 }
 
 /* -------------------------modal for rules ------------- */
@@ -130,7 +128,7 @@ a{
     height:75vh;
     width:75vw;
     background-color:lightseagreen;
-    background-image:url("background.png");
+    background-image:url("walpaperend.jpg");
     background-repeat: no-repeat;
     background-position:right;
     background-size:cover;
@@ -194,11 +192,11 @@ a{
 
 .game-area-people{
     /* border:1px solid orange; */
-    margin-top: 5px;
     flex-basis:10%;
-    display:flex;
-    justify-content: space-around;
-    align-items:center;
+    margin:0em 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
     
 }
 
@@ -237,7 +235,7 @@ a{
 
 .lifeline-no{
     background:none;
-    font-family: "Arial" , Helvetica , sans-serif;
+    font-family: "Algerian", Arial , Helvetica , sans-serif;
     font-size:1.6em;
     padding:0 6px;
     margin-right:2px;
@@ -262,7 +260,7 @@ a{
     /* border:2px solid red; */
     border-radius:5px;
     text-align:center;
-    font-size:2rem;
+    font-size:0rem;
     text-shadow:10px 10px 20px black;
     
 }
@@ -273,6 +271,7 @@ a{
     margin:0em 1.6em;
     display:flex;
     flex-direction: column;
+    margin-bottom: 70px;
 }
 
 .lets-play-container , .lifeline-set{
@@ -308,8 +307,10 @@ a{
     justify-content: center;
     align-items:center;
     font-size:2rem;
-    font-family: "Arial" , Helvetica , sans-serif;
+    font-family: "Algerian", Arial , Helvetica , sans-serif;
     box-shadow:0px 0px 10px 3px var(--page2btn);
+    background-color: white;
+    color: black;
 }
 .question-box{
     flex-basis:40%;
@@ -336,6 +337,8 @@ a{
     flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
+    color: black;
+
     /* padding: 0.6em 0; */
     /* background-color:skyblue; */
 
@@ -345,7 +348,7 @@ a{
     /* border:1px solid red; */
     /* background-color: red; */
     width:49%;
-    height:46px;
+    height:70px;
     margin:0.3em 0;
     box-shadow:0px 0px 10px 3px var(--page2btn);
     border-radius: 5px;
@@ -354,6 +357,7 @@ a{
     align-items: center;
     cursor:pointer;
     transition:all 0.3s ease;
+    background-color: white;
     /* justify-content: center; */
 }
 
@@ -378,7 +382,7 @@ a{
     display:flex;
     flex-direction: column-reverse;
     justify-content: center;
-    background-color:#2eb875;
+    background-color:#2abe76;
     box-shadow: 0px 3px 3px white;
     /* align-items:center; */
 }
@@ -425,7 +429,7 @@ a{
   .lifeline-item{
     height:2rem;
     width:3.4rem;
-    box-shadow:0px 0px 6px 2px #00ffff;
+    box-shadow:0px 0px 6px 2px aqua;
     background-color: aqua;
     background-position:center;
     background-size: cover;
@@ -552,12 +556,16 @@ a{
     /* transform:translate(-50%,-50%); */
 }
 .transfer-image{
-    border-radius: none;
-    height:500px;
-    width:500px;
-    background-image:url("logo3.png");
+    /* border:2px solid red; */
+    border-radius: 5px;
+    height:600px;
+    /* width:300px; */
+    background-color: green;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("moneyTransfer.jpg");
     background-position:center;
     background-size:cover;
+    margin-right:2rem;
+    flex-basis:30%;
 }
 
 .quit-info-container{
