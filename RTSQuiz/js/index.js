@@ -1165,23 +1165,23 @@ function congratulationComment(ind){
 
 function lastEndComment(money){
     let comment;
-    if(money == 0 )
-        comment = "Precisas de Aprender de Cibersegurança";
-
-    else if(money >= 100 && money < 400)
-        comment = "Mostras te que tens poucos conhecimentos de Cibersegurança";
+    if(money >= 1000000 )
+        comment = "Parabéns.\nPercebes tudo de Cibersegurança!";
+    
+    else if(money >= 32000 && money < 1000000) 
+        comment = "Tens grandes conhecimentos de Cibersegurança!"; 
+        
+    else if(money >= 2000 && money < 32000) 
+        comment = "Tens conhecimentos sobre Cibersegurança!";
 
     else if(money >= 400 && money < 2000)
         comment = "Mostras te que tens alguns conhecimentos de Cibersegurança";
 
-    else if(money >= 2000 && money < 32000) 
-        comment = "Tens conhecimentos sobre Cibersegurança!";
-
-    else if(money >= 32000 && money < 1000000) 
-        comment = "Tens grandes conhecimentos de Cibersegurança!";
+    else if(money >= 100 && money < 400)
+        comment = "Mostras te que tens poucos conhecimentos de Cibersegurança";
 
     else
-        comment = "Parabéns.\nPercebes tudo de Cibersegurança!";
+        comment = "Precisas de Aprender de Cibersegurança";
 
     return comment;
 }
@@ -1243,7 +1243,7 @@ function openQuitPage(){
     {
         let temp;
         congratulation = congratulationComment(temp);
-        money = 1000000;
+        money = quitFlag.winningAmount;
         lastComment = lastEndComment(money);    
         money = formatedMoney(money);    
     }
