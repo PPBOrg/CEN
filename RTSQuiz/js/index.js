@@ -1,381 +1,382 @@
 const kbcQuestions = 
-    [
+[
 // ----------------- 1 ------------------------------
-        [{
-            question: "Qual dos seguintes é um exemplo de informação pessoal sensível?",
-            a: "Nome de um filme favorito",
-            b: "Endereço de e-mail",
-            c: "Cor favorita",
-            d: "Equipa de futebol preferida",
-            correct: "Endereço de e-mail",
-        },
-        {
-            question: "Qual das seguintes é uma boa prática para criar senhas?",
-            a: "Usar a mesma senha para todas as contas",
-            b: "Partilhar as senhas com os amigos",
-            c: "Criar senhas curtas e fáceis de lembrar",
-            d: "Criar senhas longas e complexas",
-            correct: "Criar senhas longas e complexas",
-        },
-        {
-            question: "O que é importante fazer ao criar uma senha?",
-            a: "Usar o nome e data de nascimento para facilitar a memorização",
-            b: "Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais",
-            c: "Partilhar a senha com amigos de confiança",
-            d: "Usar a mesma senha para todas as contas",
-            correct: "Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais",
-        }],
+[{
+    question: "Qual das seguintes opções é um exemplo de informação pessoal sensível?",
+    a: "Nome de um filme favorito",
+    b: "Endereço de e-mail",
+    c: "Cor favorita",
+    d: "Equipa de futebol preferida",
+    correct: "Endereço de e-mail",
+},
+{
+    question: "Qual das seguintes opções é uma boa prática para criar senhas?",
+    a: "Usar a mesma senha para todas as contas",
+    b: "Partilhar as senhas com os amigos",
+    c: "Criar senhas curtas e fáceis de lembrar",
+    d: "Criar senhas longas e complexas",
+    correct: "Criar senhas longas e complexas",
+},
+{
+    question: "O que é importante fazer ao criar uma senha?",
+    a: "Usar o nome e data de nascimento para facilitar a memorização",
+    b: "Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais",
+    c: "Partilhar a senha com amigos de confiança",
+    d: "Usar a mesma senha para todas as contas",
+    correct: "Utilizar uma combinação de letras maiúsculas e minúsculas, números e caracteres especiais",
+}],
 // ----------------- 2 ------------------------------
-        [{
-            question: "O que deve fazer caso receba uma mensagem suspeita de alguém que não conhece a pedir informações pessoais?",
-            a: "Responder com as informações solicitadas",
-            b: "Ignorar a mensagem",
-            c: "Partilhar as informações apenas com um amigo próximo",
-            d: "Informar imediatamente um adulto responsável",
-            correct: "Informar imediatamente um adulto responsável",
-        },
-        {
-            question: "O que se deve fazer caso se receba um pedido para partilhar fotos ou informações pessoais online?",
-            a: "Partilhar imediatamente",
-            b: "Perguntar aos pais ou responsáveis antes de partilhar qualquer coisa",
-            c: "Ignorar o pedido",
-            d: "Partilhar apenas com amigos próximos",
-            correct: "Perguntar aos pais ou responsáveis antes de partilhar qualquer coisa",
-        },
-        {
-            question: "O que deve fazer caso receba uma mensagem suspeita de alguém que afirma ser um amigo seu?",
-            a: "Responder imediatamente com informações pessoais",
-            b: "Ignorar a mensagem e apagar imediatamente",
-            c: "Encaminhar a mensagem para todos os seus contatos",
-            d: "Verificar a autenticidade entrando em contato com seu amigo por meio de outra forma de comunicação",
-            correct: "Verificar a autenticidade entrando em contato com seu amigo por meio de outra forma de comunicação",
-        }],
+[{
+    question: "O que deve fazer caso receba uma mensagem suspeita de alguém que não conhece a pedir informações pessoais?",
+    a: "Responder com as informações solicitadas",
+    b: "Ignorar a mensagem",
+    c: "Partilhar as informações apenas com um amigo próximo",
+    d: "Informar imediatamente um adulto responsável",
+    correct: "Informar imediatamente um adulto responsável",
+},
+{
+    question: "O que se deve fazer caso se receba um pedido para partilhar fotos ou informações pessoais online?",
+    a: "Partilhar imediatamente",
+    b: "Perguntar aos pais ou responsáveis antes de partilhar qualquer coisa",
+    c: "Ignorar o pedido",
+    d: "Partilhar apenas com amigos próximos",
+    correct: "Perguntar aos pais ou responsáveis antes de partilhar qualquer coisa",
+},
+{
+    question: "O que deve fazer caso receba uma mensagem suspeita de alguém que afirma ser um amigo seu?",
+    a: "Responder imediatamente com informações pessoais",
+    b: "Ignorar a mensagem e apagar imediatamente",
+    c: "Encaminhar a mensagem para todos os seus contatos",
+    d: "Verificar a autenticidade entrando em contato com seu amigo por meio de outra forma de comunicação",
+    correct: "Verificar a autenticidade entrando em contato com seu amigo por meio de outra forma de comunicação",
+}],
 // ----------------- 3 ------------------------------
-        [{
-            question: "O que é um vírus de computador?",
-            a: "Um programa que protege o computador contra ameaças",
-            b: "Uma peça de hardware que melhora o desempenho do computador",
-            c: "Um programa malicioso que pode danificar arquivos e software",
-            d: "Um dispositivo que permite acesso à internet sem fio",
-            correct: "Um programa malicioso que pode danificar arquivos e software",
-        },
-        {
-            question: "O que é phishing?",
-            a: "Uma técnica para proteger a identidade online",
-            b: "Um tipo de malware que rouba informações pessoais",
-            c: "Uma forma de enviar e receber mensagens criptografadas",
-            d: "Um serviço que permite fazer compras online com segurança",
-            correct: "Um tipo de malware que rouba informações pessoais",
-        },
-        {
-            question: "Qual das seguintes é uma maneira segura de comunicar pela internet?",
-            a: "Partilhar informações pessoais em fóruns públicos",
-            b: "Usar redes Wi-Fi públicas sem proteção",
-            c: "Enviar senhas e informações confidenciais por e-mail",
-            d: "Utilizar mensagens criptografadas ou aplicativos seguros",
-            correct: "Utilizar mensagens criptografadas ou aplicativos seguros",
-        }],
+[{
+    question: "O que é um vírus de computador?",
+    a: "Um programa que protege o computador contra ameaças",
+    b: "Uma peça de hardware que melhora o desempenho do computador",
+    c: "Um programa malicioso que pode danificar ficheiros e software",
+    d: "Um dispositivo que permite acesso à internet sem fio",
+    correct: "Um programa malicioso que pode danificar ficheiros e software",
+},
+{
+    question: "O que é phishing?",
+    a: "Uma técnica para proteger a identidade online",
+    b: "Um tipo de malware que rouba informações pessoais",
+    c: "Uma forma de enviar e receber mensagens criptografadas",
+    d: "Um serviço que permite fazer compras online com segurança",
+    correct: "Um tipo de malware que rouba informações pessoais",
+},
+{
+    question: "Qual das seguintes opções é uma maneira segura de comunicar pela internet?",
+    a: "Partilhar informações pessoais em fóruns públicos",
+    b: "Usar redes Wi-Fi públicas sem proteção",
+    c: "Enviar senhas e informações confidenciais por e-mail",
+    d: "Utilizar mensagens criptografadas ou aplicações seguros",
+    correct: "Utilizar mensagens criptografadas ou aplicações seguros",
+}],
 // ----------------- 4 ------------------------------
-        [{
-            question: "O que se deve fazer se encontrar uma página da web suspeita ou com conteúdo inadequado?",
-            a: "Continuar navegando e explorar a página",
-            b: "Fechar a página imediatamente",
-            c: "Partilhar o link com os amigos",
-            d: "Responder às perguntas da página",
-            correct: "Fechar a página imediatamente",
-        },
-        {
-            question: "O que é uma firewall?",
-            a: "Um tipo de vírus de computador",
-            b: "Um dispositivo usado para bloquear chamadas telefónicas indesejadas",
-            c: "Um programa que protege o computador contra ataques e acessos não autorizados",
-            d: "Uma rede de computadores conectados entre si",
-            correct: "Um programa que protege o computador contra ataques e acessos não autorizados",
-        },
-        {
-            question: "O que é importante fazer ao receber um e-mail suspeito de um remetente desconhecido?",
-            a: "Abrir os anexos e links fornecidos no e-mail",
-            b: "Responder ao e-mail fornecendo suas informações pessoais",
-            c: "Apagar o e-mail sem abrir ou clicar em qualquer coisa",
-            d: "Encaminhar o e-mail para todos os seus contatos",
-            correct: "Excluir o e-mail sem abrir ou clicar em qualquer coisa",
-        }],
+[{
+    question: "O que se deve fazer se encontrar uma página da web suspeita ou com conteúdo inadequado?",
+    a: "Continuar navegando e explorar a página",
+    b: "Fechar a página imediatamente",
+    c: "Partilhar o link com os amigos",
+    d: "Responder às perguntas da página",
+    correct: "Fechar a página imediatamente",
+},
+{
+    question: "O que é uma firewall?",
+    a: "Um tipo de vírus de computador",
+    b: "Um dispositivo usado para bloquear chamadas telefónicas indesejadas",
+    c: "Um programa que protege o computador contra ataques e acessos não autorizados",
+    d: "Uma rede de computadores conectados entre si",
+    correct: "Um programa que protege o computador contra ataques e acessos não autorizados",
+},
+{
+    question: "O que é importante fazer ao receber um e-mail suspeito de um remetente desconhecido?",
+    a: "Abrir os anexos e links fornecidos no e-mail",
+    b: "Responder ao e-mail fornecendo suas informações pessoais",
+    c: "Excluir o e-mail sem abrir ou clicar em qualquer coisa",
+    d: "Encaminhar o e-mail para todos os seus contatos",
+    correct: "Excluir o e-mail sem abrir ou clicar em qualquer coisa",
+}],
 // ----------------- 5 ------------------------------
-        [{
-            question: "O que é engenharia social?",
-            a: "Um tipo de ataque cibernético realizado por hackers profissionais",
-            b: "Um método para proteger redes sociais de ameaças virtuais",
-            c: "Um processo para criar senhas complexas e seguras",
-            d: "Uma técnica que manipula as pessoas para obter informações confidenciais",
-            correct: "Uma técnica que manipula as pessoas para obter informações confidenciais",
-        },
-        {
-            question: "O que é backup de dados?",
-            a: "Uma medida para bloquear o acesso a um site ou serviço online",
-            b: "Uma técnica para criptografar dados confidenciais",
-            c: "Uma cópia de segurança de arquivos e informações importantes",
-            d: "Um programa antivírus para proteger o computador contra ameaças",
-            correct: "Uma cópia de segurança de arquivos e informações importantes",
-        },
-        {
-            question: "O que é um software antivírus?",
-            a: "Um programa usado para invadir sistemas de computador",
-            b: "Um dispositivo físico para proteger o computador de vírus",
-            c: "Um programa que detecta e remove ameaças de malware",
-            d: "Uma técnica para criptografar dados confidenciais",
-            correct: "Um programa que detecta e remove ameaças de malware",
-        }],
+[{
+    question: "O que é engenharia social?",
+    a: "Um tipo de ataque cibernético realizado por hackers profissionais",
+    b: "Um método para proteger redes sociais de ameaças virtuais",
+    c: "Um processo para criar senhas complexas e seguras",
+    d: "Uma técnica que manipula as pessoas para obter informações confidenciais",
+    correct: "Uma técnica que manipula as pessoas para obter informações confidenciais",
+},
+{
+    question: "O que é backup de dados?",
+    a: "Uma medida para bloquear o acesso a um site ou serviço online",
+    b: "Uma técnica para criptografar dados confidenciais",
+    c: "Uma cópia de segurança de ficheiros e informações importantes",
+    d: "Um programa antivírus para proteger o computador contra ameaças",
+    correct: "Uma cópia de segurança de ficheiros e informações importantes",
+},
+{
+    question: "O que é um software antivírus?",
+    a: "Um programa usado para invadir sistemas de computador",
+    b: "Um dispositivo físico para proteger o computador de vírus",
+    c: "Um programa que detecta e remove ameaças de malware",
+    d: "Uma técnica para criptografar dados confidenciais",
+    correct: "Um programa que detecta e remove ameaças de malware",
+}],
 // ----------------- 6 ------------------------------
-        [{
-            question: "Você recebe um e-mail solicitando que clique num link para verificar a conta bancária, pois há uma atividade suspeita. O que você deve fazer?",
-            a: "Clicar no link e fornecer as informações solicitadas",
-            b: "Ignorar o e-mail e apagar imediatamente",
-            c: "Encaminhar o e-mail para os seus amigos",
-            d: "Verificar diretamente com o seu banco por meio de um canal seguro",
-            correct: "Verificar diretamente com o seu banco por meio de um canal seguro",
-        },
-        {
-            question: "Você está usando um computador público numa biblioteca e precisa fazer login na sua conta de e-mail. O que você deve fazer para proteger as suas informações pessoais?",
-            a: "Usar uma senha fácil de lembrar para não esquecer",
-            b: "Permitir que o computador guarde suas informações de login",
-            c: "Utilizar uma ligação VPN para criptografar os seus dados",
-            d: "Partilhar as suas informações de login com um amigo",
-            correct: "Utilizar uma ligação VPN para criptografar os seus dados",
-        },
-        {
-            question: "Você recebe uma mensagem de texto de um número desconhecido, solicitando que você clique num link para ganhar um prémio. O que você deve fazer?",
-            a: "Clicar no link e seguir as instruções",
-            b: "Responder à mensagem com as suas informações pessoais",
-            c: "Ignorar a mensagem e apagar imediatamente",
-            d: "Informar um adulto responsável sobre a mensagem suspeita",
-            correct: "Ignorar a mensagem e apagar imediatamente",
-        }],
+[{
+    question: "Recebes um e-mail solicitando que cliques num link para verificar a conta bancária, pois há uma atividade suspeita. O que deves fazer?",
+    a: "Clicar no link e fornecer as informações solicitadas",
+    b: "Ignorar o e-mail e apagar imediatamente",
+    c: "Encaminhar o e-mail para os amigos",
+    d: "Verificar diretamente com o seu banco por meio de um canal seguro",
+    correct: "Verificar diretamente com o seu banco por meio de um canal seguro",
+},
+{
+    question: "Estás a usar um computador público numa biblioteca e precisas de fazer login na tua conta de e-mail. O que deves fazer para proteger as tuas informações pessoais?",
+    a: "Usar uma senha fácil de lembrar para não esquecer",
+    b: "Permitir que o computador guarde as informações de login",
+    c: "Utilizar uma ligação VPN para criptografar os teus dados",
+    d: "Partilhar as suas informações de login com um amigo",
+    correct: "Utilizar uma ligação VPN para criptografar os teus dados",
+},
+{
+    question: "Recebes uma mensagem de texto de um número desconhecido, solicitando que cliques num link para ganhar um prémio. O que deves fazer?",
+    a: "Clicar no link e seguir as instruções",
+    b: "Responder à mensagem com as tuas informações pessoais",
+    c: "Ignorar a mensagem e apagar imediatamente",
+    d: "Informar um adulto responsável sobre a mensagem suspeita",
+    correct: "Ignorar a mensagem e apagar imediatamente",
+}],
 // ----------------7 ------------------------------
-        [{
-            question: "Você está usando um Wi-Fi público num café. O que você deve fazer para garantir a segurança das suas informações?",
-            a: "Realizar todas as transações financeiras e aceder as contas confidenciais",
-            b: "Desativar a firewall do seu dispositivo para uma ligação mais rápida",
-            c: "Evitar o acesso a sites que requerem senhas ou informações pessoais",
-            d: "Partilhar as suas informações de login com outros utilizadores do Wi-Fi",
-            correct: "Evitar o acesso a sites que requerem senhas ou informações pessoais",
-        },
-        {
-            question: "Você recebe um telefonema de alguém se passando por um representante de suporte técnico. Eles solicitam acesso remoto ao seu computador para resolver um problema. O que você deve fazer?",
-            a: "Fornecer acesso remoto ao seu computador imediatamente",
-            b: "Desligar o telefone e bloquear o número",
-            c: "Seguir as instruções do suposto suporte técnico",
-            d: "Verificar a autenticidade da ligação com a empresa de suporte técnico",
-            correct: "Verificar a autenticidade da ligação com a empresa de suporte técnico",
-        },
-        {
-            question: "Você recebe uma mensagem de um colega de turma pedindo que você partilhe as suas credenciais de login para aceder a um documento importante. O que você deve fazer?",
-            a: "Partilhar as suas credenciais de login com o colega",
-            b: "Ignorar a mensagem e não partilhar as suas credenciais",
-            c: "Responder à mensagem pedindo mais informações sobre o documento",
-            d: "Verificar com o professor ou responsável antes de partilhar qualquer informação",
-            correct: "Verificar com o professor ou responsável antes de partilhar qualquer informação",
-        }],
+[{
+    question: "Estás a usar um Wi-Fi público num café. O que deves fazer para garantir a segurança das tuas informações?",
+    a: "Realizar todas as transações financeiras e aceder às contas confidenciais",
+    b: "Desativar a firewall do teu dispositivo para uma ligação mais rápida",
+    c: "Evitar o acesso a sites que requerem senhas ou informações pessoais",
+    d: "Partilhar as suas informações de login com outros utilizadores do Wi-Fi",
+    correct: "Evitar o acesso a sites que requerem senhas ou informações pessoais",
+},
+{
+    question: "Recebes um telefonema de alguém se passando por um representante de suporte técnico. Eles solicitam acesso remoto ao teu computador para resolver um problema. O que deves fazer?",
+    a: "Fornecer acesso remoto ao teu computador imediatamente",
+    b: "Desligar o telefone e bloquear o número",
+    c: "Seguir as instruções do suposto suporte técnico",
+    d: "Verificar a autenticidade da ligação com a empresa de suporte técnico",
+    correct: "Verificar a autenticidade da ligação com a empresa de suporte técnico",
+},
+{
+    question: "Recebes uma mensagem de um colega de turma pedindo que partilhes as tuas credenciais de login para aceder a um documento importante. O que deves fazer?",
+    a: "Partilhar as tuas credenciais de login com o colega",
+    b: "Ignorar a mensagem e não partilhar as tuas credenciais",
+    c: "Responder à mensagem pedindo mais informações sobre o documento",
+    d: "Verificar com o professor ou responsável antes de partilhar qualquer informação",
+    correct: "Verificar com o professor ou responsável antes de partilhar qualquer informação",
+}],
 // ----------------- 8 ------------------------------
-        [{
-            question:"Which of these terms can only be used for women?",
-            a:"Dirghaayu",
-            b:"Suhagan",
-            c:"Chiranjeevi",
-            d:"Sushil",
-            correct:"Suhagan",
-        },
-        {
-            question:"Which type of waves are produced by a television remote controller?",
-            a:"Infra-red waves",
-            b:"Radio waves",
-            c:"Ultraviolet waves",
-            d:"light waves",
-            correct:"Infra-red waves",
-        },
-        {
-            question:"The Konark Temple is dedicated to",
-            a:"Vishnu",
-            b:"Shiva",
-            c:"Krishna",
-            d:"Sun-God",
-            correct:"Sun-God",
-        }],
+[{
+    question: "Estás a navegar num site e encontras um link para fazer o download gratuito de um software pago. O que deves fazer?",
+    a: "Fazer o download imediatamente para aproveitar a oferta",
+    b: "Verificar se o site é confiável e se o download é legítimo",
+    c: "Partilhar o link com teus amigos para que eles também possam fazer o download",
+    d: "Clicar no link para ver o que acontece, mas sem fazer o download",
+    correct: "Verificar se o site é confiável e se o download é legítimo",
+},
+{
+    question: "Recebes uma mensagem numa rede social de alguém que afirma ser um representante de uma empresa famosa e pede que forneças os teus dados pessoais para ganhar um prémio. O que deves fazer?",
+    a: "Fornecer os dados pessoais imediatamente",
+    b: "Ignorar a mensagem e denunciá-la como suspeita",
+    c: "Partilhar a mensagem com os amigos para obter opiniões",
+    d: "Responder à mensagem com os dados pessoais, mas com cuidado",
+    correct: "Ignorar a mensagem e denunciá-la como suspeita",
+},
+{
+    question: "Estás a planear uma viagem e decides partilhar detalhes sobre a sua localização e itinerário nas redes sociais. O que deves considerar antes de fazer isso?",
+    a: "Partilhar tudo sem restrições, para que todos saibam onde estás",
+    b: "Apenas partilhar com amigos próximos e familiares",
+    c: "Configurar os teus posts para serem visíveis apenas para pessoas confiáveis",
+    d: "Divulgar todas as informações publicamente para receber sugestões de lugares para visitar",
+    correct: "Configurar os teus posts para serem visíveis apenas para pessoas confiáveis",
+}],
 // ----------------- 9 ------------------------------
-        [{
-            question:"Bahubali festival is related to",
-            a:"Islam",
-            b:"Hinduism",
-            c:"Buddhism",
-            d:"Jainism",
-            correct:"Jainism",
-        },
-        {
-            question:" Indus river originates in __",
-            a:"Kinnaur",
-            b:"Ladakh",
-            c:"Nepal",
-            d:"Tibet",
-            correct:"Tibet",
-        },
-        {
-            question:"which of them is correct about Kargil War",
-            a:"India/Pakistan 1999",
-            b:"India/China 1998",
-            c:"India/Bangladesh 1962",
-            d:"India/SriLanka 1972",
-            correct:"India/Pakistan 1999",
-        }],
+[{
+    question: "Estás de férias e decides fazer uma reserva de hotel online. Como deves verificar se o site de reserva é seguro?",
+    a: "Fornecer as tuas informações de cartão de crédito sem te preocupares",
+    b: "Verificar se o site tem um cadeado de segurança e um endereço HTTPS",
+    c: "Partilhar os teus dados pessoais com o site sem hesitação",
+    d: "Escolher um site aleatório e fazer a reserva sem verificar",
+    correct: "Verificar se o site tem um cadeado de segurança e um endereço HTTPS",
+},
+{
+    question: "Para proteger os teus dispositivos eletrónicos, é importante:",
+    a: "Deixar o teu dispositivo desbloqueado para facilitar o acesso",
+    b: "Instalar regularmente atualizações de segurança",
+    c: "Partilhar as tuas senhas com amigos e familiares",
+    d: "Fazer o download de aplicações de fontes não confiáveis",
+    correct: "Instalar regularmente atualizações de segurança",
+},
+{
+    question: "Ao receber uma solicitação de amizade numa rede social de alguém desconhecido, o que deves fazer?",
+    a: "Aceitar a solicitação imediatamente, pois pode ser uma oportunidade de fazer novos amigos",
+    b: "Ignorar a solicitação e não aceitar amizades de pessoas desconhecidas",
+    c: "Responder à solicitação pedindo mais informações sobre a pessoa",
+    d: "Partilhar a solicitação com os teus amigos para obter opiniões",
+    correct: "Ignorar a solicitação e não aceitar amizades de pessoas desconhecidas",
+}],
 // ----------------- 10 ------------------------------
-        [{
-            question:"The Rath Yatra at Puri is celebrated in honour of which Hindu diety?",
-            a:"Ram",
-            b:"Shiva",
-            c:"Vishnu",
-            d:"Jagannath",
-            correct:"Jagannath",
-        },
-        {
-            question:"Which scientist discovered the radioactive element radium?",
-            a:"Isaac Newton",
-            b:"Albert Einstein",
-            c:"Benjamin Franklin",
-            d:"Marie Curie",
-            correct:"Marie Curie",
-        },
-        {
-            question:"The World Largest desert is ?",
-            a:"Thar",
-            b:"Kalahari",
-            c:"Sahara",
-            d:"Sonoran",
-            correct:"Sahara",
-        }],
+[{
+    question: "A prática de verificar se um site possui um cadeado de segurança e um endereço HTTPS antes de fornecer informações pessoais é uma medida de segurança chamada de _______.",
+    a: "Criptografia",
+    b: "Firewall",
+    c: "Navegação segura",
+    d: "Proteção contra malware",
+    correct: "Navegação segura",
+},
+{
+    question: "Um programa malicioso projetado para se infiltrar num sistema de computador e se espalhar sem o conhecimento do utilizador é chamado de _______.",
+    a: "Vírus",
+    b: "Senha",
+    c: "Firewall",
+    d: "Backup",
+    correct: "Vírus",
+},
+{
+    question: "A prática de usar uma combinação única de letras, números e caracteres especiais para proteger as tuas contas online é chamada de _______.",
+    a: "Senha forte",
+    b: "Antivírus",
+    c: "Criptografia",
+    d: "Backup",
+    correct: "Senha forte",
+}],
 // ----------------- 11 ------------------------------
-        [{
-            question:"Which of the following Constitutional posts is enjoyed for a fixed term?",
-            a:"President",
-            b:"Chief Justice",
-            c:"Prime Minister",
-            d:"Governor",
-            correct:"President",
-        },
-        {
-            question:"Delhi became capital of India in__",
-            a:"1910",
-            b:"1911",
-            c:"1916",
-            d:"1917",
-            correct:"1911",
-        },
-        {
-            question:"At which one of the following places do the rivers Alaknanda and Bhagirathi merge to form Ganga?",
-            a:"Devprayag",
-            b:"Rudra Prayag",
-            c:"Karnaprayag",
-            d:"Vishnuprayag",
-            correct:"Devprayag",
-        }],
+[{
+    question: "Um ataque cibernético que envolve o envio de e-mails falsos com o objetivo de induzir as pessoas a revelar informações confidenciais é chamado de _______.",
+    a: "Phishing",
+    b: "Malware",
+    c: "Firewall",
+    d: "Backup",
+    correct: "Phishing",
+},
+{
+    question: "A prática de fazer uma cópia de segurança regular dos teus ficheiros e dados importantes é conhecida como _______.",
+    a: "Firewall",
+    b: "Backup",
+    c: "Criptografia",
+    d: "Antivírus",
+    correct: "Backup",
+},
+{
+    question: "Um método utilizado por hackers para obter acesso a sistemas ou contas por meio do uso de senhas comuns ou fáceis de adivinhar é conhecido como _______.",
+    a: "Injeção de código",
+    b: "Força bruta",
+    c: "Engenharia social",
+    d: "Ransomware",
+    correct: "Força bruta",
+}],
 // ----------------- 12 ------------------------------
-        [{
-            question:"Who was the first Muslim lady to sit in the throne of Delhi?",
-            a:"Noorjehan",
-            b:"Razia Riaz Monnera",
-            c:"Iltumisha",
-            d:"Sultana Razia Begum",
-            correct:"Sultana Razia Begum",
-        },
-        {
-            question:"'Madhubani', a style of folk paintings, is popular in which of the following states in India?",
-            a:"Madhya Pradesh",
-            b:"Uttar Pradesh",
-            c:"West Bengal",
-            d:"Bihar",
-            correct:"Bihar",
-        },
-        {
-            question:"The Central Rice Research Station is situated in?",
-            a:"Chennai",
-            b:"Cuttack",
-            c:"Bangalore",
-            d:"Quilon",
-            correct:"Cuttack",
-        }],
+[{
+    question: "Uma técnica de segurança que consiste em verificar se os utilizadores são quem eles afirmam ser com base nas suas características físicas, como impressões digitais ou reconhecimento facial, é chamada de _______.",
+    a: "Autenticação de dois fatores",
+    b: "Firewall",
+    c: "Criptografia",
+    d: "Biometria",
+    correct: "Biometria",
+},
+{
+    question: "Um tipo de malware que rouba e criptografa os ficheiros de um dispositivo, exigindo um resgate para desbloqueá-los, é conhecido como _______.",
+    a: "Ransomware",
+    b: "Phishing",
+    c: "Spyware",
+    d: "Worm",
+    correct: "Ransomware",
+},
+{
+    question: "Um método de proteção de rede que controla o tráfego de entrada e saída com base num conjunto de regras de segurança é chamado de _______.",
+    a: "Firewall",
+    b: "Malware",
+    c: "Criptografia",
+    d: "Backup",
+    correct: "Firewall",
+}],
 // ----------------- 13 ------------------------------
-        [{
-            question:"Who was the last ruler of the Mughal dynasty?",
-            a:"Bahadur Shah Zafar",
-            b:"Aurangzeb",
-            c:"Jehangir",
-            d:"Shah Jahan",
-            correct:"Bahadur Shah Zafar",
-        },
-        {
-            question:"What does the ‘R’ stand for in the name of Dr B R Ambedkar?",
-            a:"Ramesh",
-            b:"Ramakant",
-            c:"Raman",
-            d:"Ramji",
-            correct:"Ramji",
-        },
-        {
-            question:"Who among the following wrote Sanskrit grammar?",
-            a:"Kalidasa",
-            b:"Charak",
-            c:"Panini",
-            d:"Aryabhatt",
-            correct:"Panini",
-        }],
+[{
+    question: "Uma técnica usada por hackers para interceptar comunicações entre dois ou mais dispositivos e roubar informações é conhecida como _______.",
+    a: "Man-in-the-middle",
+    b: "Pharming",
+    c: "Spoofing",
+    d: "Antivírus",
+    correct: "Man-in-the-middle",
+},
+{
+    question: "Uma técnica usada por hackers para convencer as pessoas a executar ações prejudiciais, como clicar em links maliciosos ou fornecer informações confidenciais, é chamada de _______.",
+    a: "Pharming",
+    b: "Engenharia social",
+    c: "Ransomware",
+    d: "Spyware",
+    correct: "Engenharia social",
+},
+{
+    question: "Um tipo de ataque cibernético que visa sobrecarregar um sistema ou site específico com tráfego excessivo, tornando-o inacessível para os utilizadores legítimos, é chamado de _______.",
+    a: "Phishing",
+    b: "Spyware",
+    c: "Ataque DDoS",
+    d: "Worm",
+    correct: "Ataque DDoS",
+}],
 // ----------------- 14 ------------------------------
-        [
-        {
-            question:"Right to property was removed from the list of Fundamental Rights during the rule of?",
-            a:"Indhira Gandhi Government",
-            b:"Morarji Desai Government",
-            c:"Narasimha Rao Government",
-            d:"Vajpayee Government",
-            correct:"Morarji Desai Government",
-        },
-        {
-            question:"Who was the first Indian woman to win a medal in the Olympics?",
-            a:"P.T.Usha",
-            b:"Karnam Malleshwari",
-            c:"Kunjarani Devi",
-            d:"Bachendri Pal",
-            correct:"Karnam Malleshwari",
-        },
-        {
-            question:"Who became the first Indian woman to join the International Olympic Committee?",
-            a:"Anjum Chopra",
-            b:"P T Usha",
-            c:"Karnam Malleswari",
-            d:"Nita Ambani",
-            correct:"Nita Ambani",
-        }],
+[
+{
+    question: "Uma técnica de segurança que envolve a codificação de dados para que só possam ser lidos por pessoas autorizadas é conhecida como _______.",
+    a: "Firewall",
+    b: "Backup",
+    c: "Criptografia",
+    d: "Antivírus",
+    correct: "Criptografia",
+},
+{
+    question: "Um programa de computador malicioso que se replica e se espalha para outros computadores sem a necessidade de interação do utilizador é chamado de _______.",
+    a: "Ransomware",
+    b: "Worm",
+    c: "Phishing",
+    d: "Spyware",
+    correct: "Worm",
+},
+{
+    question: "Uma técnica usada por hackers para criar um site falso que se parece com um site legítimo, com o objetivo de enganar as pessoas a partilhar informações confidenciais, é conhecida como _______.",
+    a: "Spyware",
+    b: "Man-in-the-middle",
+    c: "Phishing",
+    d: "Malware",
+    correto: "Phishing",
+}],
 // ----------------- 15 ------------------------------
-        [{
-            question:"In what year was Mahatma Gandhi assassinated?",
-            a:"1945",
-            b:"1947",
-            c:"1948",
-            d:"1949",
-            correct:"1948",
-        },
-        {
-            question:"Which of these is nearest to the South Pole?",
-            a:"Arctic circle",
-            b:"Tropic of Cancer",
-            c:"Equator",
-            d:"Tropic of Capricorn",
-            correct:"Tropic of Capricorn",
-        },
-        {
-            question:"Who became the first Indian woman to join the International Olympic Committee?",
-            a:"Anjum Chopra",
-            b:"P T Usha",
-            c:"Karnam Malleswari",
-            d:"Nita Ambani",
-            correct:"Nita Ambani",
-        }],
+[{
+    question: "Um software projetado para detectar, bloquear e remover programas maliciosos de um computador é chamado de _______.",
+    a: "Antivírus",
+    b: "Firewall",
+    c: "Backup",
+    d: "Criptografia",
+    correct: "Antivírus",
+},
+{
+    question: "Um tipo de ataque cibernético que redireciona o tráfego de um site legítimo para um site falso, com o objetivo de roubar informações dos utilizadores, é chamado de _______.",
+    a: "Spoofing",
+    b: "Pharming",
+    c: "Malware",
+    d: "Worm",
+    correct: "Spoofing",
+},
+{
+    question: "Uma técnica de segurança que envolve o uso de duas formas de autenticação para verificar a identidade de um utilizador, geralmente uma combinação de senha e um código enviado para um dispositivo móvel, é chamada de _______.",
+    a: "Criptografia",
+    b: "Firewall",
+    c: "Autenticação de dois fatores",
+    d: "Backup",
+    correct: "Autenticação de dois fatores",
+}],
+
 
 ];
 const page1Sound = new Audio("./sounds/Kaun_Banega_Crorepati_Bgm.mp3");
@@ -547,7 +548,7 @@ const resultAnalysis = (e)=>{
             lifelineFlag.doubleDipMarker=0;
         }
         let amount = document.getElementById(currentQuestIndex).innerText;
-        amount = amount.replaceAll(",","");
+        // amount = amount.replaceAll("","");
         quitFlag.winningAmount = parseInt(amount);
         document.getElementById("result").innerText = "Resposta Correcta";
         e.style.backgroundColor = "green";
@@ -746,7 +747,7 @@ const flipTheQuestionLogic = ()=>{
         <div class="timer-container">
             <div class="timer">0</div>
         </div>
-        <div class="question-box">
+        <div class="question-box" style="background-color:#003e71">
             <div class="question">${currQuestObject.question}</div>
         </div>
         <div class="answer-box">
@@ -1063,7 +1064,7 @@ const buildKBCquestions = ()=>{
         <div class="timer-container">
             <div class="timer">0</div>
         </div>
-        <div class="question-box" style="background-color:#03318c">
+        <div class="question-box" style="background-color:#003e71">
             <div class="question">${currQuestObject.question}</div>
         </div>
         <div class="answer-box">
@@ -1109,27 +1110,28 @@ const buildMoneyArea = ()=>{
             <div id="1" class="each-prize">200</div>
             <div id="2" class="each-prize">400</div>
             <div id="3" class="each-prize">800</div>
-            <div id="4" class="each-prize">1,000</div>
-            <div id="5" class="each-prize">2,000</div>
-            <div id="6" class="each-prize">4,000</div>
-            <div id="7" class="each-prize">8,000</div>
-            <div id="8" class="each-prize">16,000</div>
-            <div id="9" class="each-prize">32,000</div>
-            <div id="10" class="each-prize">64,000</div>
-            <div id="11" class="each-prize">125,000</div>
-            <div id="12" class="each-prize">250,000</div>
-            <div id="13" class="each-prize">500,000</div>
-            <div id="14" class="each-prize">1000,000</div>
+            <div id="4" class="each-prize">1000</div>
+            <div id="5" class="each-prize">2000</div>
+            <div id="6" class="each-prize">4000</div>
+            <div id="7" class="each-prize">8000</div>
+            <div id="8" class="each-prize">16000</div>
+            <div id="9" class="each-prize">32000</div>
+            <div id="10" class="each-prize">64000</div>
+            <div id="11" class="each-prize">125000</div>
+            <div id="12" class="each-prize">250000</div>
+            <div id="13" class="each-prize">500000</div>
+            <div id="14" class="each-prize">1000000</div>
+            <br>
+            <div id="15" class="each-prize">Pontos</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
     document.getElementById('0').style.cssText = "color: gold;";
-    document.getElementById('8').style.cssText = "color: gold;";
-    document.getElementById('11').style.cssText = "color: gold;"
-    document.getElementById('8').style.cssText = "color: gold;"
-    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
-
-    
+    document.getElementById('2').style.cssText = "color: gold;";
+    document.getElementById('5').style.cssText = "color: gold;";
+    document.getElementById('9').style.cssText = "color: gold;";
+    document.getElementById('14').style.cssText = "color: gold";
+    document.getElementById('15').style.cssText = "color: #003e71;  margin-top: -50px; padding: 20px; background-color: white; font-size: 30px;";
     let prizeId = `${currentQuestIndex}`;
     document.getElementById(prizeId).style.backgroundColor = colors.page2btn;
     document.getElementById(prizeId).style.borderRadius = "10px";
@@ -1143,40 +1145,43 @@ const questForSpecificPrizeMoney = ()=>{
 
 function congratulationComment(ind){
     let comment ;
-    if(ind >= 0 && ind < 5)
-        comment = "Estagiário de Cibersegurança";
-    
-    else if( ind >= 5 && ind < 9)
-        comment = "Técnico de Cibersegurança";
-    
-    else if(ind >= 9 && ind < 12)
+    if(ind >= 14)
+        comment = "Especialista em Cibersegurança";
+
+    else if( ind >= 9 && ind < 14)
+        comment = "Engenheiro de Cibersegurança";
+
+    else if(ind >= 5 && ind < 9)
         comment = "Analista de Cibersegurança";
     
-    else if( ind >= 12 && ind < 14)
-        comment = "Engenheiro de Cibersegurança";
+    else if( ind >= 2 && ind < 5)
+        comment = "Técnico de Cibersegurança";
     
     else
-        comment = "Especialista em Cibersegurança";
+        comment = "Estagiário de Cibersegurança";
 
     return comment;
 }
 
 function lastEndComment(money){
     let comment;
-    if(money >= 0 && money < 2000)
+    if(money == 0 )
         comment = "Precisas de Aprender de Cibersegurança";
 
-    else if(money >= 2000 && money < 32,000)
-        comment = "Foste Insufeciente no Jogo. Mostras te que tens poucos conhecimentos de Cibersegurança";
+    else if(money >= 100 && money < 400)
+        comment = "Mostras te que tens poucos conhecimentos de Cibersegurança";
 
-    else if(money >= 32,000 && money < 250,000) 
-        comment = "Bom Jogo. Tens conhecimentos de Cibersegurança!";
+    else if(money >= 400 && money < 2000)
+        comment = "Mostras te que tens alguns conhecimentos de Cibersegurança";
 
-    else if(money >= 250,000 && money < 1000,000) 
-        comment = "Muito Bom Jogo. Tens grandes conhecimentos de Cibersegurança!";
+    else if(money >= 2000 && money < 32000) 
+        comment = "Tens conhecimentos sobre Cibersegurança!";
+
+    else if(money >= 32000 && money < 1000000) 
+        comment = "Tens grandes conhecimentos de Cibersegurança!";
 
     else
-        comment = "Parabéns. Tu percebes tudo de Cibersegurança!";
+        comment = "Parabéns.\nPercebes tudo de Cibersegurança!";
 
     return comment;
 }
@@ -1198,7 +1203,7 @@ function formatedMoney(money){
         for(let i=0;i<5;i++)
         {
             if(i==2)
-                temp+=',';
+                temp+='';
             temp+=m[i];
         }
         return temp;
@@ -1208,7 +1213,7 @@ function formatedMoney(money){
         for(let i=m.length-1;i>=0;i--)
         {
             if(i==m.length-4 || i==m.length-6)
-                temp+=',';
+                temp+='';
             temp+=m[i];
         }
         temp = reverseString(temp);
@@ -1231,15 +1236,14 @@ function openQuitPage(){
     if(quitFlag.oneCroreFlag)
     {
         congratulation = congratulationComment(14);
-        money = "1 Ponto";
-        lastComment = "Parabens pela sua Vitória";
+        money = 1000000;
+        lastComment = lastEndComment(money);    
     }
     else if(quitFlag.timeUpFlag)
     {
         let temp;
-        temp = currentQuestIndex-1;
         congratulation = congratulationComment(temp);
-        money = quitFlag.winningAmount;
+        money = 1000000;
         lastComment = lastEndComment(money);    
         money = formatedMoney(money);    
     }
@@ -1247,20 +1251,26 @@ function openQuitPage(){
     {
         let temp = currentQuestIndex-1;
         congratulation = congratulationComment(temp);
-        if(quitFlag.winningAmount>=32,000){
-            lastComment = lastEndComment(money);
-            money = 32,000;
-        }
-         
-        else if(quitFlag.winningAmount>=1000){
-            lastComment = lastEndComment(money);
-            money = 1000;
-        }       
+       if(quitFlag.winningAmount>=32000){
+            money = 32000;
+        }     
+        else if(quitFlag.winningAmount>=2000){
+            money = 2000;
+        } 
+                 
+        else if(quitFlag.winningAmount>=400){
+            money = 400;
+        } 
+                 
+        else if(quitFlag.winningAmount>=100){
+            money = 100;
+        }   
         else {
-            lastComment = lastEndComment(money);
+
             money = 0; 
         }
-        money = formatedMoney(money);     
+        lastComment = lastEndComment(money);
+        money = formatedMoney(money);    
     }
     else 
     {
@@ -1278,7 +1288,7 @@ function openQuitPage(){
                 <div class="person-image"></div>
                 <div class="person-info">
                     <p id="contestant-name">${contestantName}</p>
-                    <span>Competidor</span>
+                    <span>Jogador</span>
                 </div>
             </div>
             <div class="congratulation">${congratulation}</div>
@@ -1339,23 +1349,28 @@ const showMoneyStack = ()=>{
             <div id="1" class="each-prize">200</div>
             <div id="2" class="each-prize">400</div>
             <div id="3" class="each-prize">800</div>
-            <div id="4" class="each-prize">1,000</div>
-            <div id="5" class="each-prize">2,000</div>
-            <div id="6" class="each-prize">4,000</div>
-            <div id="7" class="each-prize">8,000</div>
-            <div id="8" class="each-prize">16,000</div>
-            <div id="9" class="each-prize">32,000</div>
-            <div id="10" class="each-prize">64,000</div>
-            <div id="11" class="each-prize">125,000</div>
-            <div id="12" class="each-prize">250,000</div>
-            <div id="13" class="each-prize">500,000</div>
-            <div id="14" class="each-prize">1000,000</div>
+            <div id="4" class="each-prize">1000</div>
+            <div id="5" class="each-prize">2000</div>
+            <div id="6" class="each-prize">4000</div>
+            <div id="7" class="each-prize">8000</div>
+            <div id="8" class="each-prize">16000</div>
+            <div id="9" class="each-prize">32000</div>
+            <div id="10" class="each-prize">64000</div>
+            <div id="11" class="each-prize">125000</div>
+            <div id="12" class="each-prize">250000</div>
+            <div id="13" class="each-prize">500000</div>
+            <div id="14" class="each-prize">1000000</div>
+            <br>
+            <div id="15" class="each-prize">Pontos</div>
     `;
     document.querySelector("#money-area").classList.add("money-area");
     document.querySelector("#money-area").innerHTML = moneyAreaPrizes;
-    document.getElementById('4').style.cssText = "color: gold;";
+    document.getElementById('0').style.cssText = "color: gold;";
+    document.getElementById('2').style.cssText = "color: gold;";
+    document.getElementById('5').style.cssText = "color: gold;";
     document.getElementById('9').style.cssText = "color: gold;";
-    document.getElementById('14').style.cssText = "color: gold; font-size: 25px;";
+    document.getElementById('14').style.cssText = "color: gold;";
+    document.getElementById('15').style.cssText = "color: #003e71;  margin-top: -50px; padding: 20px; background-color: white; font-size: 30px;";
 }
 
 const hoverLifeline = ()=>{
@@ -1385,7 +1400,7 @@ const showLifeline = ()=>{
 const sitOnTheHotSeatFun = ()=>{
     let contestantName = document.getElementById("contestant-name-input").value;
     if(contestantName=="")
-        contestantName = "Anonymous";
+        contestantName = "Anónimo";
     page1Sound.pause();
     WelcomeSound();
     document.getElementById("page2").classList.add("show-modal");

@@ -6,7 +6,7 @@
 }
 
 :root{
-    --page2btn:rgb(77, 77, 77);
+    --page2btn: #003e71;
 }
 
 
@@ -15,7 +15,7 @@
     height:100vh;
     width:100vw;
     background-color:rgb(1, 1, 27);
-    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart1.jpg");
+    background-image:url("walpaperstart1.jpg");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 
 .page-container{
 
-    margin-top: 250px;
+    margin-top: 500px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +79,7 @@ input[type='text']::placeholder{
     margin-bottom:2.3em;
     position:relative;
     z-index:1;
+    
 }
 a{
     color:white;
@@ -113,7 +114,7 @@ a{
 }
 
 #sitOnTheHotSeat{
-    background-color: darkred;
+    background-color: #580e0f;
     width: 20em;
     text-align: center;
     border-radius: 20px;
@@ -128,7 +129,7 @@ a{
     height:75vh;
     width:75vw;
     background-color:lightseagreen;
-    background-image:url("../images/walpaperend.jpg");
+    background-image:url("walpaperend.jpg");
     background-repeat: no-repeat;
     background-position:right;
     background-size:cover;
@@ -192,11 +193,11 @@ a{
 
 .game-area-people{
     /* border:1px solid orange; */
-    flex-basis: 10%;
-    margin: 0em 1.6em;
+    flex-basis:10%;
+    margin:0em 1.6em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
     
 }
 
@@ -207,16 +208,25 @@ a{
     margin-top: 10px;
 }
 
-.person-image,.lets-play-image{
-    height:50px;
-    width:50px;
-    background-image: url(https://icon-library.com/images/my-account-icon-png/my-account-icon-png-22.jpg);
+.lets-play-image{
+
     background-position:center;
     background-size:cover;
     background-repeat: no-repeat;
-    margin:0 6px;
+    margin:0 9px;
+    
 }
 
+.person-image{
+    height:70px;
+    width:70px;
+    background-image: url('user.png');
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin:0 9px;
+    
+}
 .person-info p{
     font-size:1rem;
     padding: 10px;
@@ -239,11 +249,12 @@ a{
     font-size:1.6em;
     padding:0 6px;
     margin-right:2px;
+    background-color:  #003e71;
 }
 
 .page2btn::after{
     border-radius:5px;
-    background-color: rgb(142, 142, 142);
+    background-color:  #0262b1;
 }
 
 .game-area-result{
@@ -260,8 +271,7 @@ a{
     /* border:2px solid red; */
     border-radius:5px;
     text-align:center;
-    /* font-size:2rem; */       /* legendas */
-    font-size:0rem; 
+    font-size:0rem;
     text-shadow:10px 10px 20px black;
     
 }
@@ -272,6 +282,7 @@ a{
     margin:0em 1.6em;
     display:flex;
     flex-direction: column;
+    margin-bottom: 70px;
 }
 
 .lets-play-container , .lifeline-set{
@@ -289,7 +300,8 @@ a{
     margin-bottom: 100px;
     border:none;
     cursor:pointer;
-    background-image:url("../images/logo.png");
+    /* background-image:url("logo3.png"); */
+    /* Imagem segundo plano*/
 }
 
 
@@ -309,9 +321,11 @@ a{
     font-size:2rem;
     font-family: "Algerian", Arial , Helvetica , sans-serif;
     box-shadow:0px 0px 10px 3px var(--page2btn);
+    background-color: white;
+    color: black;
 }
 .question-box{
-    flex-basis:60%;
+    flex-basis:40%;
     box-shadow:0px 0px 10px 3px var(--page2btn);
     border-radius: 5px;
     display: flex;
@@ -330,11 +344,13 @@ a{
     /* background-color:rgba(137, 43, 226, 0.1); */
 }
 .answer-box{
-    flex-basis:60%;
+    flex-basis:40%;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
     align-items: center;
+    color: black;
+
     /* padding: 0.6em 0; */
     /* background-color:skyblue; */
 
@@ -344,7 +360,7 @@ a{
     /* border:1px solid red; */
     /* background-color: red; */
     width:49%;
-    height:46px;
+    height:70px;
     margin:0.3em 0;
     box-shadow:0px 0px 10px 3px var(--page2btn);
     border-radius: 5px;
@@ -353,6 +369,7 @@ a{
     align-items: center;
     cursor:pointer;
     transition:all 0.3s ease;
+    background-color: white;
     /* justify-content: center; */
 }
 
@@ -377,8 +394,7 @@ a{
     display:flex;
     flex-direction: column-reverse;
     justify-content: center;
-    background-color:#2abe76;
-    box-shadow: 0px 3px 3px white;
+    background-color:#580e0f;
     /* align-items:center; */
 }
 
@@ -389,21 +405,24 @@ a{
     display:flex;
     justify-content: center;
     align-items:center;
+    
 }
 
 .checking-bullets-container , .lifeline-box{
     display:flex;
     justify-content:center;
     align-items:center;
+  
   }
   
   .bullets , .lifeline-item{
     /* border:1px solid blue; */
     height:30px;
     width:30px;
-    box-shadow:0px 0px 12px grey;
-    border-radius:50%;
+    box-shadow:10px 10px 20px #003e71;
+    border-radius:60%;
     margin:4px 6px;
+    
   }
 
   .lifeline-box{
@@ -441,8 +460,7 @@ a{
     opacity:1;
     pointer-events: auto;
     height:11rem;
-    top:-20%;
-    margin-right: -30px;
+    top:-30%;
   }
 
   .lifeline-item:hover{
@@ -450,30 +468,30 @@ a{
   }
 
   .audience-poll{
-    background-image:url("../images/AudiencePoll.jpeg");
+    background-image:url("AudiencePoll.jpeg");
   }
 
   .fifty-fifty{
-    background-image:url("../images/fifty-fifty.jpeg");
+    background-image:url("fifty-fifty.jpeg");
   }
 
   .flip-the-question{
-    background-image:url("../images/switchQuest.jpeg");
+    background-image:url("switchQuest.jpeg");
   }
   .double-dip{
-    background-image:url("../images/doubleDip.jpeg");
+    background-image:url("doubleDip.jpeg");
   }
 
   
 .audience-poll-inner-container,.just-before-audience-poll{
-    border:1px solid yellow;
     height:9rem;
     width:10rem;
-    border-radius: 5px;
+    border-radius: 20px;
     position:absolute;
     top:10%;
     left:50%;
     transform: translate(-100%,-20%);
+    margin: 2vw 23vw;
 }
 
 .audience-bar-box,.audience-letter-box,.audience-percentage-box{
@@ -484,14 +502,14 @@ a{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-end;
-    background:transparent;
+
 }
 .bar{
     width:1.6rem;
     height:90%;
-    border:1px solid goldenrod;
+    border:1px solid #003e71;;
     /* background-color:transparent; */
-    box-shadow: 3px 0px 1px gold;
+    box-shadow: 3px 0px 1px #003e71;
     border-radius: 5px;
     margin:0 3px;
 }
@@ -499,11 +517,11 @@ a{
     height:1.5rem;
     font-weight: bold;
     align-items: flex-start;
+    background-color:#003e71;
 }
 .letter,.percentage{
     width:1.6rem;
     text-align: center;
-    color:white;
 }
 .percentage{
     font-weight: lighter;
@@ -557,7 +575,7 @@ a{
     height:600px;
     /* width:300px; */
     background-color: green;
-    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../images/moneyTransfer.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("moneyTransfer.jpg");
     background-position:center;
     background-size:cover;
     margin-right:2rem;
@@ -573,7 +591,7 @@ a{
 
 .congratulation{
     font-size:4rem;
-    color:aquamarine;
+    color:rgb(3, 49, 140);
     margin:2rem 0;
     font-family:'Gill Sans';
     /* margin-top:1rem; */
@@ -581,25 +599,26 @@ a{
 
 .prize-money-earned{
     font-size:0.8rem;
-    color:white;
+    color:black;
     margin-bottom:0.3rem;
 }
 
 .money{
     font-size:3rem;
-    color:aqua;
+    color:rgb(3, 49, 140);
 }
 
 .last-comment{
     font-size:1.4rem;
-    color:white;
+    color: black;
     margin:2rem 0;
+    
 }
 /* -------------------media query--------------- */
 
 @media screen and (max-width:480px){
     .container{
-        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../images/walpaperstart2.jpg");
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("walpaperstart2.jpg");
         background-size:cover;
         background-position:center;
         background-repeat: no-repeat;
@@ -611,6 +630,7 @@ a{
     .input-box input{
         width:80vw;
     }
+
 
     /* ------- page 2 ---------------- */
 
