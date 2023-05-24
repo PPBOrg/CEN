@@ -349,7 +349,7 @@ const kbcQuestions =
     b: "Man-in-the-middle",
     c: "Phishing",
     d: "Malware",
-    correto: "Phishing",
+    correct: "Phishing",
 }],
 // ----------------- 15 ------------------------------
 [{
@@ -1296,6 +1296,12 @@ function openQuitPage(){
             <div class="money">${money}</div>
             <br>
             <div class="last-comment">${lastComment}</div>
+            <div class="game-area-btns" style="justify-content: center;">
+                <div id="Quit" class="btn page2btn" justify-content: center>
+                    <button class="btn-rules center" style=" justify-content: center; width: 200px" onclick="refreshPage()">Começar de Novo</button>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -1303,6 +1309,10 @@ function openQuitPage(){
     clearScreenFromAudiencePoll(); 
     ThemeMusic();
     document.querySelector(".game-area").innerHTML = quitContent;
+}
+
+function refreshPage() {
+    location.reload();
 }
 
 function quitButton(){
