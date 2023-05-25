@@ -379,17 +379,17 @@ const kbcQuestions =
 
 
 ];
-const page1Sound = new Audio("./sounds/Kaun_Banega_Crorepati_Bgm.mp3");
-const welcomeSound = new Audio("./sounds/page2_kbc_intro_audio.mp3")
-const timerSound = new Audio("./sounds/Kbc Timer - Tik Tik KBC Clock.mp3");
-const wrongAnswerSound = new Audio("./sounds/wrong_with_dramatic.mp3");
-const correctAnswerSound = new Audio("./sounds/kbc_background.mp3");
-const answerLockSound = new Audio("./sounds/ans_lock2.mp3");
-const lifelineComesUpSound = new Audio("./sounds/lifeline-comesUp.mp3");
-const audiencePollSound = new Audio("./sounds/audience_poll.mp3");
-const audiencePollImplementationSound = new Audio("./sounds/audiencePoll_Implementation.mp3");
-const doubleDipWrongAnswerSound = new Audio("./sounds/wrong_ans.mp3");
-const themeMusic = new Audio("./sounds/THEME_MUSIC2.mp3");
+const page1Sound = new Audio("Kaun_Banega_Crorepati_Bgm.mp3");
+const welcomeSound = new Audio("page2_kbc_intro_audio.mp3")
+const timerSound = new Audio("Kbc Timer - Tik Tik KBC Clock.mp3");
+const wrongAnswerSound = new Audio("wrong_with_dramatic.mp3");
+const correctAnswerSound = new Audio("kbc_background.mp3");
+const answerLockSound = new Audio("ans_lock2.mp3");
+const lifelineComesUpSound = new Audio("lifeline-comesUp.mp3");
+const audiencePollSound = new Audio("audience_poll.mp3");
+const audiencePollImplementationSound = new Audio("audiencePoll_Implementation.mp3");
+const doubleDipWrongAnswerSound = new Audio("wrong_ans.mp3");
+const themeMusic = new Audio("THEME_MUSIC2.mp3");
 
 let currentQuestIndex = 0;
 let currentRandomQuestIndex;
@@ -550,7 +550,7 @@ const resultAnalysis = (e)=>{
         let amount = document.getElementById(currentQuestIndex).innerText;
         // amount = amount.replaceAll("","");
         quitFlag.winningAmount = parseInt(amount);
-        document.getElementById("result").innerText = "Resposta Correcta";
+        document.getElementById("result").innerText = "";
         e.style.backgroundColor = "green";
         enableNextButton();
         enableQuitButton();
@@ -570,7 +570,7 @@ const resultAnalysis = (e)=>{
         else
         {
             WrongAnswerSound();
-            document.getElementById("result").innerText = "Resposta Errada";
+            document.getElementById("result").innerText = "";
             e.style.backgroundColor = "lightcoral";
             correctOptionId = correctOptionAnsEle(correctAns);
             document.getElementById(correctOptionId).style.backgroundColor = "green";
@@ -586,7 +586,7 @@ const bulletTimeout = (flag,bullets,clearTimeoutId,e)=>{
     if(flag==3)
         {
             document.querySelector("#game-area-result").classList.remove("checking-bullets-container");
-            let resultBack = `<div id="result" class="result">Welcome to Kaun Banega Crorepati</div>`;
+            let resultBack = `<div id="result" class="result">Rumo ao Topo da CiberSegurança</div>`;
             let lifelineBox = `
                 <div class="lifeline-box">
                     <div class="lifeline-item audience-poll">
@@ -626,9 +626,9 @@ const bulletTimeout = (flag,bullets,clearTimeoutId,e)=>{
 const bulletsRunning = (e)=>{
     document.querySelector("#game-area-result").classList.add("checking-bullets-container");
     let bullets = `
-      <div class="bullets"></div>
-      <div class="bullets"></div>
-      <div class="bullets"></div>
+      <div class="bullets" style="background-color: white"></div>
+      <div class="bullets" style="background-color: white"></div>
+      <div class="bullets" style="background-color: white"></div>
     `
     disableNextButton();
     disableQuitButton();
@@ -691,7 +691,7 @@ const doubleDipCrossMark = ()=>{
 const doubleDipHandler = ()=>{
     lifelineFlag["doubleDipFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementing double-dip ...";
+    document.getElementById("result").innerText = "Implementa Duas Tentativas";
     LifelineImplementationSound();
     document.querySelector(".double-dip").classList.add("pointer-events-none");
     doubleDipCrossMark();
@@ -699,7 +699,7 @@ const doubleDipHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "--Faça a Primeira Escolha";
+        document.getElementById("result").innerText = "Faça a Primeira Escolha";
         lifelineFlag.doubleDipMarker = 1;
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -860,7 +860,7 @@ const fiftyFiftyHandler = ()=>{
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Duas Resposta Erradas!!";
+        document.getElementById("result").innerText = "";
         fiftyFiftyLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();

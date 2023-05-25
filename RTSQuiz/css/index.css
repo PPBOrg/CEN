@@ -228,13 +228,16 @@ a{
     
 }
 .person-info p{
-    font-size:1rem;
+    font-size:1.3rem;
     padding: 10px;
+    color:black;
+    font-weight: bold;
 }
 .person-info span{
     font-size:0.7rem;
-    color:var(--page2btn);
+    color: darkred;
     font-weight: bold;
+    margin-left: 1em;
 }
 
 .page2btn , .lifeline-no{
@@ -271,7 +274,7 @@ a{
     /* border:2px solid red; */
     border-radius:5px;
     text-align:center;
-    font-size:0rem;
+    font-size:1rem;  /* LEGENDAS */
     text-shadow:10px 10px 20px black;
     
 }
