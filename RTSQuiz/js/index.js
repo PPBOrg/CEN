@@ -464,7 +464,7 @@ const timeUp = ()=>{
     document.getElementById(correctOptionId).style.backgroundColor = "green";
     document.getElementById(correctOptionId).style.color = "black";
 
-    document.getElementById("result").innerText = "#Tempo Limite";
+    document.getElementById("result").innerText = "";
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
