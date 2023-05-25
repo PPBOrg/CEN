@@ -379,17 +379,17 @@ const kbcQuestions =
 
 
 ];
-const page1Sound = new Audio("Kaun_Banega_Crorepati_Bgm.mp3");
-const welcomeSound = new Audio("page2_kbc_intro_audio.mp3")
-const timerSound = new Audio("Kbc Timer - Tik Tik KBC Clock.mp3");
-const wrongAnswerSound = new Audio("wrong_with_dramatic.mp3");
-const correctAnswerSound = new Audio("kbc_background.mp3");
-const answerLockSound = new Audio("ans_lock2.mp3");
-const lifelineComesUpSound = new Audio("lifeline-comesUp.mp3");
-const audiencePollSound = new Audio("audience_poll.mp3");
-const audiencePollImplementationSound = new Audio("audiencePoll_Implementation.mp3");
-const doubleDipWrongAnswerSound = new Audio("wrong_ans.mp3");
-const themeMusic = new Audio("THEME_MUSIC2.mp3");
+const page1Sound = new Audio("cyber-intro.mp3");
+const welcomeSound = new Audio("cyber-town-simcity-style-music.mp3");
+const timerSound = new Audio("tik tik meme.mp3");
+const wrongAnswerSound = new Audio("fail.mp3");
+const correctAnswerSound = new Audio("success.mp3");
+const answerLockSound = new Audio("robotic-transform.mp3");
+const lifelineComesUpSound = new Audio("choosing1.mp3");
+const audiencePollSound = new Audio("waiting.mp3");
+const audiencePollImplementationSound = new Audio("announcement-end.mp3");
+const doubleDipWrongAnswerSound = new Audio("failure-3.mp3");
+const themeMusic = new Audio("say-what-you-mean-loop.mp3");
 
 let currentQuestIndex = 0;
 let currentRandomQuestIndex;
