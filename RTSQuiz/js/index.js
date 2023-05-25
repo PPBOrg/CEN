@@ -534,7 +534,7 @@ function doubleDipLogic(e){
     lifelineFlag.doubleDipMarker = 0;
 }
 
-//Result Analysis--------
+//____________________________Result Analysis_________________________________________
 const resultAnalysis = (e)=>{
     answerLockSound.pause();
     contestantAnsObject = e.childNodes;
