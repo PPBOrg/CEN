@@ -125,10 +125,31 @@ a{
 }
 
 /* -------------------------modal for rules ------------- */
-.modal-container,.modal-container-page2{
+.modal-container{
+    height:90vh;
+    width:90vw;
+    background-color: #003e71;
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size:cover;
+    background-attachment: fixed;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    box-shadow:0 0 20px rgb(88, 83, 83);
+    border-radius:6px;
+    padding:1.3em;
+    z-index:2;
+    transition:all 0.3s ease-in-out;
+    opacity:0;
+    pointer-events: none;
+}
+.modal-container-page2{
+
     height:75vh;
     width:75vw;
-    background-color:lightseagreen;
     background-image:url("walpaperend.jpg");
     background-repeat: no-repeat;
     background-position:right;
@@ -157,7 +178,7 @@ a{
 }
 .kbc-rules{
     flex-basis:95%;
-    overflow-y:scroll;
+    /* overflow-y:scroll; */
 }
 
 .close-btn{
@@ -175,7 +196,6 @@ a{
 .modal-container-page2{
     height:100vh;
     width:100vw;
-    /* background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://images.news18.com/ibnlive/uploads/2017/08/amitabhkbc.jpg?im=FitAndFill,width=1200,height=900"); */
     background-position: center;
     padding:0;
     display: flex;
@@ -183,8 +203,6 @@ a{
 
 .game-area{
     flex-basis: 75%;
-    /* border: 2px solid yellow; */
-    /* background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://images.news18.com/ibnlive/uploads/2017/08/amitabhkbc.jpg?im=FitAndFill,width=1200,height=900"); */
     background-position: center;
     display:flex;
     flex-direction: column;
@@ -274,8 +292,10 @@ a{
     /* border:2px solid red; */
     border-radius:5px;
     text-align:center;
-    font-size:1rem;  /* LEGENDAS */
+    font-size:1.3rem;  /* LEGENDAS */
     text-shadow:10px 10px 20px black;
+    color:#003e71;
+    font-weight: bold;
     
 }
 
@@ -288,11 +308,20 @@ a{
     margin-bottom: 70px;
 }
 
-.lets-play-container , .lifeline-set{
+.lets-play-container{
     /* border:2px solid red; */
     /* border-radius: 50%; */
     height:100%;
-    display: flex;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.lifeline-set{
+    /* border:2px solid red; */
+    /* border-radius: 50%; */
+    height:100%;
+    display: none; 
     justify-content: center;
     align-items: center;
 }
@@ -382,9 +411,18 @@ a{
     /* border:1px solid orange; */
     flex-basis:10%;
     margin:0em 1.6em;
+    display: none;   /* border:1px solid orange; */
+    align-items: center;
+    justify-content:space-between;
+ 
+}
+
+.game-area-btns2{
+    margin:0em 10em;
     display: flex;
     align-items: center;
     justify-content:space-between;
+ 
 }
 
 .money-area{
@@ -613,14 +651,18 @@ a{
 .last-comment{
     font-size:1.4rem;
     color: black;
-    margin:2rem 0;
+    margin:2rem 1rem;
     
+}
+.restart{
+    margin-top: 20em;
+    justify-content: center;
 }
 /* -------------------media query--------------- */
 
 @media screen and (max-width:480px){
     .container{
-        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("walpaperstart2.jpg");
+        background-image:url("walpaperstart2.jpg");
         background-size:cover;
         background-position:center;
         background-repeat: no-repeat;
@@ -635,6 +677,9 @@ a{
 
 
     /* ------- page 2 ---------------- */
+    #restart{
+        margin-top: 10em;
+    }
 
     .game-area{
         flex-basis:100%;
@@ -654,6 +699,7 @@ a{
     .game-area-result{
         flex-basis:15%;
     }
+    
     .game-area-ques-ans{
         flex-basis: 65%;
     }
@@ -686,9 +732,9 @@ a{
 
     }
     .quit-info-container{
-        width:90vw;
+        width:110vw;
         text-align:center;
-        margin-top:15em;
+        margin-top:6em;
         /* border:1px solid white; */
     }
     .people{
@@ -699,6 +745,9 @@ a{
     }
     .money{
         font-size:2.5rem;
+    }
+    .person-info span{
+        margin-right: 5em;
     }
 }
 

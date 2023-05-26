@@ -18,12 +18,60 @@
             <div class="input-box">
                 <input id="contestant-name-input" type="text"  placeholder="Nome" onclick="openingSound()">
             </div>
+            <div id="btn-rules" class="btn " style="background-color: #003e71;   border-radius: 20px; width: 20em; text-align: center;">
+                <button class="btn-rules">Regras</button>
+            </div>
+            <br>
             <div  id="sitOnTheHotSeat" class="btn ">
                 <button class="btn-rules">Entrar</button>
-
             </div>
+
         </div>
     </div>
+
+    <section id="modal-container-rules" class="modal-container" style="background-color: #003e71;">
+        <div class="modal-rules">
+            <div class="kbc-rules" style="margin-left: 10vw;">
+                <br>
+                <h1 >Rumo ao Topo da Cibersegurança<br><br><br><br></h1>
+
+                <p>
+                    (1)   15 Perguntas<br><br>
+                    (2)   5 Níveis de difuldade<br><br>
+                    (3)   6 Ranks de Ciberseguurança<br>
+                </p>
+                <p style="margin-left: 50px;">
+                    1 - Estagiario <br>
+                    2 - Tecnico<br>
+                    3 - Analista<br>
+                    4 - Engenheiro<br>
+                    5 - Consultor<br>
+                    6 - Especialista<br><br>
+                </p>
+                <p>
+                    (4)   4 Ajudas<br>
+                </p>
+                <p style="margin-left: 50px;">
+                    1 - Público<br>
+                    2 - 50:50<br>
+                    3 - Troca de Pergunta<br>
+                    4 - Dupla Tentativa<br>
+                </p>                  
+                <br>
+                <p>
+                    Nota: Caso querias sair ficas com o nivel que estavas , se perderes voltas ao nivel do teu rank (cor amarela no placar pontos) e ficas com os pontos respectivos
+                </p>
+                <br><br> <br> <br>
+                <p>
+                    Criadores: Alexandre Machado, Filipe Sousa,  João Moita, Miguel Gonzalves e Pedro Briga 
+                </p>
+                <br>
+            </div>     
+            <div id="close-modal-btn" class="btn page2btn" >
+                <button class="btn-rules " style="  width: 70px;">Fechar</button>
+            </div>
+        </div>
+    </section>
 
             <!-- ------------------------------- page 2 -------------- -->
     <section id="page2" class="modal-container-page2">
@@ -73,18 +121,19 @@
 
             <div class="game-area-ques-ans">
                 <div class="lets-play-container">
-                    <div class="lets-play-image"></div>
+                    <div class="lets-play-image" onclick="showButtons()"></div>
                 </div>
             </div>
-
+            
             <div class="game-area-btns">
-                <div id="Quit" class="btn page2btn" >
-                    <button class="btn-rules ">Sair do Jogo</button>
+                <div id="Quit" class="btn page2btn">
+                    <button class="btn-rules">Sair do Jogo</button>
                 </div>
-                <div id="Next" class="btn page2btn" >
-                    <button class="btn-rules ">Próxima</button>
+                <div id="Next" class="btn page2btn">
+                    <button class="btn-rules">Próxima</button>
                 </div>
             </div>
+            
         </div>
         <div id="money-area">
 
@@ -94,5 +143,15 @@
     <script src="index.js">
 
     </script>
+    <script>
+        function showButtons() {
+        var buttons = document.querySelector('.game-area-btns');
+        buttons.style.display = 'flex';
+        var lifelineSet = document.querySelector('.lifeline-set');
+        lifelineSet.style.display = 'flex';
+    }
+    </script>
+
 </body>
+
 </html>

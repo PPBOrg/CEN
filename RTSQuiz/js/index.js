@@ -615,7 +615,7 @@ const bulletTimeout = (flag,bullets,clearTimeoutId,e)=>{
       {
           let ele = document.querySelector(".checking-bullets-container");
           ele.innerHTML = bullets;
-          ele.children[flag].style.backgroundColor = "gold";
+          ele.children[flag].style.backgroundColor = "orange";
           clearTimeout(clearTimeoutId);
           flag++;
           clearTimeoutId = setTimeout(bulletTimeout,800,flag,bullets,clearTimeoutId,e);
@@ -948,7 +948,7 @@ const audiencePollTimeout = (flag,justBeforeAudiencePoll,clearTimeoutId)=>{
                 </div>
             `;
             document.querySelector(".audience-poll-outer-container").innerHTML = audiencePollInnerContainer;
-            document.querySelectorAll(".bar").forEach((e)=>{e.style.backgroundColor = "goldenrod"});
+            document.querySelectorAll(".bar").forEach((e)=>{e.style.backgroundColor = "white"});
             audiencePollLogic();
             if(document.querySelector(".lifeline-no").innerText >0 )
                 enableLifelineButton();
@@ -962,7 +962,7 @@ const audiencePollTimeout = (flag,justBeforeAudiencePoll,clearTimeoutId)=>{
             tempFlag = flag-4;
         let ele = document.querySelector(".audience-poll-outer-container");
         ele.innerHTML = justBeforeAudiencePoll;
-        ele.children[0].children[tempFlag].style.backgroundColor = "goldenrod";
+        ele.children[0].children[tempFlag].style.backgroundColor = "orange";
         clearTimeout(clearTimeoutId);
         flag++;
         clearTimeoutId = setTimeout(audiencePollTimeout,1000,flag,justBeforeAudiencePoll,clearTimeoutId);
@@ -1296,8 +1296,8 @@ function openQuitPage(){
             <div class="money">${money}</div>
             <br>
             <div class="last-comment">${lastComment}</div>
-            <div class="game-area-btns" style="justify-content: center;">
-                <div id="Quit" class="btn page2btn" justify-content: center>
+            <div class="game-area-btns2" style="justify-content: center;">
+                <div id="restart" class="btn page2btn" justify-content: center>
                     <button class="btn-rules center" style=" justify-content: center; width: 200px" onclick="refreshPage()">Começar de Novo</button>
                 </div>
             </div>
