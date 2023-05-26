@@ -1149,13 +1149,16 @@ function congratulationComment(ind){
         comment = "Especialista em Cibersegurança";
 
     else if( ind >= 9 && ind < 14)
-        comment = "Engenheiro de Cibersegurança";
+        comment = "Consultor de Cibersegurança";
 
     else if(ind >= 5 && ind < 9)
-        comment = "Analista de Cibersegurança";
+        comment = "Engenheiro de Cibersegurança";
     
     else if( ind >= 2 && ind < 5)
-        comment = "Técnico de Cibersegurança";
+        comment = "Analista de Cibersegurança";
+
+    else if( ind >= 0 && ind < 2)
+        comment = "Técnico de Cibersegurança";    
     
     else
         comment = "Estagiário de Cibersegurança";
