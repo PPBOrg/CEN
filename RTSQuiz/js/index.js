@@ -522,7 +522,7 @@ const WrongAnswerSound = ()=>{
 
 function doubleDipLogic(e){
 
-    document.querySelector("#result").innerText = "Resposta Errada! Faça a Segunda Escolha.";
+    document.querySelector("#result").innerText = "Resposta errada! Faça a segunda tentativa";
     e.style.backgroundColor = "lightcoral";
     optButtonEnabled();
     e.style.pointerEvents = "none";
@@ -584,19 +584,19 @@ const bulletTimeout = (flag,bullets,clearTimeoutId,e)=>{
             let resultBack = `<div id="result" class="result">Rumo ao Topo da CiberSegurança</div>`;
             let lifelineBox = `
                 <div class="lifeline-box">
-                    <div class="lifeline-item audience-poll">
+                    <div class="lifeline-item computador">
                         <div id="audience-cross-one" class="cross-mark cross-one "></div>
                         <div id="audience-cross-two"  class="cross-mark cross-two "></div>
                     </div>
-                    <div class="lifeline-item flip-the-question">
+                    <div class="lifeline-item troca-de-pergunta">
                         <div class="cross-mark cross-one "></div>
                         <div class="cross-mark cross-two "></div>
                     </div>
-                    <div class="lifeline-item fifty-fifty">
+                    <div class="lifeline-item cinquenta-cinquenta">
                         <div class="cross-mark cross-one "></div>
                         <div class="cross-mark cross-two "></div>
                     </div>
-                    <div class="lifeline-item double-dip">
+                    <div class="lifeline-item dupla-tentativa">
                         <div class="cross-mark cross-one "></div>
                         <div class="cross-mark cross-two "></div>
                     </div>
@@ -638,7 +638,7 @@ const AnswerLockSound = ()=>{
 }
 
 function clearScreenFromAudiencePoll(){
-    document.querySelector(".audience-poll-outer-container").innerHTML = "";
+    document.querySelector(".computador-outer-container").innerHTML = "";
 }
 
 const disableLifelineButton = ()=>{
@@ -678,7 +678,7 @@ function LifelineImplementationSound(){
 
 
 const doubleDipCrossMark = ()=>{
-    let t = document.querySelector(".double-dip").children;
+    let t = document.querySelector(".dupla-tentativa").children;
     for(let i=0;i<t.length;i++)
         t[i].classList.add("opacity-one");
 }
@@ -686,15 +686,15 @@ const doubleDipCrossMark = ()=>{
 const doubleDipHandler = ()=>{
     lifelineFlag["doubleDipFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementa Duas Tentativas";
+    document.getElementById("result").innerText = "A implementar dupla tentativa";
     LifelineImplementationSound();
-    document.querySelector(".double-dip").classList.add("pointer-events-none");
+    document.querySelector(".dupla-tentativa").classList.add("pointer-events-none");
     doubleDipCrossMark();
     lifelineNum = document.querySelector(".lifeline-no").innerText ;
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Faça a Primeira Escolha";
+        document.getElementById("result").innerText = "Faça a primeira tentativa";
         lifelineFlag.doubleDipMarker = 1;
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -706,12 +706,12 @@ const doubleDipHandler = ()=>{
 const doubleDip = ()=>{
     if(lifelineFlag["doubleDipFlag"])
     {
-        document.querySelector(".double-dip").addEventListener("click",doubleDipHandler);
+        document.querySelector(".dupla-tentativa").addEventListener("click",doubleDipHandler);
     }
     else
     {
         doubleDipCrossMark();
-        document.querySelector(".double-dip").classList.add("pointer-events-none"); 
+        document.querySelector(".dupla-tentativa").classList.add("pointer-events-none"); 
     }
 }
 
@@ -719,7 +719,7 @@ const doubleDip = ()=>{
 
 
 const flipTheQuestionCrossMark = ()=>{
-    let t = document.querySelector(".flip-the-question").children;
+    let t = document.querySelector(".troca-de-pergunta").children;
     for(let i=0;i<t.length;i++)
         t[i].classList.add("opacity-one");
 }
@@ -765,15 +765,15 @@ const flipTheQuestionLogic = ()=>{
 const flipTheQuestionHandler = ()=>{
     lifelineFlag["flipTheQuestionFlag"] = 0;
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementa Mudar de Pergunta";
+    document.getElementById("result").innerText = "A implementar troca de pergunta";
     LifelineImplementationSound();
-    document.querySelector(".flip-the-question").classList.add("pointer-events-none");
+    document.querySelector(".troca-de-pergunta").classList.add("pointer-events-none");
     flipTheQuestionCrossMark();
     lifelineNum = document.querySelector(".lifeline-no").innerText ;
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
-        document.getElementById("result").innerText = "Pergunta Mudada!!";
+        document.getElementById("result").innerText = "Pergunta trocada!!";
         flipTheQuestionLogic();
         if(document.querySelector(".lifeline-no").innerText >0 )
             enableLifelineButton();
@@ -785,18 +785,18 @@ const flipTheQuestionHandler = ()=>{
 const flipTheQuestion = ()=>{
     if(lifelineFlag["flipTheQuestionFlag"])
     {
-        document.querySelector(".flip-the-question").addEventListener("click",flipTheQuestionHandler);
+        document.querySelector(".troca-de-pergunta").addEventListener("click",flipTheQuestionHandler);
     }
     else
     {
         flipTheQuestionCrossMark();
-        document.querySelector(".flip-the-question").classList.add("pointer-events-none"); 
+        document.querySelector(".troca-de-pergunta").classList.add("pointer-events-none"); 
     }
 }
 // _____________________________________50-50_____________________________________
 
 const fiftyFiftyCrossMark = ()=>{
-    let t = document.querySelector(".fifty-fifty").children;
+    let t = document.querySelector(".cinquenta-cinquenta").children;
     for(let i=0;i<t.length;i++)
         t[i].classList.add("opacity-one");
 }
@@ -847,9 +847,9 @@ const fiftyFiftyHandler = ()=>{
     lifelineFlag["fiftyFiftyFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementa 50-50";
+    document.getElementById("result").innerText = "A implementar 50-50";
     LifelineImplementationSound();
-    document.querySelector(".fifty-fifty").classList.add("pointer-events-none");
+    document.querySelector(".cinquenta-cinquenta").classList.add("pointer-events-none");
     fiftyFiftyCrossMark();
     lifelineNum = document.querySelector(".lifeline-no").innerText ;
     lifelineNum--;
@@ -867,18 +867,18 @@ const fiftyFiftyHandler = ()=>{
 const fiftyFifty = ()=>{
     if(lifelineFlag["fiftyFiftyFlag"])
     {
-        document.querySelector(".fifty-fifty").addEventListener("click",fiftyFiftyHandler);
+        document.querySelector(".cinquenta-cinquenta").addEventListener("click",fiftyFiftyHandler);
     }
     else
     {
         fiftyFiftyCrossMark();
-        document.querySelector(".fifty-fifty").classList.add("pointer-events-none"); 
+        document.querySelector(".cinquenta-cinquenta").classList.add("pointer-events-none"); 
     }
 }
-// __________________________________audience-poll_____________________________________
+// __________________________________computador_____________________________________
 
 const audiencePollCrossMark = ()=>{
-    let t = document.querySelector(".audience-poll").children;
+    let t = document.querySelector(".computador").children;
     for(let i=0;i<t.length;i++)
         t[i].classList.add("opacity-one");
 }
@@ -920,7 +920,7 @@ const audiencePollTimeout = (flag,justBeforeAudiencePoll,clearTimeoutId)=>{
     if(flag==8)
         {
             let audiencePollInnerContainer = `
-                <div class="audience-poll-inner-container">
+                <div class="computador-inner-container">
                     <div class="audience-percentage-box">
                         <div id="percentage_a" class="percentage">34%</div>
                         <div id="percentage_b" class="percentage">32%</div>
@@ -942,7 +942,7 @@ const audiencePollTimeout = (flag,justBeforeAudiencePoll,clearTimeoutId)=>{
 
                 </div>
             `;
-            document.querySelector(".audience-poll-outer-container").innerHTML = audiencePollInnerContainer;
+            document.querySelector(".computador-outer-container").innerHTML = audiencePollInnerContainer;
             document.querySelectorAll(".bar").forEach((e)=>{e.style.backgroundColor = "white"});
             audiencePollLogic();
             if(document.querySelector(".lifeline-no").innerText >0 )
@@ -955,7 +955,7 @@ const audiencePollTimeout = (flag,justBeforeAudiencePoll,clearTimeoutId)=>{
         let tempFlag = flag;
         if(tempFlag>3)
             tempFlag = flag-4;
-        let ele = document.querySelector(".audience-poll-outer-container");
+        let ele = document.querySelector(".computador-outer-container");
         ele.innerHTML = justBeforeAudiencePoll;
         ele.children[0].children[tempFlag].style.backgroundColor = "orange";
         clearTimeout(clearTimeoutId);
@@ -979,16 +979,16 @@ const audiencePollAddHandler = ()=>{
     lifelineFlag["audiencePollFlag"] = 0;
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
-    document.getElementById("result").innerText = "Implementa Ajuda do Público";
+    document.getElementById("result").innerText = "A implementar ajuda do computador";
     AudiencePollSound();
-    document.querySelector(".audience-poll").classList.add("pointer-events-none");
+    document.querySelector(".computador").classList.add("pointer-events-none");
     audiencePollCrossMark();
     lifelineNum = document.querySelector(".lifeline-no").innerText ;
     lifelineNum--;
     document.querySelector(".lifeline-no").innerText = lifelineNum;
     setTimeout(()=>{
         let justBeforeAudiencePoll = `
-            <div class="audience-bar-box just-before-audience-poll">
+            <div class="audience-bar-box just-before-computador">
                 <div id="bar_a" class="bar"></div>
                 <div id="bar_b" class="bar"></div>
                 <div id="bar_c" class="bar"></div>
@@ -1006,18 +1006,18 @@ const audiencePollAddHandler = ()=>{
 const audiencePoll = ()=>{
     if(lifelineFlag["audiencePollFlag"])
     {
-        document.querySelector(".audience-poll").addEventListener("click",audiencePollAddHandler);
+        document.querySelector(".computador").addEventListener("click",audiencePollAddHandler);
     }
     else
     {
         audiencePollCrossMark();
-        document.querySelector(".audience-poll").classList.add("pointer-events-none"); 
+        document.querySelector(".computador").classList.add("pointer-events-none"); 
     }
 }
 
 const audiencePollRemoveHandler = ()=>{
     if(lifelineFlag["audiencePollFlag"] == 1)
-        document.querySelector(".audience-poll").removeEventListener("click",audiencePollAddHandler);    
+        document.querySelector(".computador").removeEventListener("click",audiencePollAddHandler);    
 }
 
 const lifelineApplied = ()=>{
@@ -1134,7 +1134,7 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
+    document.getElementById("result").innerText = `Pergunta para ${prizeValue} pontos`;
 }
 
 function congratulationComment(ind){

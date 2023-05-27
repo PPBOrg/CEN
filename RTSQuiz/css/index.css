@@ -507,23 +507,23 @@ a{
     transform:scale3d(1.5, 1.5, 1.5);
   }
 
-  .audience-poll{
+  .computador{
     background-image:url("AudiencePoll.jpeg");
   }
 
-  .fifty-fifty{
+  .cinquenta-cinquenta{
     background-image:url("fifty-fifty.jpeg");
   }
 
-  .flip-the-question{
+  .troca-de-pergunta{
     background-image:url("switchQuest.jpeg");
   }
-  .double-dip{
+  .dupla-tentativa{
     background-image:url("doubleDip.jpeg");
   }
 
   
-.audience-poll-inner-container,.just-before-audience-poll{
+.computador-inner-container,.just-before-computador{
     height:9rem;
     width:10rem;
     border-radius: 20px;
@@ -715,7 +715,7 @@ a{
         width:100%;
         margin:3px 0;
     }
-    .audience-poll-inner-container{
+    .computador-inner-container{
         top:13%;
         left:70%;
     }
