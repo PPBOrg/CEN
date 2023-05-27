@@ -377,7 +377,6 @@ const kbcQuestions =
     correct: "Autenticação de dois fatores",
 }],
 
-
 ];
 
 const page1Sound = new Audio("cyber-intro.mp3");
