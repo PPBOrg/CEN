@@ -1142,7 +1142,7 @@ const buildMoneyArea = ()=>{
 const questForSpecificPrizeMoney = ()=>{
     let prizeId = `${currentQuestIndex}`;
     let prizeValue = document.getElementById(prizeId).innerText ;
-    document.getElementById("result").innerText = `Pergunta para ${prizeValue}`;
+    document.getElementById("result").innerText = `Pergunta para ${prizeValue} pontos`;
 }
 
 function congratulationComment(ind){
