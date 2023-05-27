@@ -380,18 +380,15 @@ const kbcQuestions =
 
 ];
 
+const welcomeSound = new Audio("page2_kbc_intro_audio.mp3")
+const timerSound = new Audio("Kbc Timer - Tik Tik KBC Clock.mp3");
+const wrongAnswerSound = new Audio("wrong_with_dramatic.mp3");
+const correctAnswerSound = new Audio("kbc_background.mp3");
+const answerLockSound = new Audio("ans_lock2.mp3");
+const lifelineComesUpSound = new Audio("lifeline-comesUp.wav");
+const audiencePollSound = new Audio("audience_poll.mp3");
+const themeMusic = new Audio("THEME_MUSIC2.mp3");
 
-const page1Sound = new Audio("cyber-intro.mp3");
-const welcomeSound = new Audio("cyber-town-simcity-style-music.mp3");
-const timerSound = new Audio("tik tik meme.mp3");
-const wrongAnswerSound = new Audio("fail.mp3");
-const correctAnswerSound = new Audio("success.mp3");
-const answerLockSound = new Audio("robotic-transform.mp3");
-const lifelineComesUpSound = new Audio("choosing1.mp3");
-const audiencePollSound = new Audio("waiting.mp3");
-const audiencePollImplementationSound = new Audio("announcement-end.mp3");
-const doubleDipWrongAnswerSound = new Audio("failure-3.mp3");
-const themeMusic = new Audio("say-what-you-mean-loop.mp3");
 
 let currentQuestIndex = 0;
 let currentRandomQuestIndex;
@@ -470,14 +467,14 @@ const timeUp = ()=>{
     disableLifelineButton();
     disableQuitButton();
     optButtonDisabled();
-    setTimeout(openQuitPage,5000);
+    setTimeout(openQuitPage,8000);
 }
 
 const stopWatch = ()=>{
     tikTikSound();
 }
 const tikTikSound = ()=>{
-    document.querySelector(".timer").innerText = 60;
+    document.querySelector(".timer").innerText = 30;
     timerSound.currentTime=0;
     timerSound.play();
     tikTikText();
@@ -522,10 +519,6 @@ const WrongAnswerSound = ()=>{
     wrongAnswerSound.play();
 }
 
-const DoubleDipWrongAnswerSound = ()=>{
-    doubleDipWrongAnswerSound.currentTime = 0;
-    doubleDipWrongAnswerSound.play();
-}
 
 function doubleDipLogic(e){
 
@@ -557,7 +550,7 @@ const resultAnalysis = (e)=>{
         enableNextButton();
         enableQuitButton();
         if(currentQuestIndex==14){
-            setTimeout(openQuitPage,3000);
+            setTimeout(openQuitPage,5000);
             quitFlag.oneCroreFlag = 1;
             disableQuitButton();
         }
@@ -566,7 +559,7 @@ const resultAnalysis = (e)=>{
     {
         if(lifelineFlag.doubleDipMarker==1)
         {
-            DoubleDipWrongAnswerSound();
+            WrongAnswerSound();
             doubleDipLogic(e);
         }
         else
@@ -579,7 +572,7 @@ const resultAnalysis = (e)=>{
             document.getElementById(correctOptionId).style.color = "black";
             disableQuitButton();
             quitFlag.wrongAnswerFlag = 1;
-            setTimeout(openQuitPage,5000);
+            setTimeout(openQuitPage,5500);
         }
     }
 }
@@ -987,7 +980,7 @@ const audiencePollAddHandler = ()=>{
     disableQuitButton();
     document.querySelector(".lifeline-box").classList.remove("show-lifeline");
     document.getElementById("result").innerText = "A implementar ajuda do computador";
-    AudiencePollImplementationSound();
+    AudiencePollSound();
     document.querySelector(".computador").classList.add("pointer-events-none");
     audiencePollCrossMark();
     lifelineNum = document.querySelector(".lifeline-no").innerText ;
@@ -1005,7 +998,6 @@ const audiencePollAddHandler = ()=>{
         document.getElementById("result").innerText = "";
         AudiencePollSound();
         let clearTimeoutId;
-        audiencePollImplementationSound.pause();
         audiencePollTimeout(0,justBeforeAudiencePoll,clearTimeoutId);
     },1500);
 }
@@ -1230,6 +1222,7 @@ function formatedMoney(money){
 
 function ThemeMusic(){
     themeMusic.currentTime = 0;
+    themeMusic.loop = true;
     themeMusic.play();
 }
 
@@ -1327,11 +1320,11 @@ function quitButton(){
         correctOptionId = correctOptionAnsEle(correctAns);
         document.getElementById(correctOptionId).style.backgroundColor = "green";
         document.getElementById(correctOptionId).style.color = "black";
-        DoubleDipWrongAnswerSound();
+        WrongAnswerSound();
         optButtonDisabled();
         clearStopWatch();
         correctAnswerSound.pause();
-        setTimeout(openQuitPage,3000);
+        setTimeout(openQuitPage,4000);
     });
 }
 
@@ -1347,13 +1340,9 @@ document.querySelector(".lets-play-image").addEventListener("click",()=>{
     disableNextButton();
 })
 
-const openingSound = ()=>{
-    page1Sound.currentTime = 0;
-    page1Sound.play();
-}
-
 const WelcomeSound = ()=>{
     welcomeSound.currentTime = 0;
+    welcomeSound.loop = true; 
     welcomeSound.play();
 }
 
@@ -1416,7 +1405,6 @@ const sitOnTheHotSeatFun = ()=>{
     let contestantName = document.getElementById("contestant-name-input").value;
     if(contestantName=="")
         contestantName = "Anónimo";
-    page1Sound.pause();
     WelcomeSound();
     document.getElementById("page2").classList.add("show-modal");
     document.getElementById("contestant-name").innerText = contestantName;
