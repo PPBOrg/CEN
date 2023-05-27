@@ -380,6 +380,7 @@ const kbcQuestions =
 
 ];
 
+
 const page1Sound = new Audio("cyber-intro.mp3");
 const welcomeSound = new Audio("cyber-town-simcity-style-music.mp3");
 const timerSound = new Audio("tik tik meme.mp3");
