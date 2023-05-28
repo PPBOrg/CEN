@@ -1239,9 +1239,26 @@ function openQuitPage(){
     }
     else if(quitFlag.timeUpFlag)
     {
-        let temp;
+        let temp = currentQuestIndex-1;
         congratulation = congratulationComment(temp);
-        money = quitFlag.winningAmount;
+        if(quitFlag.winningAmount>=32000){
+            money = 32000;
+        }     
+        else if(quitFlag.winningAmount>=2000){
+            money = 2000;
+        } 
+                 
+        else if(quitFlag.winningAmount>=400){
+            money = 400;
+        } 
+                 
+        else if(quitFlag.winningAmount>=100){
+            money = 100;
+        }   
+        else {
+
+            money = 0; 
+        }
         lastComment = lastEndComment(money);    
         money = formatedMoney(money);    
     }
