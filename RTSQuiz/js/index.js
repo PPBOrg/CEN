@@ -1163,7 +1163,7 @@ function congratulationComment(ind){
 function lastEndComment(money){
     let comment;
     if(money >= 1000000 )
-        comment = "Parabéns.\nPercebes imenso sobre Cibersegurança!";
+        comment = "Parabéns, chegaste ao fim do jogo!\nPercebes imenso sobre Cibersegurança!";
     
     else if(money >= 32000 && money < 1000000) 
         comment = "Tens grandes conhecimentos sobre Cibersegurança!"; 
