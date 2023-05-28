@@ -1163,22 +1163,22 @@ function congratulationComment(ind){
 function lastEndComment(money){
     let comment;
     if(money >= 1000000 )
-        comment = "Parabéns.\nPercebes tudo de Cibersegurança!";
+        comment = "Parabéns.\nPercebes imenso sobre Cibersegurança!";
     
     else if(money >= 32000 && money < 1000000) 
-        comment = "Tens grandes conhecimentos de Cibersegurança!"; 
+        comment = "Tens grandes conhecimentos sobre Cibersegurança!"; 
         
     else if(money >= 2000 && money < 32000) 
         comment = "Tens conhecimentos sobre Cibersegurança!";
 
     else if(money >= 400 && money < 2000)
-        comment = "Mostras-te que tens alguns conhecimentos de Cibersegurança";
+        comment = "Tens alguns conhecimentos sobre Cibersegurança";
 
     else if(money >= 100 && money < 400)
-        comment = "Mostras te que tens poucos conhecimentos de Cibersegurança";
+        comment = "Tens poucos conhecimentos sobre Cibersegurança";
 
     else
-        comment = "Precisas de Aprender de Cibersegurança";
+        comment = "Precisas de aprender mais sobre Cibersegurança";
 
     return comment;
 }
