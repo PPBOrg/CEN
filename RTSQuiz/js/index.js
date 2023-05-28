@@ -1172,7 +1172,7 @@ function lastEndComment(money){
         comment = "Tens conhecimentos sobre Cibersegurança!";
 
     else if(money >= 400 && money < 2000)
-        comment = "Mostras te que tens alguns conhecimentos de Cibersegurança";
+        comment = "Mostras-te que tens alguns conhecimentos de Cibersegurança";
 
     else if(money >= 100 && money < 400)
         comment = "Mostras te que tens poucos conhecimentos de Cibersegurança";
