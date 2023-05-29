@@ -448,6 +448,20 @@ const optButtonEnabled = ()=>{
     document.querySelectorAll(".answer-opt").forEach((e)=>{
         e.classList.remove("pointer-events-none");
     })
+
+    timerSound.play();
+    let innerTextValue = document.querySelector(".timer").innerText;
+    if(innerTextValue>0)
+    {
+        innerTextValue--;
+        document.querySelector(".timer").innerText = innerTextValue;
+        clearTimeout(currSetTimeoutId);
+        currSetTimeoutId = setTimeout(tikTikText,1000);
+    }
+    else
+    {
+        timeUp();
+    }
 }
 
 const TimeUpSound = ()=>{
